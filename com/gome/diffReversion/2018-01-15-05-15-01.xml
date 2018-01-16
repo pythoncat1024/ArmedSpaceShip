@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch=".." name="origin" review="http://192.168.59.30:8080"/>
+  
+  <default remote="origin" revision="GM12E_7.1_mtk6797_dev_171016"/>
+  
+  <project name="AUS6797_6M_N_C2K_SIXTH.CBP.MD.MP3.V81.4" revision="cdc985105492d98bb30095937ec6c9744c3f56e3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="AUS6797_6M_N_LWCTG_MP3_MOLY.LR11.W1603.MD.MP.V62.4/arm7" revision="526454e4b772d424a0429c8d74665f0eec327908" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="AUS6797_6M_N_LWCTG_MP3_MOLY.LR11.W1603.MD.MP.V62.4/common" revision="d0407ce4e5b0db0210071a688b06f03a74c8a718" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="AUS6797_6M_N_LWCTG_MP3_MOLY.LR11.W1603.MD.MP.V62.4/mcu" revision="b4626bf91a7f67cf414461fc128a536d6602cc09" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="abi/cpp" revision="2401b1418a8edcb65816c028646eba576d6774b2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="art" revision="cc154af1f4463ca8f95bc0286e9610ef3e90b719" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="bionic" revision="64d405a4e1a168d511d2d1b45a3fd6d5bd075e82" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="bootable/recovery" revision="09e62f7e5ac40420b90b2d8a4783eded0643986a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,tradefed" name="build" revision="a4875cfd826f984a00c23095204d571eb17d0c9e" upstream="GM12E_7.1_mtk6797_dev_171016">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+  </project>
+  <project groups="pdk,tradefed" name="build/blueprint" revision="9d30c70086b6a981ab02cad60756c1a47e02516c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,tradefed" name="build/kati" revision="f55c2334cf47d327ab3ef5f27288b2da18aa7abc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,tradefed" name="build/soong" revision="04c4c2c4ef3efc9a27ae8ec0d775a408a333183e" upstream="GM12E_7.1_mtk6797_dev_171016">
+    <linkfile dest="Android.bp" src="root.bp"/>
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+  </project>
+  <project groups="cts,pdk-cw-fs,pdk-fs" name="cts" revision="781ab15d50560ddd53e9ab6122661e066be21d0f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="dalvik" revision="24a3fd5f3fe98f5df292f62af69ed7c54ea8fea5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="developers/build" revision="c5a04ba512806e168511271167501d282e1087f5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="developers/demos" revision="20c2d729752b22092c8a8cd00e0292056964a9be" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="developers/samples/android" revision="09c8d30890d36c35e09bbb78e187ffe7a317aab6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="development" revision="e75435afedc425cd47784e703ed51669b89b5292" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="broadcom_pdk,device,fugu" name="device/asus/fugu" revision="508ceabf04d07bb5ccc954580ec8678a6326b5cd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="broadcom_pdk,device,fugu" name="device/asus/fugu-kernel" revision="0e54735da32bf9be22e8862536d49372d87d9ab6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="device/ausshine" revision="355f507229819400d1c9263b6ea833cbf34ccf31" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="device/common" revision="7b3bf576ea113a75e5ef2e013f881fb978500337" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/arm64" revision="a9527840615351af231d1ac9593f21317958b92b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/armv7-a-neon" revision="1cb12f20d17a770f4303d27e9250cb78a12cd0d8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/common" revision="b8cf61df9b758d5e18ef1ec0dedb4fdd8e5e7e8b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/goldfish" revision="1d11c6e142468f1b40f2f371afbf86436b779904" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/goldfish-opengl" revision="3921039144a7e3bb93736a27f77459e9653076a1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mini-emulator-arm64" revision="b623c21287ded02822748ffe67ac828efdf91f45" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mini-emulator-armv7-a-neon" revision="ed4d1363ff2e4880fa0687a9b67678df617f04c0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mini-emulator-mips" revision="b097cbf64f50221a29253d5c1ce6b41f9a7c9db2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mini-emulator-mips64" revision="7d16b41386137af8f4b7c80567ac2acfe733b831" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mini-emulator-x86" revision="2d6c28d4450b5393d3a9a25035861f3eab6f0c7e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mini-emulator-x86_64" revision="5e82468fd0a3a72363671aba49a9675765534df9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mips" revision="16ed7401993bc1d5697cc4858c491b1a8a7a6247" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/mips64" revision="01dc653608c6a75f737f9d5c855fbfd4031dd777" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="device/generic/qemu" revision="3fe0dcea253b8f759e3d3826150230c1639d2043" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/x86" revision="be034048229d15d59632de4ad735214b24159153" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/generic/x86_64" revision="9939c0972443d454ee55464e94720f9e43a64ad4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device" name="device/google/accessory/arduino" revision="c6d747099d55a8d022408b77315fc4ee117808b5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device" name="device/google/accessory/demokit" revision="35365b13bdc5eaf16800608a0f6189940f0022a3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="broadcom_pdk,device,fugu,generic_fs" name="device/google/atv" revision="d7321ae9266062d396d0f69ca24e382a04729669" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device" name="device/google/contexthub" revision="102d71efd82969b5807bf8371fe1f3effc337e3e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device,dragon" name="device/google/dragon" revision="8379029faf40350669b0b01badfec3754e9b3e9b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device,dragon" name="device/google/dragon-kernel" revision="95b1e12d4e573a7a9f2d3c54331134f17667a3cd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device,marlin" name="device/google/marlin" revision="14b9d7b88008dbc209f360ae11b36000dea79690" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device,marlin" name="device/google/marlin-kernel" revision="b0a76814908c7025605315160944e9727ab5f5a2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="broadcom_pdk,device,flounder" name="device/htc/flounder" revision="cf0a03de450f0703b4dd64d881eace311b84fa14" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="broadcom_pdk,device,flounder" name="device/htc/flounder-kernel" revision="cedfca5b475861ef9208929dca44f86d35adec7a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="angler,broadcom_pdk,device" name="device/huawei/angler" revision="8ea0f5fe23cef46369e12e0989e0d8361ae476ba" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="angler,broadcom_pdk,device" name="device/huawei/angler-kernel" revision="863d243c41ef96f6490344eefdeec4ebe3a68483" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="device" name="device/intel/edison" revision="15b2091945044f901e67a466990d365352802fd6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="bullhead,device" name="device/lge/bullhead" revision="da7ade04d06ed311696f1d1c9f2ffa44b48e96fa" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="bullhead,device" name="device/lge/bullhead-kernel" revision="f0ff235b5a68419d6eb2a19bcc9d867431d24696" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="device/linaro/hikey" revision="d0caf6de7b144cdccd6ccfd93e41183128b0c7a1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="device/linaro/hikey-kernel" revision="d516c980cdd6fad2391e4068f525ff2ceb92b667" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="device/mediatek" revision="ee3f753c5c6e19bdf68342984a19f64192c7042d" upstream="GM12E_7.1_mtk6797_dev_171016">
+    <copyfile dest="vendor/mediatek/proprietary/operator/Android.mk" src="common/addon/vendor/mediatek/proprietary/operator/srcAndroid.mk"/>
+    <copyfile dest="vendor/mediatek/proprietary/operator/OperatorConfig.mk" src="common/addon/vendor/mediatek/proprietary/operator/OperatorConfig.mk"/>
+    <copyfile dest="vendor/mediatek/proprietary/operator/OperatorInfo.mk" src="common/addon/vendor/mediatek/proprietary/operator/OperatorInfo.mk"/>
+    <copyfile dest="vendor/mediatek/Android.mk" src="common/addon/vendor/mediatek/srcAndroid.mk"/>
+    <copyfile dest="mk" src="mk"/>
+  </project>
+  <project groups="broadcom_pdk,device,shamu" name="device/moto/shamu" revision="373355de41b67b1d674138270385c491ef2d422e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="broadcom_pdk,device,shamu" name="device/moto/shamu-kernel" revision="81d0a57d226605a3f9cc7f5d4774bc0dd71f5997" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="device/sample" revision="be856413ae6ba9cc2e2a3855ea4313451566e414" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="docs/source.android.com" revision="e7135dc6fd7695965c95be88a830f01fd6096817" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/ImageMagick" revision="5760c94d3b66fc018e0b3970d2e862a55d75e6eb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/aac" revision="26b0a02fd2db7bebaba1c4eca2f52a545f8a2086" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/android-clat" revision="b2092674a39e3d9fe0273e3e3818b41b47d71cce" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/androidplot" revision="a5e51b61598416b18c60ecbff07c4fcfb1305385" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/ant-glob" revision="c81df352dfa8a9e860238dc9af95c2f84fdb0df2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/antlr" revision="2e503220d1a8f7770d4228f62e36b9adbef054e0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/apache-commons-math" revision="67528e5826edd614416530ffefb50eb5ad9d30e6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/apache-harmony" revision="e9c1357993f971db48f1475173d8b3bb8b456325" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/apache-http" revision="fbfd88d8b48e146a254621b2945cbe9148a95ee1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/apache-xml" revision="42777c33b5162c2042a359adf51ff186bbfeabda" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/archive-patcher" revision="86c20b9d3f435300a4a6b040daa0fe8044288c11" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/autotest" revision="f540dc6ec2f59160cf9f55e5261df65eb173c86f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/avahi" revision="84cbc4df2f050b1fcb99f087563f8314df757a6c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/bison" revision="8bc949ca2570f6fbcdd082a51e16fb15992485bc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/blktrace" revision="3bb11afd059575f111923be2512e3b3992456c33" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,trusty" name="external/boringssl" revision="aa980f10597436249f822283af7c8ca833336905" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/bouncycastle" revision="e0ce9176506a1a7aec3a941a6059a7a5c4cfabea" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/bsdiff" revision="ca3ed6d4d7ac02d866d34bdf0f62693458dfdd3a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/bzip2" revision="d2c5506a000edee9e97d2a8b031ac59c50e16972" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/c-ares" revision="89f566f7dc034a0324942da080503dff276bdd84" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/caliper" revision="b2384ee7097ff0f7ee304fe31a1fa9b6ad5e2b1f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/cblas" revision="8adf9c49dd24825013360ba4eb65d8aa243f74d2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/ceres-solver" revision="e808af08dfa15941f5d84fe4e78a598db6b999cf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/chromium-libpac" revision="df0da00a59013a3c4f23f2b0332d1a8c6e236fd4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/chromium-trace" revision="371da7c4e3a4912841ce1f21cb4b609b927e986a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/chromium-webview" revision="c7094b8c1431adfae6e9f6b58011307f1979b9f6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/clang" revision="0804dc7f09cb786860604ccb27b5b365b4450399" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/cmockery" revision="6091334945ef6a18cc76726ab262fecf6f8aca5e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/compiler-rt" revision="b5fe9d962dea88aa6e837d3cb45f7db70bc4a2f0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/conscrypt" revision="4e0eee349a561aafc2cb24f31f068ddba3ee339e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/crcalc" revision="45682fa5638a12482c6bfeafdb29ca786a82fc5c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/cros/system_api" revision="846c61322c3531b3a37bc4481ba99ba7e68b5be8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/curl" revision="75fd64199d60c82bf7baf6ae7876efcdda700ff8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/dagger2" revision="f960451ba5d6469422c3c60b1921dde99f65a56f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/dbus" revision="2fcac22f01f1176f71aa8da56f40b7c3cb6cbdeb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/dbus-binding-generator" revision="86acecffea012ecf0fbb5cda6f1eed12ab79dbd6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/deqp" revision="b1fa1dc99c016c3c63383bb61e79c30baeb726fa" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/dexmaker" revision="bc701a6c66cc388df0f7e71f82536e0de56b21c8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/dhcpcd-6.8.2" revision="a74c22669331cda4ddf26d6a5a8c3724aaa264d6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/dlmalloc" revision="cd4567a6ec03ac88f515f2ff38d21b44598f51d0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/dng_sdk" revision="4c7757e7de636c1fedd29cb4a69bd444400da5a2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/dnsmasq" revision="a26f2fe89b7111bb54187718b1017054f346cee3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/doclava" revision="8f71b5be277182ea890ac2be64883bf267810715" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/donuts" revision="e1e27e7c4e9d4e4d65105f43701109b338532145" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="drm_gralloc" name="external/drm_gralloc" revision="cda77655d0f3dfd096249dffe1e95933b1d04035" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="drm_hwcomposer" name="external/drm_hwcomposer" revision="39d1022252fae15a018e0a9b7e8da3d68b8801d8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/droiddriver" revision="8c941609f219cd9a4897c51b2c5bdea0a93edf7e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/e2fsprogs" revision="579efa9069bb36a3719df1d8c73285be88521171" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/easymock" revision="e0ef2229b88ea057b74697c9f0a9c18d84921cf8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/eclipse-basebuilder" revision="69dd83aafbb34ea652b64523e5d3afc867b9a2b2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/eclipse-windowbuilder" revision="0ee24433ce450a548e641991db9a7f1eae98e91f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/eigen" revision="eb5f3482838d0ec363abd8e5b5b3daf279e7184b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/elfutils" revision="b099d9f10fa0a26a30353a187d155fe0210b3349" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/emma" revision="ec9d82e4d25de531917ca3f18af3c3529010c731" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/esd" revision="b49e4307b711292fd95be925e3bbbb9e043a423b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/expat" revision="7b88cd28d59f3af53e2603caf0fd0d1e3528ac6c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/eyes-free" revision="82aa6f97a0b2a9b259f887f7fa630914e97cb2a8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/f2fs-tools" revision="0afed1d7208a65d8e21dd5014d56288bfeaebc81" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/fdlibm" revision="11ee854180a885146dfd339759a3ef9be47678bc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/fec" revision="0bc1bec731532ba93385bb2a5486c1c9d8483357" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/fio" revision="7c80590c6badefa5c453803f5dce1596fe9c256c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/flac" revision="1d167c45650cf804db0df068f4eda1a0cde120ee" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/fonttools" revision="71fe4b2df4acbf505e825394768d4a1a4200444f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/freetype" revision="af8f4507a118e6e775f3c529ea6f78d9072e3688" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/fsck_msdos" revision="7094c10d3258360ec37ae4f0327c09877ca26c93" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/gemmlowp" revision="d4bc3c2b425a5f763d25769e325729bdf7f71cb4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,qcom_msm8x26" name="external/giflib" revision="8c96b7f69feafbc56aa4e4b5f878961409b95204" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/glide" revision="f92eb0e0f6babc34945fdffc1d549dc282ba81f4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/gmock" revision="58359e335a7a2dfc0938b3a62f08510e94fc9e72" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/google-benchmark" revision="ea23ba651fc74a2521622eaa759ab4a56380a7c6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="dragon" name="external/google-breakpad" revision="c57c87f3569a8c15e6527ea5b009c440675ad2c5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/google-fonts/carrois-gothic-sc" revision="8b4aabf3bd635bce06b3481e0c2bbadce50b86e8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/google-fonts/coming-soon" revision="a8d75bf1ebccd703661b91d06084b23057ee2ca9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/google-fonts/cutive-mono" revision="96f83d7eefd49b4db0e0b2a39cc5798dba1eaa89" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/google-fonts/dancing-script" revision="ad032edff991aad720eccf32317570e5c49dfab3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/google-tv-pairing-protocol" revision="abf8e8f48f55e946409455c8dbbf7a2160988387" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/gptfdisk" revision="58f69a8d409d3c60f49e8d7ebb1449a8f0473f41" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/gtest" revision="e1affa3d35b97ec847da33b6fce31882dde287fb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/guava" revision="5c194d3103d4907dcee84ab520e058edbe667925" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/guice" revision="3ac2edd17a62e9573dc2ea0dee44e2d3667ca6a0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/hamcrest" revision="91a7d0b973210eb2605a3c67eb9e7d21f39c5e04" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,qcom_msm8x26" name="external/harfbuzz_ng" revision="7b4cfa98d36632e21bc5b8515edc74482b2847d0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/hyphenation-patterns" revision="83571ab10b27ba561efd5a0e3758bd08dfd48acc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/icu" revision="a8bcaca3dfdf1589e73eb28a0124af65b6bc7a38" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/ims" revision="b19201c0edba6c0744fbf6c8b1ca13bbe8364867" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/iproute2" revision="33b84cba133d7fd476cbab68674742219c17d90f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/ipsec-tools" revision="a7c38ef24244aa64f75999be19607f687cf23f01" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/iptables" revision="639308f4f7b9327e86fcca620109f649d55b563f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/iputils" revision="9ec06ad47f30f7c67bcf75c63b8ac2dacb362cfa" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/iw" revision="e7977d44fb510c897bbf6ba2f395f0033870db16" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/jacoco" revision="33ae8fe11edc1076cad8471ac551480768bb2b64" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/jarjar" revision="903c1cf016c96bb5c638c93cd4a8e418e6cec210" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/javasqlite" revision="a6c0476e19e10e5bab23b46088dc353b6255d9e4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/javassist" revision="46a6bcf2c6b3b37588c6edb37c641b78f41c02e8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/jcommander" revision="570193e7c4eef201f7e5bcd19fa8b8b0c56262b0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/jdiff" revision="d519ceaf817dfd065b762d555a313adcdfb19b23" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/jemalloc" revision="53395efcd8e80208f96e02cbd9148e9d0abf2d52" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/jetty" revision="0e5a435f9a8a903dc3bf2a22171d870e39b1f15d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/jhead" revision="335edd6e17d9512055867dc5cee38ad831f0aff7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/jmdns" revision="bf6ef93e5a08a65c6be5629ce556d50c540068ec" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/jsilver" revision="4210690a2ce0116f305c73c686248fbc01af79d3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/jsmn" revision="bac20d6745180a569e116b59279520ede1224703" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/jsoncpp" revision="bf76a7ae3671d439b25585f8d64dddb6bb529cc3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/jsr305" revision="7a63c88e1eff885582f17ebc3fd8aab585c53a04" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/jsr330" revision="32c427a11ff5333d180594c8ce5fa6f0ae5d39ee" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/junit" revision="f7d09ccc08ce578d45b0942859389d2394b2f902" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/kernel-headers" revision="efc6bd9dab3cbf050ce38aa25c488b4b244f8aa8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/ksoap2" revision="e69efd519032dd389b920f5a962de8465fecbd5e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libavc" revision="42698c36fd1d14280664340dbb71d13e1350b088" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libbrillo" revision="4e0abb89cb7ef515069e17886c93dddc01d2bf8c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libcap" revision="b8a06fae9e31c877109fb3a2939b68c6724e0af5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libcap-ng" revision="8bcb2a94f606ae16d7f2d496baed25ea20a8ffa7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libchrome" revision="529d3f3a7756a63de93ee63f4d2b65ed4084b02c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libcxx" revision="98cc68f432a0c40ead07af50718ebc66910f918a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libcxxabi" revision="c083d9d08242c0e9cee1f3779ad45bb5ea892358" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libdaemon" revision="efc3340d617abd431c5f3515cd6bd2635d29f3d9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libdivsufsort" revision="a2e8861ffb56e8cb1a3a289aa60a5c6dc58e21df" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libdrm" revision="a01beab71430077c824deb2ef9c1e4cba697957d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/libedit" revision="6ba21ae8b0e566c5877e108649c4179822ce98db" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libevent" revision="5f8548c71fe40b2c37260f33239c5914f3b86e48" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libexif" revision="9672928419a339332a2d792024da14774b6d37c2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libgdx" revision="bc7713bbdd7166d0af6c7a444387745dd5387a71" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libgsm" revision="af7f724c468c9f8aed3ee9a027b0adbc63892ef0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/libhevc" revision="7eff47143941c9c246d830e7f8d75ee0817b5a5e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libjpeg-turbo" revision="c588ad1e540c80046d543884abd35288836b9bdd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/liblzf" revision="ed0fb6d81828585c14f64284ec102ab60a6575fb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libmicrohttpd" revision="8bd1ff4e7a9bc56b8d32d4724653193c238f334c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libmpeg2" revision="2f66481fc2cf2884658ea4805978eb8ca453d7e7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libmtp" revision="cc53023fb560da36f55e275a0267e9ee6f54177c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libnfc-nci" revision="fe50e251ca89d7855d203f8c654f8b501e1132b1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libnfc-nxp" revision="ad35130c07160085135d9bf9140337842080578a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libnl" revision="2f1af98f05e00c869e093507e122a1a61aa9e38f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libogg" revision="6925a38a56f9bf102f774548783df2b4dae95cd3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libopus" revision="7c45bb457596e7c2d17adc6dc84c6f1169b0801d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,pdk-cw-fs,pdk-fs" name="external/libpcap" revision="00ebeb605ba24c685e747db9808e4221c7084215" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libphonenumber" revision="9038fe1f18626f45c9dd42ac494827dfdc6cd82d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libpng" revision="9fa8176d7d8aa74592dbf26f9c28e904b4454c99" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libselinux" revision="fe8ce357753c56bf94a0539305eaf6aeb04dd70f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libunwind" revision="074c8cb507b6752f7fa38ffd8f0075436af93f5a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libunwind_llvm" revision="64c808d6bfb5316bc5a2ea68716ce9f106a19d11" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libusb" revision="ba2717c9fe3dea1e2a6cf18494337b83f3677953" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libusb-compat" revision="8400335127fc9d8ca957baab08aa6b833afe3a16" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libutf" revision="82cc884e11acf2223f54a14c275d2185c434520f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libvncserver" revision="74a88cea611476a9e4ddbc98154f73e1c7539194" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libvorbis" revision="c912f477045f34ab1abe75c947b1514b85f87833" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/libvpx" revision="586b7cf8d9716fbf89d600e8732f4d76ca259395" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/libvterm" revision="4bd1e36dfb72bfd5a5de6e18beb23f15ab0e21ae" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/libweave" revision="e21461b8c822c006c6fcad8e0cb66db2a4cab974" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="libxml2,pdk-cw-fs,pdk-fs" name="external/libxml2" revision="3476e4db5248c3d8a99795498f5667b9647dd5f7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="libyuv,pdk-cw-fs,pdk-fs" name="external/libyuv" revision="009caac36a297415549001ddba5d84232ee6cf40" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/littlemock" revision="aa796f016d5078e121d6eccf421cca99d5690816" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/lld" revision="3fffa71d0e32894f25494cb6cd0c8f79734a286b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/llvm" revision="8428c8c29d30f68090e25cfe660b84bfd6489780" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/ltrace" revision="0727b880c96376c453615e57a7808c84ff5bf549" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/lz4" revision="e818bcad566a4a46c7e87246075aafc11b52f136" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/lzma" revision="fcab3ce21d2db6625d2f411881356e0dd67aa1f9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/markdown" revision="faa9303948aa9d1adfd430f82dc2bc1be4ab2348" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/mdnsresponder" revision="b7c413ddcc661bf84767c7dd93f6a6dc4933f000" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/mesa3d" revision="fa15251b694c70b124b3e7d98e56ed83ccb1af47" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/messageformat" revision="7a2fd8ec16b908aed611a8ee724db8c7c4ff364d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/minijail" revision="e654b85e225cb0310806204e6d03fd0d2279b246" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/mksh" revision="954a412542d9b717b1fe91533c96b9913cbdba39" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/mmc-utils" revision="1eff26b2645a77ceb724ee4064f3a923298c7dcf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/mockftpserver" revision="9e56f3ba712aa84ddd42197823a1390efd1ebad7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/mockito" revision="9f48cf4c636e39ee5716a52aa85c82fff98d45d5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/mockwebserver" revision="775d6da106c8507f6b432ffa131fbf4bb534e3a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/modp_b64" revision="1e7e931db989779306b4bb68ae7380b64f890380" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/mp4parser" revision="942ec49cd1e9b49b21fcb65f2d9520ed42c36525" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/mtpd" revision="a47f7ae5034303fcb7ce356178b18ff6d32233c2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/nanohttpd" revision="7ef6ca27a6d9d734f38ef933190fbb4ca17a4e09" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/nanopb-c" revision="99640e7e581f1e1eacab113acf22a58028226d95" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/naver-fonts" revision="ffc3f2ba2fa07536964bcb0133a70375209b43ae" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/netcat" revision="5976cb2d93b5a8a06a5dbbe88f426d57015dc759" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/netperf" revision="ea316241669690f2d1f6fd382274ad785045fc07" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/neven" revision="46afc67c9a24c4d56b6f92337b0cd708127a4d8c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/nfacct" revision="bad726eed382c4d8ef8280923c5cf68d19adf94d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/nist-pkits" revision="38d94e64e5eb2831077c8e28cbd1e3f7eb85ec31" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/nist-sip" revision="bf6895ac47670c46273fb6ea91b0d07e1bcef246" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/noto-fonts" revision="0e586c02479ee6ee71c056ae2d0e2506e772d607" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/oauth" revision="1bfc0d47c9be2459bd3be1e6ef263c363afb4319" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/objenesis" revision="5de1742268c60d4fea4bdd69992554aa88d0047a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/okhttp" revision="678009a7c2cf7fc8e66d6e4f21ec4744f8bbfc96" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/opencv" revision="7497bccbe25498c0dced69073f713a2e304a819d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/opencv3" revision="b48307c96ae9a8c93d9548c01f0f9a613b7984f9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/owasp/sanitizer" revision="abd8a48312597f04af0cfea4a1298345174802bf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/parameter-framework" revision="b750454a01604f3f70e640409404598dca705316" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/pcre" revision="1f3ce17b80d6927f2e24af734935736f890d9e8a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/pdfium" revision="d513e6cf6c183444df90fb265710add1d939ac15" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/piex" revision="03cb0b3c21c7f82dc32a4844eca603f2288aad1a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/ppp" revision="02aa80ae1233441e7d3d6ef0f5527029d8b531e4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/proguard" revision="ef54d8755da90058a30699b91f854a7b2a1bf10c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/protobuf" revision="0aa275959ea7a4e8587e3327c40078be9b15be96" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/regex-re2" revision="b988455b0bbd3cb6dcb80d2e428bf7e02096580b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/replicaisland" revision="4658d9f3bf97b2b4a31a34a1cdbc7e8cdd24c301" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/rmi4utils" revision="d6a7bbdebf40778ea4295d63b10b3fe772b701f8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/robolectric" revision="eba99e74ab94c6b752e35b79d7426086f167525d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/roboto-fonts" revision="c35f7a5734ec9bfc703cc62c951c43064bc75fbd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/rootdev" revision="ac16afac41586ce4e29d3e77498bb7a0218ee33d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/safe-iop" revision="8fd70e5e8ba45d06956ecb27784886b74fdcba78" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/scrypt" revision="23f125d9aa9e5ef4ffee5a468c5ef7b204b9d8cb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/selinux" revision="52875a012a6c99bae96ea676a3b08baaaf691787" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,qcom_msm8x26" name="external/sfntly" revision="aceb1e34dde1bb661ea53f46624d390ef0b3e60b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/shflags" revision="9a53894c5bdaccc3817958b8341a490688dde2d7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,qcom_msm8x26" name="external/skia" revision="5363f004ebe31f3660b56754606235bcdbfce874" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/sl4a" revision="220d00dec2d154c7e47de2bccb0f36b785d3c57a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="external/slf4j" revision="1411390361332ac6132d7bf68d27fdde06a3b8bf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/smali" revision="c70898461572d505f9845263a329c02f6f56ab18" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/snakeyaml" revision="d37310a296121c7a73b108a5e3e2cb46eb39ff34" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/sonic" revision="d9193d6f339eaf23a6f236a0607cd8fbd6136aef" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/sonivox" revision="512f2bf242c3e6bdfa63266fa8e8cc8dc42eb0d5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/speex" revision="4a5607bcbf52b8be90bd0494e16811536474d259" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/sqlite" revision="fabea9a44bd477efb4aa19e1ac5935378aff1e70" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/squashfs-tools" revision="34dfa2431ac432a0b847b5cf00aaabc1f57df81d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/srtp" revision="d69f4c1803e3d07e4927c34bed56b8a3544ea29e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/strace" revision="38cd8a4db49388dd0871c317b40f6034d8aa31b0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/svox" revision="d4d9d6597a0b921861521b9dbf0979c1783fe77a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/tagsoup" revision="02215dc217bd29936e941556c528dd09d9208b9a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,pdk-cw-fs,pdk-fs" name="external/tcpdump" revision="553bc40133b59928f0254d125a3afabb85a157be" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/testng" revision="b868b30860b04fc203297c4fe756e1258efa1ba6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/timezonepicker-support" revision="dd6cfe7ef2bb5fc17d1136b94c84e95bfb2aa0b0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/tinyalsa" revision="30b1fdced89afd3d872c34b9e91467baf8791b84" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/tinycompress" revision="7474739cd7447239b62eba324a9e6d6730e9704b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/tinyxml" revision="c4cdc60b9b5aeb8b864280aae301daab04a6721e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/tinyxml2" revision="4fb058e49f198cd96e1279a4bd71e92131841efd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/tlsdate" revision="3cb0236e2b2de3ddede2444cf062293314c605e6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/toybox" revision="7e3b11c912b07a6a76d1b4b1b07b6006057a2833" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/tpm2" revision="fc381726cea381bba821196cd0072d88ef2b3342" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/tremolo" revision="354922d9dc1245e34161fff8c3d2c76f0812b9be" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/unicode" revision="32ad1df24f07422e75ddfee77d85606e28cbd5ec" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/universal-tween-engine" revision="8cf73383b249bbb1a6397eca4fae3bc0cb3ccd16" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/v8" revision="70ec10dc7c41c4f263d18242dc71edec4a2df16d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/valgrind" revision="5ba3a725a99b3ea47da2626562aefd051be5f9b2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="vboot" name="external/vboot_reference" revision="b82ca67614bbddb925698cb56919d0a678687ed3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/vixl" revision="eed8a00e1d7435295604fd831d7fbb68ffd38398" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/vogar" revision="26f88a5149636c21d0d1cbb1bed226a30b6fb874" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="external/vulkan-validation-layers" revision="4e97d7b7c63551d7ef8869a90262e911956c779a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,qcom_msm8x26" name="external/webp" revision="45a6d8794b6d782e4cda7a65f3d2b5bb884b87c7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/webrtc" revision="8c9e3d5ad724e0f4998f9cd8505306a17b337a5c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/wpa_supplicant_8" revision="2c9234c46f6c095b5a749af577c1ed2288380f1e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/xmlrpcpp" revision="fd581366bc00258d55a37e2a783eadc9ed851650" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/xmlwriter" revision="8eb22c61834011ca142afc10bd24ce3740aca994" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/xmp_toolkit" revision="39709ac02bf19fcb809252cc7484a69bff2fd44e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="external/zlib" revision="bf9d203868c79d120abe8c23a474a10cd01f426e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/zopfli" revision="152e536b15ba18d4931a82eb5eddeea3721a28f0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="external/zxing" revision="e2e57b631203a7c19c92d21fcff617cfacea09e1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/av" revision="45003d58842e9fe7a18c1dcda9cbf9d478b5a2f7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/base" revision="bb8d5cbd034386b70eae07500ad6b86e626d9066" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/compile/libbcc" revision="bf15c5723bbe18ac895786313f87868225ff6e85" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/compile/mclinker" revision="1a4741c25e6038b7dac075976deca3aa121e0ca3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/compile/slang" revision="f0f67a2bd5ad22a73d846945debb520a7b656fb6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/data-binding" revision="f0370c98274be6b52d06386ebd7d0fd8be6b8c72" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/ex" revision="55104f0bfa1ccc83313dbef4fb9597b3d1dfb909" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/minikin" revision="8f7cd3dee967615a9c475c6e3e1f5f680463684b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/ml" revision="4402d2d478e9fcd4eaeae2a8748453710d6f6d28" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/multidex" revision="b01db4a145af75b5cc352ef78e48d77dbf23cd86" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/native" revision="1aaad5826f9ced49f63ad2af39aa2bee83e7beb6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="frameworks/opt/bitmap" revision="c3084a5d1c08377e80dc5fbe153c5f779d111680" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/bluetooth" revision="5b56e0e7ade97acea33691ba2b7f3a90d886b0be" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/calendar" revision="bc443f7d05b6dcd72c4337edb2129728d895ba9b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/chips" revision="50ae2aae169b821da5188191086c3f2663a82231" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/colorpicker" revision="46b3f432b4e30dad8a26d0efabb2a6814b958a46" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/datetimepicker" revision="bfcdf7aa39f0aca0d48819e2d059aa3793b684a2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/emoji" revision="e577abae7ddbc5d6d676676ba604fadbfc2a32b6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="frameworks/opt/inputconnectioncommon" revision="e577abae7ddbc5d6d676676ba604fadbfc2a32b6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/inputmethodcommon" revision="fc603dc013b8cca979ee924c346254fbdb267ca1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="frameworks/opt/net/ethernet" revision="6969e7d49c4b1de898bc5fb081f2eded98804c08" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="frameworks_ims,pdk-cw-fs,pdk-fs" name="frameworks/opt/net/ims" revision="d40ec3ed6cb2bf701279decc4c08b46c6779e694" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/net/voip" revision="975bb7e3d703dec5f6a700c1a13e0d540320bb68" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/opt/net/wifi" revision="22de566111203746761fd02e144bd2a37dd990ab" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/photoviewer" revision="9fef833644bb9ae05c7c6ee607886b1c1f309296" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/setupwizard" revision="168da4b50d8ad60d638a15f3d34067b3b694fefb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/opt/telephony" revision="bc0d7810c099ae3ad5e1c9b63024421c2b95648c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/timezonepicker" revision="8740eb568f73ac9efa05b711e4ca966554118af6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/vcard" revision="adc3c277b942e23097e19a82bd741ddfafeac624" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="frameworks/rs" revision="0aea76cdf2c08a54bc3fc1b2be608751dbbc2598" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/support" revision="22d5c65cadac744e6ead96517a9c0f93846409e2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/volley" revision="651ae1490c997203c6be0788fee5c10c42d3ace7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/webview" revision="78d2f600bb485106a581dcc6b206004b4989711d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="frameworks/wilhelm" revision="4410302332955277305bc213b40317ba53c4a970" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="hardware/akm" revision="ad871b13a7a7d070a9057e55d0ca195ad7121a79" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="hardware/broadcom/libbt" revision="7a6fcdf5bbbd09176284740a0c583687b13188eb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="broadcom_wlan,pdk" name="hardware/broadcom/wlan" revision="43c13dc91894ab70f17a5e7eb3afb094dcfbfdb2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="hardware/bsp/intel" revision="9fdde9fadd4ec5ded9e529fd463f5d91793caa5f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="hardware/google/apf" revision="75e7e3ce1287d911febdaa6eca06d50d06ab8706" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/audio_media" revision="9287aa48b70c260a8e753ccf427301e1188038f8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/bootstub" revision="886687b6cd11ab53570afc51e22df051ad709994" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/bd_prov" revision="a07213910397f3e366e34829a378f0ab9f48744c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/libmix" revision="12f544e23f304c21f4496e28d86753dd6db67c92" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/libstagefrighthw" revision="60b478d579c64d190c73472537d84b2ef8610985" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/libva" revision="68921cfac68e849f0c1c27d32238c3e9eaa7b7cf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/libwsbm" revision="9a59f9a1ebb8c43cca2acc54c8d46ceca44dda83" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/omx-components" revision="63a6a61624b83bdcec235f4bc7948326a65bce0a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/utils" revision="50e6332d02b94f8bca9dcf8ebcd7ac598c2cc094" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/common/wrs_omxil_core" revision="96df403abbbc3233721c9d2a9e7b6c81ac636784" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/img/hwcomposer" revision="659e229df01eed8666884b8e28e649cef008785f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/img/psb_headers" revision="828b46f0ccc74a99ce3b7c4565b8578b875b33c9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel" name="hardware/intel/img/psb_video" revision="c7f40ff30df8702036cff6a589faa20996696b1c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="intel_sensors" name="hardware/intel/sensors" revision="06a1b0498b05c8e2776a7a242ad59110e0c1b925" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="invensense" name="hardware/invensense" revision="1f1ce86a40cfb7c537332c1b1765a4134886947d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,trusty" name="hardware/libhardware" revision="5d29f01cc319a4c8864b324fb0607f6cfc9ec461" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="hardware/libhardware_legacy" revision="276c3a0f9696fa0e5ae3b7ff4b68d42556e607f8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="marvell_bt" name="hardware/marvell/bt" revision="4068e1ae9ef93696f8ede43d8dde98e52d2cd3d7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom,qcom_audio" name="hardware/qcom/audio" revision="82d2de0a5556beb42fc25981873d2f2b435f2ee9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="hardware/qcom/bootctrl" revision="ed334ece0c4043b388b5a28233a6d0a034ebdb0b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom" name="hardware/qcom/bt" revision="b081f4f245da442bfe8c583df0da3ef952980cbc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom" name="hardware/qcom/camera" revision="83afb545932efe3b67db3af56807b3e81916dd4c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,qcom,qcom_display" name="hardware/qcom/display" revision="87da65beab3238b432e97eab11e1d29db0d782c5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom,qcom_gps" name="hardware/qcom/gps" revision="149064b3c0f990253f289c0459a1ce8836c362bf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom,qcom_keymaster" name="hardware/qcom/keymaster" revision="12dea13975ef7e292c8cdd1d2c81a69b6ff107dc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom" name="hardware/qcom/media" revision="4e462e8698c62612f88edd946c56853202eeb1cf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom_msm8960" name="hardware/qcom/msm8960" revision="2dbcc3bc3955f86c267228688798e3cfafb61084" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom_msm8994" name="hardware/qcom/msm8994" revision="b7927e46d38688fb45925a002dc41be4672f0c07" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom_msm8996" name="hardware/qcom/msm8996" revision="104d2845df6f152c1bf61601e4678541b558a425" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom_msm8x26" name="hardware/qcom/msm8x26" revision="ebf130d67252fb42010bfba92b829c6803c59678" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom_msm8x27" name="hardware/qcom/msm8x27" revision="8488706135166276e595c7b969b9838dd35e08b4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom_msm8x84" name="hardware/qcom/msm8x84" revision="7d15ab1e535d42a8c68b363d5c759f3a4d15bc46" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom" name="hardware/qcom/power" revision="525952a3dda041968dbb7573133251710c79664f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="qcom_wlan" name="hardware/qcom/wlan" revision="06046308d4fe814b4c04a0c860091978b9f69635" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="hardware/ril" revision="283ee74def1bddd3f978f572c380f0a241994e13" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="omap3" name="hardware/ti/omap3" revision="ca27dd731891f945b694127bea8a202a73243e5b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="omap4-aah" name="hardware/ti/omap4-aah" revision="01209fb88b3a1f91201fc1457d61f86ad9f7f11b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="omap4" name="hardware/ti/omap4xxx" revision="b15ab3123cb4a77b6b17bfa0692b2810b7461b43" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="kernel-3.18" revision="32b695ca4d1470c79fc88063ae3aa827f404e1a4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="libcore" revision="c527f8f796b188b518fbcd3d95bcd4067504dfb0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="libnativehelper" revision="000ee8770b209944f2491cba13828144a567360d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="generic_fs" name="ndk" revision="eaca41fc424ae70279d7d02787a7c74738b1dcaf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/BasicSmsReceiver" revision="0fbe9060d4abf474293324ed70814ccc0b55b1f7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/Bluetooth" revision="c425e8c6bceef01b1b899cf5aa0b924187a08dfb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/apps/Browser2" revision="055fa31339429a701ee4b1e2fa29e6ba392ae0ea" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Calculator" revision="be37d9a0e63f27e20fd03e2368c56f513f9df6a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Calendar" revision="8fa84e16070831b0b01691abf421a91534c57e06" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Camera2" revision="75e62661e6ddb97c1cc58bafd16b6832d54f6416" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/CarrierConfig" revision="67deb1574e3071364144cdce38397ddc1b6bb9e1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/CellBroadcastReceiver" revision="fc96dd7a5bd49296b6d0552b31efc940837c9b9b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/CertInstaller" revision="ef568009f4b3d2c4118681cfbaa62140ab0670ba" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Contacts" revision="c646bf9065efd8f4dbab9f86e22db794aaf04c8c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/ContactsCommon" revision="05f6de1b037e7bcb4d7f77f8dd5821608e77f6d3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/DeskClock" revision="2238442a1b986a4ac573c5b237c09edeab2204d2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="packages/apps/DevCamera" revision="c46246ec31ab1b210b9b0655d0a5f707648af84b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Dialer" revision="2f1b1b98aef62ffac0a84399b6a4804f67dc6cf4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Email" revision="8c5a2c03017d53db9d616107ae11c451698c1b2b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/apps/EmergencyInfo" revision="6b9b8c4bbc30483f8f4ff70f396443fabb111ac7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/ExactCalculator" revision="0925b7a6e9a68c159e5aa530aa8abfe322f75081" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Gallery" revision="a8abc9021d0e44c04b2a786b0681e4a110801766" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Gallery2" revision="d52248d15441ff5503e5d4cf5f81dec4afd436d3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/HTMLViewer" revision="d2cc0963937fb6d6685fc066283e1d6ef580dd25" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/KeyChain" revision="ed425a0edc7823e6f8a0aa606ba5f80ffe118de7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Launcher2" revision="a5aad073c7fb18d0919145e45b7935664d6e74ad" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Launcher3" revision="9ee5c88d6f5b0e55a0d686105a2c8876fc13843c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/LegacyCamera" revision="8ea29c3bcce4967e5e884ac3b766905a17d73515" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/ManagedProvisioning" revision="d1aae88f845b64f45be74dfebb7aafdb4aeeb49c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Messaging" revision="e599cf34a852cd50aa502fd0700b363dee693238" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Music" revision="eb84aa4e7239ab1deef2f420674ab1664eedc4cf" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/MusicFX" revision="cf054e0c1bdbc79e9869ef86244dd0df96bd0386" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="apps_nfc,pdk-fs" name="packages/apps/Nfc" revision="bf32b8e7f92875c6c34980102ba573cba8aefb63" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/OneTimeInitializer" revision="3db12ea57ef1a7da789ab8d8ddd01fc16a65a799" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/PackageInstaller" revision="51ea970a50859ba6f3886de3da918fab9b454860" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Phone" revision="962fcf052368b69ab66124d6e68ea445a22b2597" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/PhoneCommon" revision="73e6b200773fa372c85fb0c0bcc0e7a71de7a612" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Protips" revision="6457462eb78e0438fb4e30fdbd058c123fe3a658" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Provision" revision="aceed48d7e89a45595ac782fa3dc3168fe413f2f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/QuickSearchBox" revision="6da97aec4037c0f1639bdb32b2093e2321780b24" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/apps/SafetyRegulatoryInfo" revision="03022475e81f7567feecd741c662b0f4e9839131" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Settings" revision="2d3a7dc83d1405c9da221978e057c3ff6f6820d7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/SoundRecorder" revision="c97ca7c4879fbe321a391caf080a00013595465e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/SpareParts" revision="4082d07a21e52794e05c3cc952df07a939e12a54" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/SpeechRecorder" revision="fe2c5049faf428e2c8ea1cdaa089b291d6243e25" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="apps_stk,pdk-fs" name="packages/apps/Stk" revision="9e8b744b4a30df0590de4bf3c441a868fd8622c3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/apps/StorageManager" revision="fe89a6055ddc9202fa66daee19a4ce54f0aa5503" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/apps/TV" revision="43f53f2901ac8bd901999e5fee4902608950b135" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Tag" revision="64b72dd4fdf4962bb0c3e2c43712fed55aabeda3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/Terminal" revision="7a1a5251f413a2c983d6bfcf47a640f218517ea5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/apps/Test/connectivity" revision="9b69a79229681b8392c1a179bafaea90d71139b8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="generic_fs" name="packages/apps/TvSettings" revision="4ebbbb7627741bb1d5a3aab476ed9588c8ec7a24" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/apps/UnifiedEmail" revision="1549c80d1093258d31113bc42fa7b9fcbcdf01af" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/apps/WallpaperPicker" revision="b2399f39e0b1d51a1e7fbae9c8c86b6086257632" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="packages/experimental" revision="0758504a9db7831312973d8eb0264d2335188210" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/inputmethods/LatinIME" revision="8991eaae3393d93a7e67f26b1da3868052e9e550" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/inputmethods/OpenWnn" revision="c697d0a097faea21c810b579ec4f4e5c5ee0d18d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/providers/ApplicationsProvider" revision="ede8d805ad8d118535e1eef2b602b1d2a0b5edce" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/providers/BlockedNumberProvider" revision="098c2e449d31b7603cbfc3f38f9f4cc1c9c9fa26" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/providers/BookmarkProvider" revision="2279045f3349434b7300e0c90d24d64842a50744" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/CalendarProvider" revision="92879c49cd5a14db2df9fdebc38d78a71d4cdfd9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/providers/CallLogProvider" revision="0679531caea185ff1680aedbd71c54a39f9122a4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/ContactsProvider" revision="ff980ac8a791d57ce10831be87c79b041d849ecb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/DownloadProvider" revision="c7e7613e92f72ee195d6ccab9e24fe4c80c29cff" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/MediaProvider" revision="ed9040461f13d286362ac606078dced110d24afc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/providers/PartnerBookmarksProvider" revision="251ad4f857241279154b4581b513a0bbf90508d8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/TelephonyProvider" revision="00e6fdc98f8286429812036cad4fe668db53f80c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/providers/TvProvider" revision="c582bb933deef5d140a23089afc54738e56df14c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/UserDictionaryProvider" revision="377beab0771d5b8448913e24524bd4b4dae03302" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/screensavers/Basic" revision="18ce96a2a26edf54379a11818c5486986067b129" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/screensavers/PhotoTable" revision="0e0f48cc4e5ca81e291d58139ef2670cb7fc71b5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/screensavers/WebView" revision="5ec2cc8c59257e177ceefa7b62c221086bf7311a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="adp8064,pdk-cw-fs,pdk-fs" name="packages/services/Car" revision="f574eb9bf4f75781256b32b7eb42209571e0d813" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/services/Mms" revision="d1e1303b9ea6ff32d29519ea7b0e1661ffbe6b4b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/services/Telecomm" revision="6d7bb8a32b40463dabfe262a5c5b5d8a65262e8f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="packages/services/Telephony" revision="7736e25e73c9dff0e058d76637cab50c4f9e527d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="packages/wallpapers/LivePicker" revision="60173bcd9e8ff7adfe40933d2682cfa7b9fa4bf6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="pdk" revision="da05dd5c37d03857944c9e7d0ccac1a59e34b9a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="platform_testing" revision="ed6b5cfc23fa4ed731e9949a9374b73d7ecb5a8a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="prebuilts/android-emulator" revision="ee1e9943116af4546c3bfa276339bfb98245cf25" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,pdk" name="prebuilts/clang/darwin-x86/host/3.6" revision="591aa247dec84b784b69f14fa73eea7fbcf71d5c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,pdk" name="prebuilts/clang/host/darwin-x86" revision="8d9729e07ce9ac66fde396bba932f73aa3c7dbe5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="prebuilts/clang/host/linux-x86" revision="0ab58af49242d553688c7dc20adc9374d3eecb9a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,pdk" name="prebuilts/clang/linux-x86/host/3.6" revision="f1497f800cf2b2153fe888b62c3d59b5b1ed622e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="prebuilts/deqp" revision="66bceb2b796f037ebbc99e80eef8d558c2a79897" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="prebuilts/devtools" revision="77e7d5777c97370f564ba70c69c64d84131c2f61" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="prebuilts/eclipse" revision="f764217ef35d223919c826f05c0e37dc18674465" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="arm,darwin,pdk" name="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" revision="f9e50de0c8b812bd2a33a5cdfe2cd35fe53cbb20" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="arm,darwin,pdk" name="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" revision="5851cbdf8c01e9cae8a780b65623b769282d036c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="arm,darwin,pdk" name="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" revision="bcdd724b4a987999c9c75f6819ff8436a7ce3d5d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,pdk" name="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" revision="0a28ae72f0f04dbc56a53bef1f3c03a67206059d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,mips,pdk" name="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" revision="b4734ddefb3375b45cd679eb2a69b6f33cef57f1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,pdk,x86" name="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" revision="9c57fc38e8a942ebf963abe09ae4eeda46d62998" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="arm,linux,pdk,trusty" name="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="45d749abde498529ffed2946b056b43ce66f710c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="prebuilts/gcc/linux-x86/aarch64/cit-aarch64-linux-android-4.9" revision="2d99b7629012aea7e40f864a63b14a98a0b94480" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="arm,linux,pdk,trusty" name="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" revision="738df4deff1db5e86db1870678cafac4a96266ed" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="arm,linux,pdk,trusty" name="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="69876234e4873133cfaae65eb21e1e53816a2344" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="prebuilts/gcc/linux-x86/arm/cit-arm-eabi-4.8" revision="cace0d536978ffbeb93b20bb472bf047cccaf086" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="prebuilts/gcc/linux-x86/arm/cit-arm-linux-androideabi-4.8" revision="3ea37c76263017115ba568cbc3e8c97b053ec7e1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="prebuilts/gcc/linux-x86/arm/gcc-arm-none-eabi-4_7-2012q4" revision="5ec59a202c7b5e19ac1107f1ca8977a02296d99f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="prebuilts/gcc/linux-x86/arm/gcc-arm-none-eabi-4_8-2014q3" revision="2f17f153062c39bf82ca06c60c74dd8a60d5e969" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,pdk" name="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" revision="c2fc4917b4e6f5dd7c17d4152a85871ac44eba3e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,pdk" name="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" revision="034e4716c8276c38224778971a678bd267e73a1f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-fs" name="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" revision="a8b7b3766fe24e47ac2888ce933adb5a22f44005" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,mips,pdk" name="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" revision="87a5571535847a2e5e9b6addeb1bfe613d608f53" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,pdk,x86" name="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" revision="229add4a2a0dd1f3897e1ccbd37b1a26fc2f8f7d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin" name="prebuilts/gdb/darwin-x86" revision="11c80af3c92fe3a9170893aa6c3a614416dbf0b1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux" name="prebuilts/gdb/linux-x86" revision="bcea53d6f6713017ec1fdef865465999eae7d788" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,tradefed" name="prebuilts/go/darwin-x86" revision="40bd063d21f0845a08dcde35be67a7a5e3a92a12" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,tradefed" name="prebuilts/go/linux-x86" revision="54dc002970f50c8d592b062aa645c0917ee534cc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="prebuilts/gradle-plugin" revision="a824f3a90e5acd87f566ba209c66732379acb649" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="prebuilts/libs/libedit" revision="a9710e8ce1b64d890c9801e67e49a62e583d5827" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="prebuilts/maven_repo/android" revision="f821e5891a4dd95a3d61747546b35e988faabb83" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="prebuilts/misc" revision="c39a8bcd35df63f43611bfbbb09fa34cee4fe4de" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="prebuilts/ndk" revision="8a130af7f9150bc8b66f9608085082c07e5616c7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,pdk,tradefed" name="prebuilts/ninja/darwin-x86" revision="861756e4cd6e4520adf68606af39f91a06093642" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,pdk,tradefed" name="prebuilts/ninja/linux-x86" revision="b2347d17f5a0b7b3bc1faaf3787aaa62c0b0a28f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="darwin,pdk,pdk-cw-fs,pdk-fs" name="prebuilts/python/darwin-x86/2.7.5" revision="70aa004a9ac476d46467b123d899385ddd7a02e3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="linux,pdk,pdk-cw-fs,pdk-fs" name="prebuilts/python/linux-x86/2.7.5" revision="ceb0b2de6df431e05063101b5c11be5042d6f314" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="prebuilts/qemu-kernel" revision="fb45744fb3c46a4a1de77424dd2c50f33f6939f1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="prebuilts/sdk" revision="b883ea73053ea0cd998562f82cc32665ed04c445" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,tools" name="prebuilts/tools" revision="8d9b18036bc75db8068e120916c237e4e4f58b4f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="sdk" revision="842f09ca1d3946c59528e28ea9a29d29aa0054a3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/bt" revision="c14c20b52620ffcf6756b997cc535bb9d6d1182f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/ca-certificates" revision="09006b08d908ec786f5cf882680a09c7d402bb52" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/connectivity/apmanager" revision="8f6e9b91da6e63697e725f993a45757d9f74be7e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/connectivity/dhcp_client" revision="272b49e2e7f93f1ba7e71dfc7b7e437295ec9e26" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/connectivity/shill" revision="77cec69234c076f1e8fc9e77734f91874597c634" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/core" revision="691b2d57c4c9fc97188b525dab0002afc33b02ac" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/extras" revision="ff728d1521cdb8e35cbe9fb08fbbd454423057f8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/firewalld" revision="5ce906dc3e6b2932e855c6b7420e5d39be891ce2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,trusty" name="system/gatekeeper" revision="eaa34763877c9a3323c11167f8dd76c7540d2483" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk,trusty" name="system/keymaster" revision="7ca0d9ac700ecb79df92ebcf9a5a71cfd4c85def" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/media" revision="99438ed64afa13efa806fa93e27ed90516e5c5b4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/nativepower" revision="88be328aeaa3af20260834551861bfca1157bed5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/netd" revision="ebbe18ba1320f6f9f23c72bccf6ee07de0bc3221" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/nvram" revision="1a57a8fd438cc1d2f458e0958ab0809fcb8149a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/security" revision="f72185f820dc3ebe7ed8cff3a17cc67caac7270f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/sepolicy" revision="1948e0dabe3864f2e2ef461695d7fd0870f2a458" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="system/tools/aidl" revision="54d31f112b75b853fe528b2e49aa4b7761050b65" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/tpm" revision="3dbf9f4099b940532ef934c1156b513f1af52383" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/update_engine" revision="e7766c42a65be52f45e5774db587f6a430525d42" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/vold" revision="59d56a41f57b6d60d13ae0b5d2b99c0ef72b6b05" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/weaved" revision="cbb6e466430b6957fd2d0b78003732382093bc0c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/webservd" revision="62ff2189d4ead04f7546f5097b9f4f124897a10a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="toolchain/binutils" revision="bcd37f4f2b4511ef7949449c8966170a27bfac3d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="tools" name="tools/external/fat32lib" revision="891d2967c4adbb22fc54f89c3be3f24979dd5aa6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="tools" name="tools/external/gradle" revision="8bed5f42a2d821041fc8b0a33d424a7c9bb4581d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="tools/test/connectivity" revision="bc1b66de340c0b6402714b84600124fd813ab63f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/ausshine" revision="5c1891f515b38b2e702d12a81e877bd938a17c54" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/config" revision="720bc1e3b3eee537d9334061a65944399c5cc6c1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_app" revision="4108647baf583b2ca63e74e4c7c2c6399118dd76" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/App2Lock" revision="111a17070c719aebaf3f0a4c4f645ba300e8202d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/AppIntercept" revision="f3a2b654841964abd7b62f0b8219c671bf561e96" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/BackupRestore" revision="551db0b9f4673b39e948a85de3b32c335a51d79b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/Calendar_IUV" revision="998d0da3f1c451cc7545e1f22847375879ca50e0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/Clock_IUV" revision="1374387822f524dfa28a0d0d534238be7b1d045f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/FileManager" revision="605d42988d93e050efcd5ed137ff48d3281c670c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/Fota_IUV" revision="f05b0429ca0e87a1663408bac4dd1f90670cb4c0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/Gallery_IUV" revision="1fb243b816c67c84ae74e1562771f6d6c1bcdef2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/GomeAccountService" revision="f540350d9761a85e7d7db05a344194f07c7e1676" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/GomeCloud" revision="a32fbd42aab2cd6ce2dc3ccc16189e9d6c696bb8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/GomeThemeBravery" revision="f229083a0eb9bb6e481d16d44c2aecae9edca6d7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/GomeThemeDefault" revision="f032add23e9749b549caa399b1f3aaa1fad11b36" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/GomeThemeElegence" revision="24bcf1716b7324bcb70a723bcf96f07c1f53f078" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/GomeThemeFrankness" revision="125301156449d301b71d4fbff4210e0739752f81" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/Recorder_IUV" revision="cf3ddc8e31e17ac6fc2711021b5cb28e5d4de106" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/SalesTracterClient_IUV" revision="98a18b336e9b4b2072d1269b4ffded40dc946b5f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/SecurityManager_IUV" revision="7727d71ef6fe2b5c2e268e1a96ae6e325c063c2f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/ThemeChooser" revision="e73a55fe2ca09dc1e0bf9fd7cb58bcf8c7ad6aba" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/ThemeManagerService" revision="05b4c0ea262719aff95f770c7c1bc6e10ca7a815" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/ThemesProvider" revision="e39c69b282c615ddc7e45e25785e96347a3c3d32" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/UserCenter_IUV" revision="4f3ecf11ab68eb43d2a52ad768ace6b57eb08125" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/gome_src/Video_IUV" revision="b9be6775380a961ad4d238887e95e08867d0c1be" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/customer/third_app" revision="895cb39ffe9b44ce4d490d70c1dd2b16abcb6de2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/dolby" revision="d4b80481b70495497219f57cd283d00fe09b0c50" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/libs" revision="09aae53e7dbe13ed28ce4b9cfb228be6ed3d49f5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/bootable/bootloader/lk" revision="1165961dc3cb6f4ccfd5bff676c516d7e54c5081" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/bootable/bootloader/lk2" revision="1068fa87154b288b754f31f656b7df82c998887f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/bootable/bootloader/preloader" revision="61fe7864740c64d0505305faa5d075b76ffdaf46" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/bootable/recovery/applysig" revision="6575015c5c5aa892a98313d920bc240e5729ab28" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/bootable/recovery/auth" revision="839c3e3d7ae86041615d7abbc9c0b3b68a588065" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/bootable/recovery/sec" revision="7e1f1815c4c85d3eb7491c680e8e548e571fb100" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/bootable/recovery/utils" revision="e75f4a0174d9447909f7b7a513d343a1805d8846" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/buildinfo" revision="30a7e26ec318537d4a44558fb76988fbbdce5588" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/cgen" revision="3deafb8e5e0c171fc2df1f56ead67b53a7247aa4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/custom" revision="ce2505e559445fd805fbd1f7f5b871b967f5b76a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/AudioCompensationFilter" revision="217f1b4b874674c785090ca21ec82704c2db517a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/AudioComponentEngine" revision="2493b30f583e97b63f01d27badbc55ff8356df5e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/AudioDCRemoval" revision="aa17c34a6062e29426bc0b088af777bdcfdb676a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/AudioParamParser" revision="5d0b2a29d58b89eb3d9493f3984f27a756f77cb7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/AudioSetParam" revision="946708bbe64e3227001ef6c224c4db81debc1ca7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/AudioSpeechEnhancement" revision="085c7062b1bb1775b81bd596e2a7135eda9526a2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/AudioTimeStretch" revision="2ea2084ec8f903b74d5a35fd0ed76abbec4b6136" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/EccList" revision="82dd3b58b511677a5aea7c001a3de4978d038a48" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/LaunchPPPoe" revision="ab0324240bca2087f6f9ecd40fe6175bab69322c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/SRS_AudioEffect" revision="236a0618a47be2fb7dc8295cd0fa9b00f64fdbc8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/VideoSpeedEffect" revision="462040007aba1605bd46ae8f54bf884fb353c4ec" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/adpcmdec" revision="f28fb63ff023e1218fd6cd63fc3bfda8fabe0791" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/adpcmenc" revision="e4de8036571faec726186b640361c7961ac82e68" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/aee" revision="11942e0538de7d83535ab546e7a1d416832fca1c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/amr" revision="321068e6d082fb52bb00fea34d36b5f413e328aa" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/ant-wireless" revision="843c9928e7d995c53b8fe6e7cb8b0004484d07d3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/apedec" revision="92fc3d99d82feadd827ac4d304f0577dc0f9e16a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/atvctrlservice" revision="59dd570ee8ecf2cbd8a85e1ab90860ad1fb00766" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/audioATCmdHandlerServer" revision="e28480e76eb90bbc1a5782ad6458ad6fa37a5f13" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/audiocommand" revision="7ead3300bf6a0b823eb446f09ebe3d8beb88145f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/audiocustparam" revision="1c0cdfd0b73fd877865d4db0340e85fe15583298" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/audiodcremoveflt" revision="4467d2c214102b0c3ed15950151e217c67c0e193" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/audioregsetting" revision="f3a73e94afc4dc6b976728e5a644379f5237a467" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/audiosetting" revision="93629ba049509442045fd05e961cbaedc0594e78" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/aurisys" revision="c5c5324728e20f9bf396fd2e54d817564f237fb6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/autokd" revision="80938e16f2cd2e37da8cdb29bcfb578c82a4eabe" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/awb" revision="22b387161f59513c2dc27b3a678de4675edbd030" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/bessound_HD" revision="0bad982c4121ffec8277c1f6bb9d5763d04ce532" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/bessurround_mtk" revision="a56ed746e8ef0aa144b71dcddd233ef05de0dd9d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/blisrc" revision="84298a638dbf41d6853bf2dca112d4c6805ec9bc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/boot_logo_updater" revision="ab4297c3c3ff3e35325f465cf4da1b093abbdc4c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/charger" revision="a99de26b1274d5487e19851104e529dcd94b5b78" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/cvsd_plc_codec" revision="3aecef8c85698444ec613f8b4c378b2f851e6334" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/dm_agent_binder" revision="c30c688d1128bffa22baa421e2dc1e67ee79b174" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/dmlog" revision="6f2f42ae975000c2583482c344823ed412b680ab" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/ext_md_daemon" revision="64ace59a52970ed98e834ba0d960b6d4b3fe0c94" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/fft" revision="199017d2d7959de456e59af8fae475e4bf15ec95" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/flacdec" revision="ea353b04f2059e18f7504e5d37f9fe6399c51689" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/fuelgauged" revision="9acac0c96d8d91a9173112845e6a97c51a4d718c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/icusbd" revision="b5153b3ba260ab865d87cb343c624391e466498e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/invensense" revision="714921293c15cd9a29f9e126cfaf645fc08650bb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/ipo_swap" revision="99d4a3ac96fa0fc89fb0381582dc74ce272e0db8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/ipod" revision="23c68b6472132f363c13876897997daa9f46864b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/kisd" revision="bcfec37073c14e84a6b3a0b36ec93a813d5dc4b1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/lcdc_screen_cap" revision="fcb9bfdd3afc0cd9412703a041d1953ddc935015" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libhotknot_device" revision="c3fa41f315cfcdeb0610e80af092adb294b6153d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libifaddrs" revision="35077c7d1df62d83280862f1f4c3d040233c02ae" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libion_mtk" revision="3bd7b116267f3e32370261a1653db163ca997cc8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libipod" revision="f0a69d61a607cbe6afef4c07e1d4b6620c741a8a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libipsec_ims" revision="0f72c114579ec711434a20e527c359a7c851528b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libsched" revision="f87ec2a5fb74068a472eeaa4275d62f048f4615d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libshowlogo" revision="4889ea92d675c2218ced559930600b01a25e155b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libstorage_otp" revision="4492d1c9b20f3f732842d67fa37097b9c48102fb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libsysenv" revision="79d3d41e351f967feefac1a506bdf773b65bb3a2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/libusb" revision="6daad12fcd0251cca95ad45e9db9fd08fe269e2e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/limiter" revision="78923c38b2077a061a58e9d1bb208f1a91ed90e4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/lzo" revision="f1622fbc76ce0b50c41afa58605e8ef2238cb9d0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/matv" revision="82d9cdb703e19717edaf53dd65e8309a0b2d7b21" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/maxim" revision="6b925c4cfd1a20f1314b92354d226ebb2fc11f22" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/md_ctrl" revision="a58339f61688b57fd60f7524bbb10e55c7c822b9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/midiSeektable" revision="af8d81a2bf3b2289cd3ab204f484ba58a97489a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mkimage" revision="6e15761ddc9983bf8928c6458dfb7b88a042ad89" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mmc_ffu" revision="877c7bbda45142f452959a208d26896f0bec3953" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mp3dec" revision="e6e8a0c1b509af6405ad235c47823ad382191f01" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mpe" revision="79e58ae114ff657cdb1083e48d6b3758745167e2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mpud6050" revision="79259d35904d89f897c2dab3382b52f2cc594902" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/msbc_codec" revision="b2a2e7403ba69238eb96255cdb0c0c877f4e6f2b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mtd-utils" revision="7b5731dccf070cd551dadc93813dc162d88bf9ad" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mtknfc" revision="424a25b924363487132d4868a82a86fff3b2fbc8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mu3d" revision="080830d7a2d4e6d58e92a8eb33fc8aa598358776" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mu3h" revision="317ce796d6e32ec698173a1c7a2d730be94b60e0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/mvg_app" revision="b5df8fec8736c29c5e54da962e833f73d4effa96" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/nvram" revision="d73d436399ee2a4a9b7b2e84d604347e1f3b38e7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/nxp" revision="de58a8d03f5962ae6d47fccdedd02d866055afbd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/opencl_icd_loader" revision="9876b693c247d5bc0c3d9da3878ea9f762903cca" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/otp" revision="5bfdb844dcdd9e061e9a811b3b9615538fac26a5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/permission_check" revision="7d830850a37491c6f29a6254fd6504e1c39c20d3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/pppd_btdun" revision="ba6fb4f2310cc5e3da0eab6d2acccf3ebe091c6e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/pppoe" revision="f5d4f0598d8f46522026832283e62ed810f0e9a5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/radvd" revision="7cf5f4bb7d4e5eeb1cfb569dee01bbae7a2cf448" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/resize_ext4" revision="06f6b76fb9179e6737354fea8c74be9bcea0d170" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/shifter" revision="fd884d2bb395e5c7721c35cef7aa41355a271a71" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/simservs" revision="6a283f85d5cab8b159bd762a9e59cf67fe7f87a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/sip" revision="2ff5ae6c7c7fb7877c49e000d70c49624376cb0e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/sn" revision="c282cf12ba628f377e95464393fc4a615468cf9a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/strongswan" revision="563d198cb338c91298870672759f7dbaf5801350" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/superumount" revision="dd0c1f0851ad29d27565ed9d1c8e05810dd343ad" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/thermal" revision="b997198c16619903e301718b1971c00efb3740c7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/thermal_managerlib" revision="03b35095a0fccda7da86f372dac7adeb14af3efd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/thermalalgolib" revision="5aa18bc69f92a37fe5652e04cd922798c2faab68" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/tiny_util" revision="a234aa49f27ea8344028cd7beba15df7dc69ecc7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/trustzone/mtee" revision="31278c785c57f82b3e9c251928f38c160797bfae" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/udf" revision="23af49739b1cc3721ad4e5c4ddfcd6188c102884" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/voiceui" revision="4d2e1bfb93e90d0709e87e5ddd82e7db16c69582" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/voiceunlock" revision="3fdcef4bb4d6ce05c2ce70cc600c76961682dcac" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/vorbisenc" revision="1969f83ef80f9f9c6be526aa932035a2d3152972" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/wide-dhcpv6" revision="d4ba128a8cb6b794ddea0efcf322347e59bc5102" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/wifi2agps" revision="a39deea05a5ff9aafa1b8e8a908f28d05c16b80b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/wma" revision="48290ea10c945691318a2091d2a4e2db1308cba8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/external/xcap" revision="4e3785123cfe1910a111b7abeae00e8209003d42" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/factory" revision="c789b1a5f1a6841f836d4cc73d86a0876bff4ff2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/av/drm" revision="2b1937c49133dc642878c7ef2722f58485579975" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/av/media/BnMtkCodec" revision="5aa7203b77661b20d062de4021ad35e44d6c7e14" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/av/media/MtkCodecService" revision="0a81184787adc3427ca2d10cb0496b2910e3dddd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/av/media/libs" revision="6a9efc150d7edb62a507594ef28866667588a721" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/av/media/matv" revision="2ef6e279dfe947e8c4bfff9351ed1cb27cb29861" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/av/memorydumper" revision="19345c24cdad2514594ae20f9fa68b0e17b655c7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/av/services/mmsdk" revision="6f50fec4e8ae0abe189acbda2c5606e85a88e4e6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/base" revision="a37010e0c864647c58c86bec25b78553a8e55ff5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/common" revision="796239693696f65f02e6f48bfc89af91e996d198" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/native/include" revision="606fcc0113673b117a859c14c4d472055ada1918" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/native/libs/sensorhub" revision="e9ba75f4112a9753b4e258847f75c68819c784da" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/native/services/sensorhubservice" revision="8d7456a534fa1f44aba2b7ff62c856be6a43fcd0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/native/services/surfaceflinger" revision="67434a363f7528f4116ba29f19207dfd17c345ae" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/GeoCoding" revision="b85abacf565f575eed8ec43a87c3e1e28aefa846" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/ProgramBinaryServer" revision="2e166be16b52167a3515fc140b0983123b7c4111" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/atbinlibs" revision="284729333f72ad8504b2e80c9075c1f0093cb471" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/atcid" revision="3c0d009871141c0c55f41a658e9d73f3ca64b680" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/batterywarning" revision="57bdf5458a5e48983149d5c9051df09af7032ee2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/brctrler" revision="bb4930533137580c1f0f08c96b40f0c2855d812c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/carrierexpress" revision="854a77866dd78339679effb387c7d6a238717002" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/compatibility-check" revision="07cfad20aef1f5459c16cd7990ba16039c436955" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/consumerir" revision="f6042dd94579643f29d23e70496ba9273d96d399" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/crossmount" revision="c2888414121e14faedac66604e26cd067321eb6d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/downloader" revision="fa14829bf50dd64d3bf6fd9b5d4ef2afc8071bf5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/epos_lib" revision="53c25d4feaae1f9a9423245a312c5dc4aa3c9063" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/jpe_lib" revision="9327fa27ead1f759c7a5710e1ce736670b0cad11" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/magelib" revision="da966c5201f5d92cced4c48e3e55cf75988aa415" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/plugin" revision="9cf55233878fe07fe94f4750cb443b6bd5f426b2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/ppl_agent" revision="b6a7bbd1c1e3a40da0fd5458a9f322cf9b02d7fb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/simmelock" revision="fbaee871391f9c30cc2a4fecd02bfa6f1ffeb200" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/tedongle" revision="3f626ff090eba0723dcaf771a9ca63493691d8db" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/telephony" revision="1a6382cb39b7e5ac7d6b3f0a2a55bf619c833fee" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/vtmal" revision="6b56d68bf56aa41ca6e3787b98a0c6b29cb96386" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/frameworks/opt/wbxml" revision="1be3ccd3a26a23db6718c0b57cc69a8e358d2165" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/Trace" revision="5ed9acff074e104086bb8bd5b92761c74fe7bfa5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/aal" revision="698ee8ca8c001d2a7dc2aa08d6fba9af7b76d21d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/audio" revision="84495d0b91e0063b7a0a794497a4d316127548c6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/audio_remote_submix" revision="31f89998480e5d490af9e49abfe43c273c4cf0f0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/bwc" revision="2c19c87d1a6cb3c1af8bf77385431fbc1e246abb" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/ccci" revision="c4fb09db810b0fc09b3736fdb4d1145ebaa1ec63" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/ANT" revision="166e7a0a74613d3449555cb9ef45b4d4cfab1d09" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/bluetooth" revision="94f2d35ee2f57b429db692654e40952d88070e0f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/combo_tool" revision="e6875b84816b861792af7e01e92a95b22029aa18" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/documentation" revision="3b4f3ec37044d1aa9ba325d55de20e76aa32a5c9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/flp" revision="7160f72d627314cd34e7614b898b2a43d27d02f2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/flp_ext" revision="28043093b688c1b70e88cce5ac47f11d3dba30c8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/fmradio" revision="58f142cb9e46b055705c840230c4dc83c157dcdc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/fmradio_ext" revision="657d2500712a221c2cc095b059dce853ccc1fd4d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/gps" revision="77e20bf15f647e81b75a4e2b8fc58dc27a6ed0a1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/wapi" revision="2d035b7fc4632b4de6850f79aa97fdbfd7d51c2a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/connectivity/wlan" revision="6e3d108a8112884edce14c33e92bdc7ef0004394" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/consumerir" revision="84962d9908d3d8e1ab1c8fb487dc215b69654eed" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/dongle-ril" revision="9cb1146cec66901b36f2a41e4907b914393bcbe8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/drvb_lib" revision="c3c6ba12ba52821aceb7cbba02abedb42fcb3a29" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/fbconfig_tool" revision="a03cc76c0d71f5f0e997d75cc7a13e39b3315197" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/fingerprint" revision="8bc4e8f4887d53144414e78c4abcd927b2d97596" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/fstab" revision="5a08c4abf2afef19a4f5b540eb8ce601ca5c1e91" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/gpu_img" revision="c79818bd58a8ea6d6ee7d63afbfb02fe716b2853" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/gpu_mali_lib" revision="fdabc64833907a56628e2c9a7c5f580e4d2ff7ba" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/gpu_mtk" revision="cb13ae32f24c99feb4b26d2531e0cf1fa3276eb9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/gralloc_extra" revision="ba46bacd286005ca70694b705b3f1e580324a816" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/gsm0710muxd" revision="398b59b0f7c835ec9a31833ea8dfdf530f701ccd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/hwcomposer" revision="138f229fee93837a3e954d422306572b66fff86f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/keymaster" revision="52b9620d54e683d94980d024f15d81bc8729e6f6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/libcamera_ext" revision="8f1e0f40b343148a29e292b23d1d06eb9b220073" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/libgem" revision="127154cdcd5b2221fec8d892f17c709957136420" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/liblights" revision="56c1f3f2264da0d577ff9dc69bf8cf1c5b8b2671" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/m4u" revision="c002d16d0709df1b35fc93584e0aa245938e3f6a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/memtrack" revision="c1cafcde8bc8f72d6a9f6b2a8ca69ba5529f8233" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/meta" revision="8488c39950597159acbb1bd0929c24c0074cc42f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/miravision" revision="1e351fac1bf27732f32f39e244a539a17870e68e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/mjc" revision="21517bcd6e47d947ad92e548a70c7b20267e1a5e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/mmsdk" revision="ab7bafb591f17554484213b85d09857760c4e46b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/mmutils" revision="00b53abc9fa6b36789cbd16de4a970db0996b952" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/mtkcam" revision="e46769aead8bbcd3cd2749df5e477c2e3bb72e78" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/omx" revision="57ad96e597a932b556ce571030b7f23380bdd400" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/perfservice" revision="d9ba78ab719a939e6bfbe9434df300b4505300de" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/power" revision="2db0f287f90e846d57045969926d41cb83cc61db" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/pq" revision="c6a3c844c3c47638817930267c149d54d87a52c7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/ril" revision="431d8a0fed9da87bdd2cc9b6205901792f00635f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/rrc" revision="cc3c2cccaf2018b26c5a84741a25b1351df26a02" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/seclib" revision="7b142e19d3d02df1b9c22613e932bb2bde7e74d3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/sensor" revision="adcda998bc9728fd746ff8ffb3e352ea446a0d60" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/sensor_bio" revision="6964267043a3ccd0c86a6c2c9a606b6c222aa5d4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/sensorhub" revision="a5f6cdf0188b8a885ad7e36beba9b4162c2704df" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/smartpa" revision="41631625ad0092560cf8b5ee84f1d44f45bd1bac" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/soundtrigger" revision="d6430975c8231fa9ad29cc58f6df3fd52c68e1f0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/spm" revision="1dffeab240bf10902958dea1d2fec4f31b3f31f4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/terservice" revision="c6ba58c881668f6066cb536362cc7b87a522aea3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/thermal" revision="37e82068e8e890abb0e8af4e6cd426c43fefee58" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/usbaudio" revision="b529721f3d5ca45c5348e4ea7fa558aade4e97c1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/vcodec" revision="0c1061b68287b968904a3d58329758df95d9e378" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/hardware/vpu" revision="3a0ec75017f5ab89c446b90778f06e43f133098a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/modem" revision="0e346db22cc75e9f79ea0c6442a47e90515fdd7b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP01" revision="0cbc01756e906748897bcbed1f3df0e2b242fb07" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP02" revision="de824508b276ac9a2352cfb07d4e0b31cdb725cd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP03" revision="c7d71851c6499f796e8c6bb130aceb5180a5d4c6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP05" revision="e88ec29ee32e7e87e24664d3283fd01b81fc0871" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP06" revision="1add6c74ea8c99312be85f16981cbe6b43fe1160" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP07" revision="a4bdf94b2b9be4cb016bb5dcdfbdfcbd705fceb8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP08" revision="ccfb2fdae00142fbd16a0557d864666e05c22cda" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP09" revision="53ee5cc4d39f2412aec623f9801af4ad22fe2409" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP1001" revision="55538afdd50c2dcdf6074e6a7bd1e1e68df73c19" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP105" revision="6bbbc9131909ccd21a5cb994cc31496d7113d55a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP11" revision="25908500f6b3c55e71a0cf725a808587ab6dddc2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP112" revision="376b836c1246d9a7f76c72c9d4cb03ffc9381e56" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP113" revision="756e4a01e2901bb083946af2250f250bf6e8fed0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP12" revision="1944af2c9f073c5f0f32e775e4b2ed805e4c422a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP120" revision="36c995bc6b582691b6833ab55bb04d06ebf1f8ca" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP126" revision="0588037ebd3813bd3bab5ecf944c6ce5a5a78d6d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP127" revision="50ae915fc1bf0b1da9b24880b06634b2e5e6d9db" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP15" revision="8c27837b4d658281d5a0a2c8bf0a3a6b1675f0e7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP16" revision="00a0d6b381a04d738902d19f5fb8df443e74f490" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP17" revision="b28136e20c4100a496c676308f390d6a90b785b4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP18" revision="88c1787abdb4431aabac7336f79cdbabb5d2b0b3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/OP19" revision="550471e66070a118f7138f7a21fc3d4d520e17f5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/operator/common" revision="6c67528fbd9da8ed7efbfec820fefabce5466f5e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/ANT" revision="8440ad7c732fe6fd1038f8fe2b03b898ea0ac076" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/DangerDash" revision="d95a23b2559efc7bfad8cbf4943839b1f9e02917" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/FingerPrintTest" revision="291782e92490ee5035408df3c377f5399b91ac1e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/FpFactoryM_TEE" revision="fb6ac88dd0c5b24e4200367097eeb4d25d3a8d9c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/IR_UEI_APP" revision="d95a23b2559efc7bfad8cbf4943839b1f9e02917" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/LBS" revision="8eb818cb51814d752b35ae1547adabb3fcb80647" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/PGA_50_Free_Games" revision="714fe8040e9171ded489abc147e9f4b28956c02e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/3rd-party/RunIn" revision="78ff702c5ecec92e8ced069864579eeff2431e35" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apicheck" revision="bb4b58eb2e1c1337eab10472b823f4483518cfcd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/AlwaysOnDisplay" revision="f657130840ac0a1dcebcb8fd60bf8351fefefaea" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/AutoDialer" revision="591c667aeac115a78ec56e20cc180249a44fe5c4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/BLEManager" revision="4700c7a2b81b404d214518744ec1a1caee46e4a9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/BSPTelephonyDevTool" revision="f109193ba4a85c35e7ee746b5a2ae77f685fcc15" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/BackupRestore" revision="9c5db96eea2188d8768b742d1cbc954dbbdcb092" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/BatteryWarning" revision="d1f5b4127f625fc124a80316c0a15d7f7282a5a8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/BluetoothLe" revision="0a80f5b504b56b5ff3b1fcc8172dce0a215fb6c9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Browser" revision="00743119f5a88aca871b12618d5783978adf2dc6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/BtTool" revision="9ef6c47cf325d1fd0ae3dc6c9b86d27077e726e8" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/CMASReceiver" revision="f380102bf16b43800c78de8cc871f7778bb367aa" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Calendar" revision="bdebe277acbc50fb6b3c0fcda3970f3ef2ab8a26" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/CalendarImporter" revision="101127cf63d4e51f76623a1c195f80f45aad58b3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Camera" revision="89e339b2fb8771bb653318e1319f109e4faaf93f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/CdsInfo" revision="3788c12709a76b80eb39750b2f2cf5b22cc875a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/CmasEM" revision="d636a5dae3fbc5b7720f81db2c6ce97b45d26737" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/ConfigureCheck" revision="6f8a24967b29f4d22f3c46b8bebe98106c251088" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/ConsumerIr" revision="f92f0b6ad5795c2184a6936137d1614a04fd076d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/CtaTest" revision="64f811b11028b10ca46ce65378753761bffaf5bd" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/DataProtection" revision="01ee54d8a5f2bef4dafcbff4f35e6b285dec05a2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/DeviceRegister" revision="6dac0ac909d2211263723bb9d462caeb34d27113" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/DeviceTestApp" revision="cf2c87728918cb6a422b7310290059a439c30f47" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Dongle" revision="400fc4dc6317e60a7750372e825b7224764bb82b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/EngineerMode" revision="564d8cb58bd098b130dd45f1a4ab5434099aac8b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/EsnTrack" revision="0fef552119bf23b98600e77583b3e60b3c8e6047" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Exchange" revision="63f63dfd1e201c2524ce08194732d5b5d1943f26" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/FMRadio" revision="0ddad73a64b4685a93f668db756f6b3c1db45589" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/FMRadio_Ext" revision="56c332d2f263375530b2b9e3f98bf5a1b8c5b0fc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/FMTransmitter" revision="28fa8e6ce663899c4339d1796ae61b6933b776b3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/FTPreCheck" revision="e93f11264bbf4d667b3bababc0bb171343c62f5e" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/FactoryMode" revision="04b43de0cd8f9843590e89923a86502b09ea85d9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/FileManager" revision="ea078e9a78cd1abdafcb5b799314766f5901abb2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/FlpEM2" revision="aedcff5e9ee94dac71a3b57ae7450006f6487b10" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Gba" revision="03e3d0b86135d9382312c4e919a1fd8db6a1ab9a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/HotKnot" revision="d455a8383f5cd5bdac72f2f66ad79c950492091a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/HotKnotBeam" revision="83f4dc67a0c710f7f3e8503ef903523b23b50106" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/HotKnotCommonUI" revision="2fd266fc2d3b8e3cbeb7654a18e2e720868d22df" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/HotKnotConnectivity" revision="de18427961f825ef7cd51d71b8e3a6045010df88" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/HotKnotVerifier" revision="a0b06af62bfe05db1504aa79ab2a142afece7df3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MTKAndroidSuiteDaemon" revision="8677a0157907e438ab8d119f34b8f76699f4bd44" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MTKSARTestProgram" revision="25e76072fc9adc6d975108eee752eabd3a00751d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MTKThermalManager" revision="f3502f24b5c0621bdb7a60f9abfc76fdc01749c6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MdmConfig" revision="d7c3d9c0976b3ef7a6560b3a02900d000a5ec1a0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MdmlSample" revision="cf780f5081da55d6408a67095d92ddabbdbbb547" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MediatekDM" revision="a0a86989f7a70e6638427e9b8408c113851cac6b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MiraVision" revision="dc67c171c1b273815ccd4f21d30ef6c3591cdb82" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Mms" revision="0971fd2ff18cb6b058ec23c2f74d36deb0e42d20" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/MtkFloatMenu" revision="1e3369ce9daa76cedee94bb63692789a0642e4d5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/NlpService" revision="a9307d9aa139fb276d8f2cfbefeaccf6ea9967cc" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/NvRAM" revision="9dd200e085875a24c38d253fa8865ce098a125ec" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/OfflineK" revision="be4faa7e43591eed3d29b9039fd7272cc2e0cf3c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Omacp" revision="21b05f6d7bd570b8e89af2398fd86fb3ca8dfcd6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/PermissionControl" revision="605e6843b045a07e0f08d13bf82b1892139a86ba" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/PrivacyProtectionLock" revision="e13aa38c13d968092f813e1ef0d41b264323feb4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/QuickSearchBox" revision="207c2cb5246c0b1d67f219799d9510243da5660f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/RCSe" revision="f5f06cf86e0963d0a7816714011dfb02ae6da0f2" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/RegionalPhoneManager" revision="477dbec5ddfca7de12b532dd21296e778d344d06" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/RunningBooster" revision="95e8ae9dd6715e9c6b7955b2d7daa4f0b1f41fe7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/SchedulePowerOnOff" revision="32c12f515d0b88ba665c22accf785fcd90f23796" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/SelfRegister" revision="3f73f214490b73363b2103e7b19af767d493cdb4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/SensorHub" revision="0ebb46dc61b59661c44ac4a5564f6ae3d02da007" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/SimLock" revision="c3c1f1aa1022f1d8d7ffc7fc691ee251e4229d24" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/SmartMotion" revision="33aa5328bb87a65ee41d7f33f0c7845df1aa5b65" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/SmsReg" revision="7df7d78fdcf84f68baf01d690948b64c36727638" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/Stk" revision="3b8192d4cede1cdd8c6ea5c6e3bbcd5073b53be1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/TeledongleDemo" revision="54bea43a43ceb4ed989c9eab40c0aedb78620dd6" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/VendorEmail" revision="51bb68305bf450be422dd9010dca7bde1dfbef45" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/VoiceCommand" revision="51930e275108d1eb8f770d8b71b04ce63ea1f5b0" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/VoiceUnlock" revision="30ca970db72120bde89e17f8a7c51c423f4c458f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/WiFiSDIOTest" revision="6d0852bd3663c207715542549a36a3b29b07aff9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/WiFiTest" revision="c9141c368b5e80d8bace20d5fcda6295c852a12d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/YGPS" revision="c822f3b5fe7475b9df06d50b73446d8cd608d8e1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/apps/agpsInterface" revision="aaf13b3dfbb5aba9e8cb43b735a961c2f027aa5f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/providers/DrmProvider" revision="4dd8628b241a107b0269f608acd250da888f222d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/services/AtciService" revision="fdc8ab3986e237a5a6cfd5ef1ed4e465325a4712" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/services/Entitlement" revision="fa8ee88d3c770165a4b50d3c64b30213b80f75f1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/services/Ims" revision="3fcfa73baca6544b3c6fc9bd9002ec6946a12567" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/packages/services/WifiOffload" revision="710288ec949885bd6d410ecce0c42c3052a937a4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/prebuilts" revision="1f988901376350862f4df2d8e72a6bd9cce205e3" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/scripts" revision="7ccef4af1d31fb7cb45893bb849bcaecbea69c14" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/system/core/multi_init" revision="5a3cf3258857a4bb98e6a67f1b9dfe10ae6a1034" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/system/core/xflash" revision="2ba446588241c3677803de40c891ffc299abe69b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/system/security/keystore_soterutils" revision="342480f681693f4e7724a197fe38caf9d5537de5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/tinysys" revision="73bc4771bec6628cdb6accb81a6e78a49146165d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/trustzone/atf" revision="0dd9203195b6e73a482672e06cd2aa34b0697dc9" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/trustzone/common" revision="f562856e02a33d9661d6bb2e779b76ecdb6e64b4" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/trustzone/custom" revision="f08c5af8d3b25b88daef57b47facc234d620b83a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="vendor/mediatek/proprietary/trustzone/microtrust/source" revision="e8a494178239d8cbf12eadf9b3bfca2955b986ef" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+</manifest>
