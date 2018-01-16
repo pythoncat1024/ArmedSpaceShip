@@ -16,9 +16,6 @@ def diffCommitMsg(oldPath, newlyPath):
         return
     two = zip(oldProjects, newlyProjects)
     for oldP, newlyP in two:
-        # for newlyP in newlyProjects:
-        # oldP = oldProjects
-        # newlyP = newlyProjects
         oldName = oldP.getAttribute("name")
         newName = newlyP.getAttribute("name")
         oldRevision = oldP.getAttribute("revision")
@@ -34,13 +31,8 @@ def diffCommitMsg(oldPath, newlyPath):
             print("#command=", command, "dir=", git_dir)
             # subprocess.Popen.encoding = 'utf-8'
             popen = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
-
-            # popen._stream.
-            # print("------------1---111---")
-
             origin_strs = popen.stdout.read()  # -- > 成为一个 bytes 字符串了
             # print(origin_strs)
-            # print("------------2---222---")
             gitlogArr = origin_strs.splitlines()
             for bs in gitlogArr:
                 # print(bs)  # 这个 s 是一个单行的string !
