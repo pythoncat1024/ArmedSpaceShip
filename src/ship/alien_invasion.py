@@ -2,7 +2,7 @@
 """
 -------------------------------------------------
    File Name：     alien_invasion
-   Description :
+   Description :  武装飞船：游戏入口 ！！！
    Author :       cat
    date：          2018/1/22
 -------------------------------------------------
@@ -11,9 +11,12 @@
 -------------------------------------------------
 """
 
-import sys
-import pygame
 import logging
+import sys
+
+import pygame
+
+from ship.settings import Settings
 
 # 设置log 显示的最低级别
 logging.getLogger().setLevel(logging.DEBUG)
@@ -23,9 +26,10 @@ def run_game():
     # 初始化游戏并创建一个屏幕对象
     pygame.init()
     # width_height = (1200,800)
-    width_height = (800, 400)
     bg_color = (230, 230, 230)
-    screen = pygame.display.set_mode(width_height)
+    ai_settings = Settings()
+
+    screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
 
     # 开始游戏的主循环🐖
@@ -37,7 +41,7 @@ def run_game():
                 sys.exit()
 
         # 每次循环都绘制屏幕
-        screen.fill(bg_color)
+        screen.fill(ai_settings.bg_color)
         # 让最近绘制的屏幕可见
         pygame.display.flip()
 
