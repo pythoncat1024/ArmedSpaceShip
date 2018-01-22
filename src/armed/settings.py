@@ -9,6 +9,7 @@
    Change Activity:
                    2018/1/22:
 -------------------------------------------------
+# (57,48,90) --> dark_night
 """
 
 
@@ -22,4 +23,4 @@ class Settings(object):
         # 屏幕设置 (1200,800)
         self.screen_width = 800
         self.screen_height = 600
-        self.bg_color = (230, 210, 200)
+        self.bg_color = (57, 48, 90)

@@ -12,11 +12,12 @@
 """
 
 import logging
-import sys
 
 import pygame
 
-from ship.settings import Settings
+from armed import game_functions as gf
+from armed.settings import Settings
+from armed.ship import Ship
 
 # 设置log 显示的最低级别
 logging.getLogger().setLevel(logging.DEBUG)
@@ -32,18 +33,15 @@ def run_game():
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
 
+    ship = Ship(screen)
+
     # 开始游戏的主循环🐖
     while True:
         # 监视键盘和鼠标事件
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                logging.info("关闭窗口...")
-                sys.exit()
-
+        gf.check_events(ship)
+        ship.update()
         # 每次循环都绘制屏幕
-        screen.fill(ai_settings.bg_color)
-        # 让最近绘制的屏幕可见
-        pygame.display.flip()
+        gf.update_screen(ai_settings, screen, ship)
 
 
 if __name__ == "__main__":
