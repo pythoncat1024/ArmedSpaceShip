@@ -24,3 +24,6 @@ class Settings(object):
         self.screen_width = 800
         self.screen_height = 600
         self.bg_color = (57, 48, 90)
+
+        # 设置移动速度
+        self.ship_speed = 5.5

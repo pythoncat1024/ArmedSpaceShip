@@ -40,8 +40,9 @@ class Ship(object):
         """在指定位置绘制飞船"""
         self.screen.blit(self.image, self.rect)
 
-    def update(self):
+    def update(self, ai_settings):
         if self.move_right:
-            self.rect.centerx += 1
+            print(self.rect.centerx)
+            self.rect.centerx += ai_settings.ship_speed
         if self.move_left:  # 注意：这里用if 而不是 elif 是为了让 条件1，条件2 机会均等，而不是条件1优先
-            self.rect.centerx -= 1
+            self.rect.centerx -= ai_settings.ship_speed
