@@ -267,7 +267,7 @@ if "__main__" == __name__:
             r'shengfu.huang@gometech.com.cn',
             r'wei.quan@gometech.com.cn'
         ]
-        subject = "测试邮件，请勿回复..." + subject
+        subject = "最后一次：测试邮件..." + subject
     # todo: 准备工作完成，开始发邮件吧
 
     content = send_info(is12e)
