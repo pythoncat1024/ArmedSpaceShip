@@ -1,6 +1,5 @@
-
-
 import os
+
 # str = os.popen("git log").read().strip()
 # release_dir= r'Z:\dailybuild\aus6797_6m_n\GM12E_7.1_mtk6797_dev_171016\2018-01-11-06-36-50_userdebug'
 # # win32wnet.NETRESOURCE()
@@ -13,10 +12,23 @@ import os
 #     print(commitID)
 
 
-st=b"abcd"
+st = b"abcd"
 
-s = str(st,encoding='utf-8')
-print(st,s)
+s = str(st, encoding='utf-8')
+print(st, s)
+
+collectons1 = [1, 2, 3, 4]
+collectons2 = [1, 2, 3, 4]
+
+co3 = zip(collectons1, collectons2)
+#
+# co3[0] = (1, 1)
+# co3[1] = (2, 2)
+# co3[3] = (3, 3)
+for x, y in co3:
+    if x == y:
+        print(x, y)
+print(type(co3))
 """
 >>> for s in strarr: print(s)
 ... 

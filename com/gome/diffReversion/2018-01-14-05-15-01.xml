@@ -534,11 +534,7 @@
   <project name="system/nativepower" revision="88be328aeaa3af20260834551861bfca1157bed5" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project groups="pdk" name="system/netd" revision="ebbe18ba1320f6f9f23c72bccf6ee07de0bc3221" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project name="system/nvram" revision="1a57a8fd438cc1d2f458e0958ab0809fcb8149a7" upstream="GM12E_7.1_mtk6797_dev_171016"/>
-  <project groups="pdk" name="system/security" revision="f72185f820dc3ebe7ed8cff3a17cc67caac7270f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
-  <project groups="pdk" name="system/sepolicy" revision="1948e0dabe3864f2e2ef461695d7fd0870f2a458" upstream="GM12E_7.1_mtk6797_dev_171016"/>
-  <project groups="pdk-cw-fs,pdk-fs" name="system/tools/aidl" revision="54d31f112b75b853fe528b2e49aa4b7761050b65" upstream="GM12E_7.1_mtk6797_dev_171016"/>
-  <project name="system/tpm" revision="3dbf9f4099b940532ef934c1156b513f1af52383" upstream="GM12E_7.1_mtk6797_dev_171016"/>
-  <project name="system/update_engine" revision="e7766c42a65be52f45e5774db587f6a430525d42" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+
   <project groups="pdk" name="system/vold" revision="59d56a41f57b6d60d13ae0b5d2b99c0ef72b6b05" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project name="system/weaved" revision="cbb6e466430b6957fd2d0b78003732382093bc0c" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project name="system/webservd" revision="62ff2189d4ead04f7546f5097b9f4f124897a10a" upstream="GM12E_7.1_mtk6797_dev_171016"/>
@@ -549,6 +545,12 @@
   <project name="vendor/ausshine" revision="5c1891f515b38b2e702d12a81e877bd938a17c54" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project name="vendor/customer/config" revision="720bc1e3b3eee537d9334061a65944399c5cc6c1" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project name="vendor/customer/gome_app" revision="4108647baf583b2ca63e74e4c7c2c6399118dd76" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/security" revision="f72185f820dc3ebe7ed8cff3a17cc67caac7270f" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk" name="system/sepolicy" revision="1948e0dabe3864f2e2ef461695d7fd0870f2a458" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="system/tools/aidl" revision="54d31f112b75b853fe528b2e49aa4b7761050b65" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/tpm" revision="3dbf9f4099b940532ef934c1156b513f1af52383" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+  <project name="system/update_engine" revision="e7766c42a65be52f45e5774db587f6a430525d42" upstream="GM12E_7.1_mtk6797_dev_171016"/>
+
   <project name="vendor/customer/gome_src/App2Lock" revision="111a17070c719aebaf3f0a4c4f645ba300e8202d" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project name="vendor/customer/gome_src/AppIntercept" revision="f3a2b654841964abd7b62f0b8219c671bf561e96" upstream="GM12E_7.1_mtk6797_dev_171016"/>
   <project name="vendor/customer/gome_src/BackupRestore" revision="551db0b9f4673b39e948a85de3b32c335a51d79b" upstream="GM12E_7.1_mtk6797_dev_171016"/>
