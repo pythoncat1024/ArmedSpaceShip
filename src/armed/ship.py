@@ -41,8 +41,13 @@ class Ship(object):
         self.screen.blit(self.image, self.rect)
 
     def update(self, ai_settings):
-        if self.move_right:
+        """
+        注意左右边界
+        :return: void
+        """
+        if self.move_right and self.rect.right < self.screen_rect.right:
             print(self.rect.centerx)
             self.rect.centerx += ai_settings.ship_speed
-        if self.move_left:  # 注意：这里用if 而不是 elif 是为了让 条件1，条件2 机会均等，而不是条件1优先
+        if self.move_left and self.rect.left > 0: # 注意：这里用if 而不是 elif 是为了让 条件1，条件2 机会均等，而不是条件1优先
             self.rect.centerx -= ai_settings.ship_speed
+
