@@ -26,4 +26,4 @@ class Settings(object):
         self.bg_color = (57, 48, 90)
 
         # 设置移动速度
-        self.ship_speed = 5.5
+        self.ship_speed = 1
