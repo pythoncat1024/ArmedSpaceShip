@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 -------------------------------------------------
-   File Name：     dailyEmail
+   File Name：     daily_email
    Description :
    Author :       cat
    date：          2018/1/24
@@ -150,7 +150,7 @@ pythoncat.cheng@gometech.com.cn
         if line.find("ERROR:") == -1:
             info += line
             info += '\n'
-    print(info)
+    # print(info)
 
     return info
 
@@ -192,7 +192,7 @@ pythoncat.cheng@gometech.com.cn
             info += line
             info += '\n'
 
-    print(info)
+    # print(info)
     return info
 
 
@@ -232,8 +232,9 @@ def send_email(subject, content_text, to_address_list, cc_address_list):
 
 
 if "__main__" == __name__:
-    is12e = False
+    is12e = True
     debug = True
+    only_self = True
     to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
                         r'xing.liu@gometech.com.cn',
                         r'yun.tang@gometech.com.cn',
@@ -257,7 +258,7 @@ if "__main__" == __name__:
                         ]
     subject = r"回复: GM12E每日版本" if is12e else r"回复: GMOS2.X[GM12B_7.1_mtk6757cd_develop]每日版本"
 
-    if debug:
+    if debug and not only_self:
         to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
                             r'xin.ni@gometech.com.cn',
                             # r'xing.liu@gometech.com.cn',
@@ -268,9 +269,17 @@ if "__main__" == __name__:
             r'wei.quan@gometech.com.cn'
         ]
         subject = "最后一次：测试邮件..." + subject
+    elif only_self:
+        to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
+                            r'pythoncat@qq.com',
+                            ]
+        cc_address_lists = [
+            r'pythoncat@outlook.com',
+        ]
     # todo: 准备工作完成，开始发邮件吧
 
     content = send_info(is12e)
 
     # print(subject, content, to_address_lists, cc_address_lists)
+    #  todo: 发送邮件！
     send_email(subject, content, to_address_lists, cc_address_lists)

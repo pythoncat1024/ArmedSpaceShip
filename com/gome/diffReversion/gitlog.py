@@ -12,23 +12,12 @@ import os
 #     print(commitID)
 
 
-st = b"abcd"
+import os
 
-s = str(st, encoding='utf-8')
-print(st, s)
+exists = os.path.exists(r'gome18@192.168.63.218:/home/gome18/share/dailybuild/')
 
-collectons1 = [1, 2, 3, 4]
-collectons2 = [1, 2, 3, 4]
+print(exists)
 
-co3 = zip(collectons1, collectons2)
-#
-# co3[0] = (1, 1)
-# co3[1] = (2, 2)
-# co3[3] = (3, 3)
-for x, y in co3:
-    if x == y:
-        print(x, y)
-print(type(co3))
 """
 >>> for s in strarr: print(s)
 ... 
