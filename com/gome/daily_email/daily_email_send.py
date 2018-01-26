@@ -271,10 +271,10 @@ if "__main__" == __name__:
         subject = "最后一次：测试邮件..." + subject
     elif only_self:
         to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
-                            r'pythoncat@qq.com',
+
                             ]
         cc_address_lists = [
-            r'pythoncat@outlook.com',
+            r'pythoncat@qq.com',
         ]
     # todo: 准备工作完成，开始发邮件吧
 
