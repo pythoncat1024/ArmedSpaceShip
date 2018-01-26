@@ -280,6 +280,6 @@ if "__main__" == __name__:
 
     content = send_info(is12e)
 
-    # print(subject, content, to_address_lists, cc_address_lists)
+    print(subject, content, to_address_lists, cc_address_lists)
     #  todo: 发送邮件！
-    send_email(subject, content, to_address_lists, cc_address_lists)
+    # send_email(subject, content, to_address_lists, cc_address_lists)
