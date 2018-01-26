@@ -80,6 +80,35 @@ def __today_target(rootPath, mode='userdebug'):
     return os.path.join(rootPath, target)
 
 
+def __today_target_last(rootPath, mode='userdebug'):
+    """
+    fixme: 获取当天每日版本的最后一个版本
+    获取今天的每日版本路径 --> 返回一个可以刷机的daily 版本路径
+    :param rootPath:  根目录
+    :param mode: 编译模式: userdebug user eng
+    :return: 返回一个可以刷机的daily 版本路径
+    """
+    import os
+    import logging
+    target = []
+    listdir = os.listdir(rootPath)
+    for name in listdir:
+        if name.startswith(__today()) and name.endswith(mode):
+            # 就是你了，今天要发的版本
+            # target = name
+            # print("满足条件的 name===", rootPath, name)
+            target.append(name)
+            # break
+    if not len(target):
+        target.clear()
+        target.append("ERROR:今天的每日版本没有-###{}###-{}".format(mode, rootPath))
+        logging.error("ERROR:今天的每日版本没有-###{}###-{}".format(mode, rootPath))
+
+    target.sort()
+    # print("target=====", target)
+    return os.path.join(rootPath, target[-1])
+
+
 def __trans_WXYZ_to_realPath(srcPath):
     import os
     import logging
@@ -162,13 +191,15 @@ def _send_text_os2x():
 
 开发分支版本：
 user:{}
+
 userdebug：{}
 
 登录方法：\\192.168.59.62   用户名：build 密码：build
 
 
 南京服务器地址：
-user: {}
+user:      {}
+
 userdebug: {}
 
 ----------------------
@@ -178,10 +209,10 @@ pythoncat.cheng@gometech.com.cn
     rootPath_os2x_sh = r"Z:\dailybuild\tk6757_66_n1\GM12B_7.1_mtk6757cd_develop"
     rootPath_os2x_nj = r"V:\dailybuild\SH-ReleaseVersion\tk6757_66_n1\GM12B_7.1_mtk6757cd_develop"
     day = __date_today()
-    daily_os2x_sh_user = __trans_WXYZ_to_realPath(__today_target(rootPath_os2x_sh, "user"))
-    daily_os2x_sh_userdebug = __trans_WXYZ_to_realPath(__today_target(rootPath_os2x_sh))
-    daily_os2x_nj_user = __trans_WXYZ_to_realPath(__today_target(rootPath_os2x_nj, "user"))
-    daily_os2x_nj_userdebug = __trans_WXYZ_to_realPath(__today_target(rootPath_os2x_nj))
+    daily_os2x_sh_user = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_sh, "user"))
+    daily_os2x_sh_userdebug = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_sh))
+    daily_os2x_nj_user = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj, "user"))
+    daily_os2x_nj_userdebug = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj))
     time.sleep(0.5)  # 休眠500ms
     text_format = text.format(day, daily_os2x_sh_user, daily_os2x_sh_userdebug, daily_os2x_nj_user,
                               daily_os2x_nj_userdebug)
@@ -232,7 +263,16 @@ def send_email(subject, content_text, to_address_list, cc_address_list):
 
 
 if "__main__" == __name__:
-    is12e = True
+    # rootPath_os2x_sh = r"Z:\dailybuild\tk6757_66_n1\GM12B_7.1_mtk6757cd_develop"
+    # rootPath_os2x_nj = r"V:\dailybuild\SH-ReleaseVersion\tk6757_66_n1\GM12B_7.1_mtk6757cd_develop"
+    # day = __date_today()
+    # daily_os2x_sh_user = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_sh, "user"))
+    # daily_os2x_sh_userdebug = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_sh))
+    # daily_os2x_nj_user = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj, "user"))
+    # daily_os2x_nj_userdebug = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj))
+    # ##############################################################################################
+
+    is12e = False
     debug = True
     only_self = True
     to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
