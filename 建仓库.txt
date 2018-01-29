@@ -1,0 +1,32 @@
+建仓-- 分两种情况：情况一：当前没有这个仓库。
+				   情况二：当前有这个仓库，只是这个分支上面没有这个仓库。
+				   
+
+				   
+情况一的解决办法：
+    假设现在要在 mtk_7.1_6739_ctc_180111 分支上面创建 device/fpsensor 这个仓库
+    0. 执行如下命令创建一个仓库
+	ssh -p 29418 192.168.59.30 gerrit create-project aosp/device/fpsensor --empty-commit --submit-type REBASE_IF_NECESSARY
+	1. 先去 浏览器 进入上海 gerrit ，然后点击 Projects - List - ,然后搜索框搜索"device/fpsensor",点击进去这个仓库
+	2. (目前已经定位到这个仓库了) 点击 Branchs , 在网页底部分别输入 Branch Name:____ 和 Branch Name：_master_ 
+	3. 点击 "Create Branch" 按钮
+	4. 点击 Projects - List - 然后搜索框搜索 "manifest" 仓库。点击进去(aosp/目录的)
+	5. 点击 "General" - "Clone with commit-msg hook" - "ssh" - "copy"
+	6. 去 xshell 中本地的服务器上面 执行这个命令(git clone xxxxxx)
+	7. git checkout -b local origin/mtk_7.1_6739_ctc_180111 # 这个注意，是要在哪个分支建仓, origin/后面就写哪个分支
+	8. 修改 default.xml　添加一行　<project name="device/fpsensor" path="device/fpsensor"/>
+	9. git add . && git ci -m "xx" && git push HEAD:refs/for/mtk_7.1_6739_ctc_180111 或者 refs/heads
+
+情况二的解决办法：
+	假设现在是要在 mtk_7.1_6739_ctc_180111 分支上面创建  vendor/customer/gome_src/SalesTracterClient_IUV 这个仓库
+	1. 先去 浏览器 进入上海 gerrit ，然后点击 Projects - List - ,然后搜索框搜索"SalesTracterClient_IUV",点击进去这个仓库
+	2. (目前已经定位到这个仓库了) 点击 Branchs , 在网页底部分别输入 Branch Name:____ 和 Branch Name：___ 
+	3. 点击 "Create Branch" 按钮
+	4. 点击 Projects - List - 然后搜索框搜索 "manifest" 仓库。点击进去(aosp/目录的)
+	5. 点击 "General" - "Clone with commit-msg hook" - "ssh" - "copy"
+	6. 去 xshell 中本地的服务器上面 执行这个命令(git clone xxxxxx)
+	7. git checkout -b local origin/mtk_7.1_6739_ctc_180111 # 这个注意，是要在哪个分支建仓, origin/后面就写哪个分支
+	8. 修改 default.xml　添加一行　<project name="vendor/customer/gome_src/SalesTracterClient_IUV" path="vendor/customer/gome_src/SalesTracterClient_IUV"/>
+	9. git add . && git ci -m "xx" && git push HEAD:refs/for/mtk_7.1_6739_ctc_180111 或者 refs/heads
+	
+> ps：情况一和情况二的操作方式完全相同，就是首先多了一个创建仓库的操作

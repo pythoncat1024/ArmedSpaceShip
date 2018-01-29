@@ -1,0 +1,65 @@
+1. bsp 合入 mtk patch 操作：
+2. dev 合入 mtk patch 操作：
+
+背景：--- 表示共同的代码 ， === 表示后续开发待合入的代码
+
+   mtk	--------------------------=======
+								  |
+								  |
+   bsp 							  ---------------------====
+													  |
+													  |
+   dev												  ----------------========
+   
+   
+ 如图所示: 我们拿到的 mtk 的代码是 mtk 已经开发到一定程度的。一直到(-=)相交的地方。
+	然后我们基于该点，拉了一个新分支 bsp 。 然后开发人员在 bsp 上面开发，同时 mtk 也在 mtk 线上开发(==)。
+	在 bsp 分支开发到一定程度的时候，我们又拉了一个 dev 分支。然后开发人员就在 dev 上面开发了。
+	
+ 然后某天，忽然要让 dev 合入最新的 mtk patch 该怎么做？
+ 
+ 做法：1. 在 dev 分支执行 repo init -u mtk_url
+       2. 在 dev 分支执行 repo init -u dev_url (这个也是自己本地仓库当时来代码的 url )
+	   3. 在每个 mtk 修改过的git仓库（比如：framework/base仓库） 执行 git rebase origin/mtk_branch [或者 git merge origin/mtk_branch] 的操作。 （合入patch）
+	   
+	   
+ 对于 bsp 上面 合入mtk path 也是相同的做法。
+ 
+ 
+------------------------------------------------
+
+如果拿到的是 一个压缩包，该怎么合入？
+
+比如合入到 mtk_7.1_6797 这个分支
+操作步骤：
+1. 打开 shell ,进入 bf06
+2. 把压缩包拖进当前目标 ~/
+3. 执行如下命令完成 合入本地分支
+
+cd mtk_7.1_6797
+tar  -zxvf ../ALPS03755351\(For_aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P18\).tar.gz
+repo sync -c -d -j8 --no-tags
+repo forall -c "git add ."
+repo forall -c git commit -m "apply patch aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P17"
+repo manifest -r -o aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P18.xml
+repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6797 2>&1 | tee push.log
+(或者 repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6797 2>&1 | tee push.log # 强制推送)
+
+-------------------------------------------
+
+其他分支的呢？ 
+
+切换到其他分支 比如 GM12E_7.1_mtk6797_bsp
+1. 打开 shell ,进入 bf28
+2. 执行如下命令完成
+cd GM12E_7.1_mtk6797_bsp
+repo init -u ssh://liuxing@192.168.59.30:29418/aosp/gome/manifest -b mtk_7.1_6797 --no-repo-verify  #[先 init mtk_7.1_6797]
+repo sync -c -d -j8 --no-tags
+repo init -u ssh://liuxing@192.168.59.30:29418/aosp/gome/manifest -b GM12E_7.1_mtk6797_bsp --no-repo-verify #[再 init 自己]
+repo sync -c -d -j8 --no-tags
+repo forall -p -c git rebase origin/mtk_7.1_6797 2>&1 | tee rebase.log
+repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6797 2>&1 | tee push.log #[如果push 被拒绝，加上 -f]
+													  
+#####################
+
+一行 python 脚本搜集文本中被搜索的关键字所在行
