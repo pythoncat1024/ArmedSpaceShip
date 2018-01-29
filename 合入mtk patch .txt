@@ -63,3 +63,4 @@ repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6797 2>&1 | tee push.log 
 #####################
 
 一行 python 脚本搜集文本中被搜索的关键字所在行
+target=[line for line in open('push.log') if line.startswith('To ssh')]
