@@ -1,0 +1,6 @@
+git clone ssh://chengguibao@192.168.59.30:29418/aosp/gome/manifest && scp -p -P 29418 chengguibao@192.168.59.30:hooks/commit-msg manifest/.git/hooks/
+
+c71 上面创建分支 vender/freeme 
+
+mtk_7.1_6739
+mtk_7.1_6739_ctc_180111

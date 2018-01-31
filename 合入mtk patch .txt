@@ -59,8 +59,19 @@ repo init -u ssh://liuxing@192.168.59.30:29418/aosp/gome/manifest -b GM12E_7.1_m
 repo sync -c -d -j8 --no-tags
 repo forall -p -c git rebase origin/mtk_7.1_6797 2>&1 | tee rebase.log
 repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6797 2>&1 | tee push.log #[如果push 被拒绝，加上 -f]
-													  
+							
+>>> bsp 使用 rebase , develop 使用 merge  <<<							
+#####################
+使用本地镜像：
+repo init -u ssh://liuxing@192.168.59.30:29418/aosp/gome/manifest -b mtk_7.1_6739 --no-repo-verify --reference=/home/sh-mirror
 #####################
 
 一行 python 脚本搜集文本中被搜索的关键字所在行
 target=[line for line in open('push.log') if line.startswith('To ssh')]
+
+####################
+创建一个本地分支
+在执行完成 repo init 以及 repo sync 之后
+repo start local_branch_name --all
+删除一个本地分支
+repo abandom local_branch_name

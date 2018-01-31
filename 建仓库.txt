@@ -30,3 +30,7 @@
 	9. git add . && git ci -m "xx" && git push HEAD:refs/for/mtk_7.1_6739_ctc_180111 或者 refs/heads
 	
 > ps：情况一和情况二的操作方式完全相同，就是首先多了一个创建仓库的操作
+
+-----> 使用差异化分支的代码：
+
+repo init -u ssh://chengguibao@192.168.59.30:29418/aosp/gome/manifest -m gmos3.0_8.0_develop-Multi_Media.xml -b mtk_8.0_6757_develop --no-repo-verify
