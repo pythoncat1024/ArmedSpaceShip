@@ -7,6 +7,7 @@
 import os
 import time
 
+
 def bash_shell(bash_command):
     """
     python 中执行 bash 命令
@@ -43,7 +44,7 @@ if __name__ == '__main__':
     for repo_path in find_target(os.getcwd(), key='.repo'):
         os.chdir(repo_path)
         if repo_path == os.getcwd():
-           # print('find repo in -->', repo_path)
+            # print('find repo in -->', repo_path)
             print(bash_shell('pwd'))
             print(bash_shell('repo forall -c git config core.fileMode false	--replace-all'))
 
@@ -58,7 +59,7 @@ if __name__ == '__main__':
     for git_path in find_target(os.getcwd(), key='.git'):
         os.chdir(git_path)
         if git_path == os.getcwd():
-           # print('find git in -->', git_path)
+            # print('find git in -->', git_path)
             print(bash_shell('pwd'))
             print(bash_shell('git config --add core.filemode false'))
         else:
