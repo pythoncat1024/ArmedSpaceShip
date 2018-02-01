@@ -161,6 +161,8 @@ def _send_text_12e():
 userdebug：{}
 
 登录方法：\\192.168.59.62   用户名：build 密码：build
+
+
 南京服务器地址：{}
 
 ----------------------
@@ -227,8 +229,58 @@ pythoncat.cheng@gometech.com.cn
     return info
 
 
-def send_info(is12e):
-    return _send_text_12e() if is12e else _send_text_os2x()
+def _send_text_c71():
+    import time
+    text = r"""C71 {} 每日版本已经上传服务器：
+请大家拷贝到本地刷机，不要直接用下面共享路径下刷机
+
+开发分支版本：
+userdebug：{}
+
+登录方法：\\192.168.59.62   用户名：build 密码：build
+
+
+南京服务器地址：{}
+
+----------------------
+程贵宝   应用软件部
+pythoncat.cheng@gometech.com.cn
+"""
+    rootPath_c71_sh = r"Z:\dailybuild\aus6739_66_l_n1\mtk_7.1_6739_dev_180110"
+    rootPath_c71_nj = r"V:\dailybuild\SH-ReleaseVersion\aus6739_66_l_n1\mtk_7.1_6739_dev_180110"
+    daily_12e_sh_userdebug = __trans_WXYZ_to_realPath(__today_target(rootPath_c71_sh))
+    daily_12e_nj_userdebug = __trans_WXYZ_to_realPath(__today_target(rootPath_c71_nj))
+    day = __date_today()
+    time.sleep(0.5)  # 休眠500ms
+    text_format = text.format(day, daily_12e_sh_userdebug, daily_12e_nj_userdebug)
+    info = ""
+    for line in text_format.split(sep='\n'):
+        if line.find("ERROR:") == -1:
+            info += line
+            info += '\n'
+    # print(info)
+
+    return info
+
+
+def send_info(witch='选择一个版本吧：gm12e,c71,os2x ?'):
+    if witch == 'gm12e':
+        return _send_text_12e()
+    elif witch == 'ox2x':
+        return _send_text_os2x()
+    elif witch == 'c71':
+        return _send_text_c71()
+    raise Exception("Invalid arg!", witch)
+
+
+def subject_info(witch='选择一个版本吧：gm12e,c71,os2x ?'):
+    if witch == 'gm12e':
+        return r"回复: GM12E每日版本"
+    elif witch == 'ox2x':
+        return r"回复: GMOS2.X[GM12B_7.1_mtk6757cd_develop]每日版本"
+    elif witch == 'c71':
+        return r"回复: C71每日版本"
+    raise Exception("Invalid arg!", witch)
 
 
 def send_email(subject, content_text, to_address_list, cc_address_list):
@@ -271,10 +323,14 @@ if "__main__" == __name__:
     # daily_os2x_nj_user = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj, "user"))
     # daily_os2x_nj_userdebug = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj))
     # ##############################################################################################
-
-    is12e = False
     debug = True
-    only_self = True
+    only_self = False
+
+    select = ('gm12e', 'c71', 'ox2x')
+    lucky_dog = select[1]
+    content = send_info(lucky_dog)
+    subject = subject_info(lucky_dog)
+
     to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
                         r'xing.liu@gometech.com.cn',
                         r'yun.tang@gometech.com.cn',
@@ -296,19 +352,17 @@ if "__main__" == __name__:
                         r'iuv.sw-support@gometech.com.cn',
                         r'iuv.sw@gometech.com.cn',
                         ]
-    subject = r"回复: GM12E每日版本" if is12e else r"回复: GMOS2.X[GM12B_7.1_mtk6757cd_develop]每日版本"
-
     if debug and not only_self:
         to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
                             r'xin.ni@gometech.com.cn',
-                            # r'xing.liu@gometech.com.cn',
+                            r'xing.liu@gometech.com.cn',
                             r'jiaren.li@gometech.com.cn'
                             ]
         cc_address_lists = [
             r'shengfu.huang@gometech.com.cn',
             r'wei.quan@gometech.com.cn'
         ]
-        subject = "最后一次：测试邮件..." + subject
+        subject = "测试邮件..." + subject
     elif only_self:
         to_address_lists = [r'pythoncat.cheng@gometech.com.cn',
 
@@ -317,8 +371,6 @@ if "__main__" == __name__:
             r'pythoncat@qq.com',
         ]
     # todo: 准备工作完成，开始发邮件吧
-
-    content = send_info(is12e)
 
     print(subject, content, to_address_lists, cc_address_lists)
     #  todo: 发送邮件！

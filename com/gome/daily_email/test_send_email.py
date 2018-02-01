@@ -9,5 +9,4 @@ from email.mime.text import MIMEText
 target=[]
 target.append("aaaa")
 target.append("bbbb")
-
 print("target===",target)
