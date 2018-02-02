@@ -12,37 +12,28 @@
 """
 
 
-def func():
-    import os
-    import threading
-    import logging
-    cmd = r'source build/envsetup.sh && lunch full_gm12b-userdebug && repo sync -j8 && make clean && source build/envsetup.sh && lunch full_gm12b-userdebug && make update-api && make -j8 2>&1 | tee build.log'
-    cmd = r'source build/envsetup.sh && lunch full_gm12b-userdebug'
-    print("command--==", cmd)
-    os.system(cmd)
-    threading.Timer(3, func)
+# -*- coding: utf-8 -*-
+def scheduler_build(delay, cmd):
+    def build_inner():
+        import os
+        import threading
+        print('execute==> ', delay, cmd)
+        os.system(cmd)
+        threading.Timer(delay, build_inner).start()
 
-
-def get_now(format="%Y-%m-%d %H:%M:%S"):
-    """
-    获取今天的日期 --> 返回字符串 ：2018-01-24
-    :param format: "%Y-%m-%d"
-    :return: 返回字符串 ：2018-01-24
-    """
-    import time
-    formatTime = time.strftime(format, time.localtime(time.time()))
-    print(formatTime)
-    import threading
-    threading.Timer(1,get_now).start()
-
-
-def show_print(delay=1):
-    import threading
-    timer = threading.Timer(delay, get_now)
-    timer.start()
+    build_inner()
 
 
 if "__main__" == __name__:
-    # print(get_now())
-    show_print(1)
+    cmd = r'source build/envsetup.sh && lunch full_gm12b-userdebug && repo sync -j8 && make clean && source build/envsetup.sh && lunch full_gm12b-userdebug && make update-api && make -j8 2>&1 | tee build.log'
+
+
+    # cmd = r'source build/envsetup.sh && lunch full_gm12b-userdebug'
+    def f():
+        scheduler_build(1 * 60 * 60 * 24, cmd)
+
+
+    import threading
+
+    threading.Timer(1, f).start()
     pass
