@@ -10,3 +10,17 @@ target=[]
 target.append("aaaa")
 target.append("bbbb")
 print("target===",target)
+
+s=""
+
+if s:
+    print('xxxxxxx')
+else:
+    print("aaaa")
+
+s = []
+
+if s:
+    print('--xxxxxxx')
+else:
+    print("--aaaa")
