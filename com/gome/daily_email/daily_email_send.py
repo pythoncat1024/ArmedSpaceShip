@@ -323,7 +323,7 @@ if "__main__" == __name__:
     # daily_os2x_nj_user = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj, "user"))
     # daily_os2x_nj_userdebug = __trans_WXYZ_to_realPath(__today_target_last(rootPath_os2x_nj))
     # ##############################################################################################
-    debug = True
+    debug = False
     only_self = False
 
     select = ('gm12e', 'c71', 'ox2x')
@@ -373,5 +373,5 @@ if "__main__" == __name__:
     # todo: 准备工作完成，开始发邮件吧
 
     print(subject, content, to_address_lists, cc_address_lists)
-    #  todo: 发送邮件！
+    # #  todo: 发送邮件！
     # send_email(subject, content, to_address_lists, cc_address_lists)

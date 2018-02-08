@@ -48,7 +48,7 @@ def find_target(target_path="./", key='.git'):
                 yield super_dir
 
 
-def find_target2(target_path="./", key='.git'):
+def find_target2(target_path="./"):
     """
     查找一个项目的所有 project
     查找目标目录所在的目录 ： 如 ／aa/bb/.git --> return /aa/bb/
@@ -130,5 +130,6 @@ if "__main__" == __name__:
         # 没有进行任何的传参
         changes = status(os.getcwd(), find_target2(os.getcwd()))
         print("未提交的修改为:\n", changes)
-    changes = status(sys.argv[2], find_target2(sys.argv[2]))
+    else:
+        changes = status(sys.argv[2], find_target2(sys.argv[2]))
     print("未提交的修改为:\n", changes)

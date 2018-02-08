@@ -6,21 +6,14 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-target=[]
-target.append("aaaa")
-target.append("bbbb")
-print("target===",target)
+target = 123
 
-s=""
 
-if s:
-    print('xxxxxxx')
-else:
-    print("aaaa")
+def change():
+    global target
+    target += 11
 
-s = []
+    s = 0
+    print(s, target)
 
-if s:
-    print('--xxxxxxx')
-else:
-    print("--aaaa")
+change()
