@@ -39,8 +39,7 @@ def find_target2(target_path="./", key='.git'):
 
 
 def status(target_path, project_list):
-    clean1 = "Not currently on any branch"
-    clean2 = "nothing to commit, working directory clean"
+    clean2 = "nothing to commit"
     change = []
     import os
     import subprocess
@@ -59,7 +58,7 @@ def status(target_path, project_list):
         if popen and popen.returncode == 0:
             origin_strB = popen.stdout.read()  # -- > 成为一个 bytes 字符串了
             origin_strs = str(origin_strB, encoding='utf-8')  # --> bytes 2 string
-            if not (clean1 in origin_strs) and not (clean2 in origin_strs):
+            if not (clean2 in origin_strs):
                 "说明是本地有未提交的..."
                 change.append(tpath)
                 print(tpath)
@@ -81,5 +80,8 @@ if "__main__" == __name__:
     else:
         changes = status(sys.argv[1], find_target2(sys.argv[1]))
 
-    print("未提交的修改为:\n", changes)
+    print("未提交的修改 size==:", len(changes))
+
+    for line in changes:
+        print("未提交的修改 project: ", line)
     pass
