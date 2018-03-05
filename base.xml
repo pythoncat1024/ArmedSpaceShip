@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+
+    <remote fetch=".." name="origin" review="http://192.168.63.219:88"/>
+    <default revision="mtk_8.0_6757_develop" remote="origin" sync-j="4"/>
+
+    <project name="ccu_tool" path="ccu_tool"/>
+    <project name="device/mediatek/build" path="device/mediatek/build"/>
+    <project name="device/mediatek/common" path="device/mediatek/common">
+        <copyfile dest="vendor/mediatek/proprietary/operator/legacy/Android.mk" src="addon/vendor/mediatek/proprietary/operator/srcAndroid.mk"/>
+        <copyfile dest="vendor/mediatek/proprietary/operator/legacy/OperatorConfig.mk" src="addon/vendor/mediatek/proprietary/operator/OperatorConfig.mk"/>
+        <copyfile dest="vendor/mediatek/proprietary/operator/legacy/OperatorInfo.mk" src="addon/vendor/mediatek/proprietary/operator/OperatorInfo.mk"/>
+        <copyfile dest="vendor/mediatek/proprietary/Android.bp" src="addon/vendor/mediatek/proprietary/srcAndroid.bp"/>
+        <copyfile dest="vendor/mediatek/Android.mk" src="addon/vendor/mediatek/srcAndroid.mk"/>
+    </project>
+    <project name="device/mediatek/config" path="device/mediatek/config"/>
+    <project name="device/mediatek/mt6735" path="device/mediatek/mt6735"/>
+    <project name="device/mediatek/mt6755" path="device/mediatek/mt6755"/>
+    <project name="device/mediatek/mt6757" path="device/mediatek/mt6757"/>
+    <project name="device/mediatek/mt6797" path="device/mediatek/mt6797"/>
+    <project name="device/mediatek/sepolicy/basic" path="device/mediatek/sepolicy/basic"/>
+    <project name="device/mediatek/sepolicy/bsp" path="device/mediatek/sepolicy/bsp"/>
+    <project name="device/mediatek/sepolicy/full" path="device/mediatek/sepolicy/full"/>
+    <project name="device/mediateksample/k37mv1_64" path="device/mediateksample/k37mv1_64"/>
+    <project name="device/mediateksample/k37tv1_64" path="device/mediateksample/k37tv1_64"/>
+    <project name="device/mediateksample/k50sv1" path="device/mediateksample/k50sv1"/>
+    <project name="device/mediateksample/k50sv1_64" path="device/mediateksample/k50sv1_64"/>
+    <project name="device/mediateksample/k50v1" path="device/mediateksample/k50v1"/>
+    <project name="device/mediateksample/k50v1_64" path="device/mediateksample/k50v1_64"/>
+    <project name="device/mediateksample/k53v1_64" path="device/mediateksample/k53v1_64"/>
+    <project name="device/mediateksample/k57pv1" path="device/mediateksample/k57pv1"/>
+    <project name="device/mediateksample/k57pv1_dm_64" path="device/mediateksample/k57pv1_dm_64"/>
+    <project name="device/mediateksample/k97v1_64" path="device/mediateksample/k97v1_64"/>
+    <project name="kernel-3.18" path="kernel-3.18"/>
+    <project name="kernel-4.4" path="kernel-4.4"/>
+    <project name="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.3.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.3.1"/>
+    <project name="prebuilts/gcc/linux-x86/arm/arm-eabi-6.3.1" path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.3.1"/>
+    <project name="prebuilts/gcc/linux-x86/arm/cit-arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/cit-arm-eabi-4.8"/>
+    <project name="prebuilts/gcc/linux-x86/arm/gcc-arm-none-eabi-4_7-2012q4" path="prebuilts/gcc/linux-x86/arm/gcc-arm-none-eabi-4_7-2012q4"/>
+    <project name="prebuilts/gcc/linux-x86/arm/gcc-arm-none-eabi-4_8-2014q3" path="prebuilts/gcc/linux-x86/arm/gcc-arm-none-eabi-4_8-2014q3"/>
+    <project name="vendor/mediatek/libs/LPPeService" path="vendor/mediatek/libs/LPPeService"/>
+    <project name="vendor/mediatek/libs/LocationEM2" path="vendor/mediatek/libs/LocationEM2"/>
+    <project name="vendor/mediatek/libs/android.hardware.drm@1.0-service.widevine" path="vendor/mediatek/libs/android.hardware.drm@1.0-service.widevine"/>
+    <project name="vendor/mediatek/libs/anrappmanager" path="vendor/mediatek/libs/anrappmanager"/>
+    <project name="vendor/mediatek/libs/anrmanager" path="vendor/mediatek/libs/anrmanager"/>
+    <project name="vendor/mediatek/libs/ccci_fsd" path="vendor/mediatek/libs/ccci_fsd"/>
+    <project name="vendor/mediatek/libs/ccci_mdinit" path="vendor/mediatek/libs/ccci_mdinit"/>
+    <project name="vendor/mediatek/libs/cmddumper" path="vendor/mediatek/libs/cmddumper"/>
+    <project name="vendor/mediatek/libs/com.mediatek.mdml" path="vendor/mediatek/libs/com.mediatek.mdml"/>
+    <project name="vendor/mediatek/libs/com.mediatek.protect.email" path="vendor/mediatek/libs/com.mediatek.protect.email"/>
+    <project name="vendor/mediatek/libs/com.mediatek.tatf.common" path="vendor/mediatek/libs/com.mediatek.tatf.common"/>
+    <project name="vendor/mediatek/libs/com.mediatek.vcalendar" path="vendor/mediatek/libs/com.mediatek.vcalendar"/>
+    <project name="vendor/mediatek/libs/com_mediatek_amplus" path="vendor/mediatek/libs/com_mediatek_amplus"/>
+    <project name="vendor/mediatek/libs/cta" path="vendor/mediatek/libs/cta"/>
+    <project name="vendor/mediatek/libs/drDRMHDCPCommon_api" path="vendor/mediatek/libs/drDRMHDCPCommon_api"/>
+    <project name="vendor/mediatek/libs/drDRMHDCPCommon_core" path="vendor/mediatek/libs/drDRMHDCPCommon_core"/>
+    <project name="vendor/mediatek/libs/drWidevineModularDrm_api" path="vendor/mediatek/libs/drWidevineModularDrm_api"/>
+    <project name="vendor/mediatek/libs/drWidevineModularDrm_core" path="vendor/mediatek/libs/drWidevineModularDrm_core"/>
+    <project name="vendor/mediatek/libs/duraspeed" path="vendor/mediatek/libs/duraspeed"/>
+    <project name="vendor/mediatek/libs/emdlogger1" path="vendor/mediatek/libs/emdlogger1"/>
+    <project name="vendor/mediatek/libs/emdlogger2" path="vendor/mediatek/libs/emdlogger2"/>
+    <project name="vendor/mediatek/libs/emdlogger3" path="vendor/mediatek/libs/emdlogger3"/>
+    <project name="vendor/mediatek/libs/emdlogger5" path="vendor/mediatek/libs/emdlogger5"/>
+    <project name="vendor/mediatek/libs/flashlessd" path="vendor/mediatek/libs/flashlessd"/>
+    <project name="vendor/mediatek/libs/ged_srv" path="vendor/mediatek/libs/ged_srv"/>
+    <project name="vendor/mediatek/libs/k37mv1_64" path="vendor/mediatek/libs/k37mv1_64"/>
+    <project name="vendor/mediatek/libs/k37tv1_64" path="vendor/mediatek/libs/k37tv1_64"/>
+    <project name="vendor/mediatek/libs/k50sv1" path="vendor/mediatek/libs/k50sv1"/>
+    <project name="vendor/mediatek/libs/k50sv1_64" path="vendor/mediatek/libs/k50sv1_64"/>
+    <project name="vendor/mediatek/libs/k50v1" path="vendor/mediatek/libs/k50v1"/>
+    <project name="vendor/mediatek/libs/k50v1_64" path="vendor/mediatek/libs/k50v1_64"/>
+    <project name="vendor/mediatek/libs/k53v1_64" path="vendor/mediatek/libs/k53v1_64"/>
+    <project name="vendor/mediatek/libs/k57pv1" path="vendor/mediatek/libs/k57pv1"/>
+    <project name="vendor/mediatek/libs/k57pv1_dm_64" path="vendor/mediatek/libs/k57pv1_dm_64"/>
+    <project name="vendor/mediatek/libs/k97v1_64" path="vendor/mediatek/libs/k97v1_64"/>
+    <project name="vendor/mediatek/libs/lib3a_core1" path="vendor/mediatek/libs/lib3a_core1"/>
+    <project name="vendor/mediatek/libs/lib3a_core2" path="vendor/mediatek/libs/lib3a_core2"/>
+    <project name="vendor/mediatek/libs/libClearMotionFW" path="vendor/mediatek/libs/libClearMotionFW"/>
+    <project name="vendor/mediatek/libs/libJpgDecDrv_plat" path="vendor/mediatek/libs/libJpgDecDrv_plat"/>
+    <project name="vendor/mediatek/libs/libJpgDecPipe" path="vendor/mediatek/libs/libJpgDecPipe"/>
+    <project name="vendor/mediatek/libs/libJpgEncDrv_plat" path="vendor/mediatek/libs/libJpgEncDrv_plat"/>
+    <project name="vendor/mediatek/libs/libJpgEncPipe" path="vendor/mediatek/libs/libJpgEncPipe"/>
+    <project name="vendor/mediatek/libs/libMtkOmxAdpcmDec" path="vendor/mediatek/libs/libMtkOmxAdpcmDec"/>
+    <project name="vendor/mediatek/libs/libMtkOmxAdpcmEnc" path="vendor/mediatek/libs/libMtkOmxAdpcmEnc"/>
+    <project name="vendor/mediatek/libs/libMtkOmxAlacDec" path="vendor/mediatek/libs/libMtkOmxAlacDec"/>
+    <project name="vendor/mediatek/libs/libMtkOmxApeDec" path="vendor/mediatek/libs/libMtkOmxApeDec"/>
+    <project name="vendor/mediatek/libs/libMtkOmxAudioDecBase" path="vendor/mediatek/libs/libMtkOmxAudioDecBase"/>
+    <project name="vendor/mediatek/libs/libMtkOmxAudioEncBase" path="vendor/mediatek/libs/libMtkOmxAudioEncBase"/>
+    <project name="vendor/mediatek/libs/libMtkOmxG711Dec" path="vendor/mediatek/libs/libMtkOmxG711Dec"/>
+    <project name="vendor/mediatek/libs/libMtkOmxGsmDec" path="vendor/mediatek/libs/libMtkOmxGsmDec"/>
+    <project name="vendor/mediatek/libs/libMtkOmxMp3Dec" path="vendor/mediatek/libs/libMtkOmxMp3Dec"/>
+    <project name="vendor/mediatek/libs/libMtkOmxRawDec" path="vendor/mediatek/libs/libMtkOmxRawDec"/>
+    <project name="vendor/mediatek/libs/libMtkOmxVdecEx" path="vendor/mediatek/libs/libMtkOmxVdecEx"/>
+    <project name="vendor/mediatek/libs/libMtkOmxVenc" path="vendor/mediatek/libs/libMtkOmxVenc"/>
+    <project name="vendor/mediatek/libs/libMtkOmxVorbisEnc" path="vendor/mediatek/libs/libMtkOmxVorbisEnc"/>
+    <project name="vendor/mediatek/libs/libRSCL" path="vendor/mediatek/libs/libRSCL"/>
+    <project name="vendor/mediatek/libs/libRSCpuRef_mtk" path="vendor/mediatek/libs/libRSCpuRef_mtk"/>
+    <project name="vendor/mediatek/libs/libRSDriver_mtk" path="vendor/mediatek/libs/libRSDriver_mtk"/>
+    <project name="vendor/mediatek/libs/libSmartCompass_32" path="vendor/mediatek/libs/libSmartCompass_32"/>
+    <project name="vendor/mediatek/libs/libSmartCompass_64" path="vendor/mediatek/libs/libSmartCompass_64"/>
+    <project name="vendor/mediatek/libs/libSwJpgCodec" path="vendor/mediatek/libs/libSwJpgCodec"/>
+    <project name="vendor/mediatek/libs/libaal" path="vendor/mediatek/libs/libaal"/>
+    <project name="vendor/mediatek/libs/libakl" path="vendor/mediatek/libs/libakl"/>
+    <project name="vendor/mediatek/libs/libaudiostream" path="vendor/mediatek/libs/libaudiostream"/>
+    <project name="vendor/mediatek/libs/libbcc_mtkrs" path="vendor/mediatek/libs/libbcc_mtkrs"/>
+    <project name="vendor/mediatek/libs/libblas_mtkrs" path="vendor/mediatek/libs/libblas_mtkrs"/>
+    <project name="vendor/mediatek/libs/libc2kutils" path="vendor/mediatek/libs/libc2kutils"/>
+    <project name="vendor/mediatek/libs/libcdm" path="vendor/mediatek/libs/libcdm"/>
+    <project name="vendor/mediatek/libs/libcdm_protos" path="vendor/mediatek/libs/libcdm_protos"/>
+    <project name="vendor/mediatek/libs/libcdm_utils" path="vendor/mediatek/libs/libcdm_utils"/>
+    <project name="vendor/mediatek/libs/libdpframework" path="vendor/mediatek/libs/libdpframework"/>
+    <project name="vendor/mediatek/libs/libdpframework_prot" path="vendor/mediatek/libs/libdpframework_prot"/>
+    <project name="vendor/mediatek/libs/libdrmctaplugin" path="vendor/mediatek/libs/libdrmctaplugin"/>
+    <project name="vendor/mediatek/libs/libdrmmtkplugin" path="vendor/mediatek/libs/libdrmmtkplugin"/>
+    <project name="vendor/mediatek/libs/libdrmmtkutil" path="vendor/mediatek/libs/libdrmmtkutil"/>
+    <project name="vendor/mediatek/libs/libged" path="vendor/mediatek/libs/libged"/>
+    <project name="vendor/mediatek/libs/libged_static_common" path="vendor/mediatek/libs/libged_static_common"/>
+    <project name="vendor/mediatek/libs/libged_static_gas" path="vendor/mediatek/libs/libged_static_gas"/>
+    <project name="vendor/mediatek/libs/libged_static_sys" path="vendor/mediatek/libs/libged_static_sys"/>
+    <project name="vendor/mediatek/libs/libged_static_ven" path="vendor/mediatek/libs/libged_static_ven"/>
+    <project name="vendor/mediatek/libs/libged_sys" path="vendor/mediatek/libs/libged_sys"/>
+    <project name="vendor/mediatek/libs/libgpu_aux" path="vendor/mediatek/libs/libgpu_aux"/>
+    <project name="vendor/mediatek/libs/libh264dec_hw" path="vendor/mediatek/libs/libh264dec_hw"/>
+    <project name="vendor/mediatek/libs/libh264dec_sw" path="vendor/mediatek/libs/libh264dec_sw"/>
+    <project name="vendor/mediatek/libs/libh264enc_hw" path="vendor/mediatek/libs/libh264enc_hw"/>
+    <project name="vendor/mediatek/libs/libh264enc_sw" path="vendor/mediatek/libs/libh264enc_sw"/>
+    <project name="vendor/mediatek/libs/libh265dec_hw" path="vendor/mediatek/libs/libh265dec_hw"/>
+    <project name="vendor/mediatek/libs/libh265dec_sw" path="vendor/mediatek/libs/libh265dec_sw"/>
+    <project name="vendor/mediatek/libs/libhevcenc_hw" path="vendor/mediatek/libs/libhevcenc_hw"/>
+    <project name="vendor/mediatek/libs/libhevcenc_sw" path="vendor/mediatek/libs/libhevcenc_sw"/>
+    <project name="vendor/mediatek/libs/libhotknot_GT1XX" path="vendor/mediatek/libs/libhotknot_GT1XX"/>
+    <project name="vendor/mediatek/libs/libhotknot_GT9XX" path="vendor/mediatek/libs/libhotknot_GT9XX"/>
+    <project name="vendor/mediatek/libs/libhwm" path="vendor/mediatek/libs/libhwm"/>
+    <project name="vendor/mediatek/libs/libimsma_adapt" path="vendor/mediatek/libs/libimsma_adapt"/>
+    <project name="vendor/mediatek/libs/liblog3a" path="vendor/mediatek/libs/liblog3a"/>
+    <project name="vendor/mediatek/libs/libmdloggerrecycle" path="vendor/mediatek/libs/libmdloggerrecycle"/>
+    <project name="vendor/mediatek/libs/libmdmonitor" path="vendor/mediatek/libs/libmdmonitor"/>
+    <project name="vendor/mediatek/libs/libmemoryDumpEncoder" path="vendor/mediatek/libs/libmemoryDumpEncoder"/>
+    <project name="vendor/mediatek/libs/libmhalImageCodec" path="vendor/mediatek/libs/libmhalImageCodec"/>
+    <project name="vendor/mediatek/libs/libmjc" path="vendor/mediatek/libs/libmjc"/>
+    <project name="vendor/mediatek/libs/libmjcFakeEngine" path="vendor/mediatek/libs/libmjcFakeEngine"/>
+    <project name="vendor/mediatek/libs/libmpeg2dec_hw" path="vendor/mediatek/libs/libmpeg2dec_hw"/>
+    <project name="vendor/mediatek/libs/libmpeg4dec_hw" path="vendor/mediatek/libs/libmpeg4dec_hw"/>
+    <project name="vendor/mediatek/libs/libmpeg4enc_hybrid" path="vendor/mediatek/libs/libmpeg4enc_hybrid"/>
+    <project name="vendor/mediatek/libs/libmpeg4enc_sw" path="vendor/mediatek/libs/libmpeg4enc_sw"/>
+    <project name="vendor/mediatek/libs/libmtkjpeg" path="vendor/mediatek/libs/libmtkjpeg"/>
+    <project name="vendor/mediatek/libs/libmtkjpeg_rvct.NEON" path="vendor/mediatek/libs/libmtkjpeg_rvct.NEON"/>
+    <project name="vendor/mediatek/libs/liboemcrypto_static" path="vendor/mediatek/libs/liboemcrypto_static"/>
+    <project name="vendor/mediatek/libs/libpq_prot" path="vendor/mediatek/libs/libpq_prot"/>
+    <project name="vendor/mediatek/libs/librpc" path="vendor/mediatek/libs/librpc"/>
+    <project name="vendor/mediatek/libs/librs2spir" path="vendor/mediatek/libs/librs2spir"/>
+    <project name="vendor/mediatek/libs/libspir2cl" path="vendor/mediatek/libs/libspir2cl"/>
+    <project name="vendor/mediatek/libs/libtlcWidevineModularDrm" path="vendor/mediatek/libs/libtlcWidevineModularDrm"/>
+    <project name="vendor/mediatek/libs/libvc1dec_hw" path="vendor/mediatek/libs/libvc1dec_hw"/>
+    <project name="vendor/mediatek/libs/libvc1dec_sw" path="vendor/mediatek/libs/libvc1dec_sw"/>
+    <project name="vendor/mediatek/libs/libvcodec_cap" path="vendor/mediatek/libs/libvcodec_cap"/>
+    <project name="vendor/mediatek/libs/libvcodec_utility" path="vendor/mediatek/libs/libvcodec_utility"/>
+    <project name="vendor/mediatek/libs/libvcodecdrv" path="vendor/mediatek/libs/libvcodecdrv"/>
+    <project name="vendor/mediatek/libs/libviagpsrpc" path="vendor/mediatek/libs/libviagpsrpc"/>
+    <project name="vendor/mediatek/libs/libvoicerecognition" path="vendor/mediatek/libs/libvoicerecognition"/>
+    <project name="vendor/mediatek/libs/libvoicerecognition_jni" path="vendor/mediatek/libs/libvoicerecognition_jni"/>
+    <project name="vendor/mediatek/libs/libvp8dec_hw" path="vendor/mediatek/libs/libvp8dec_hw"/>
+    <project name="vendor/mediatek/libs/libvp8dec_sw" path="vendor/mediatek/libs/libvp8dec_sw"/>
+    <project name="vendor/mediatek/libs/libvp8enc_sw" path="vendor/mediatek/libs/libvp8enc_sw"/>
+    <project name="vendor/mediatek/libs/libvp9dec_hw" path="vendor/mediatek/libs/libvp9dec_hw"/>
+    <project name="vendor/mediatek/libs/libvp9dec_sw" path="vendor/mediatek/libs/libvp9dec_sw"/>
+    <project name="vendor/mediatek/libs/libwidevinehidl_utils" path="vendor/mediatek/libs/libwidevinehidl_utils"/>
+    <project name="vendor/mediatek/libs/libwvdrmcryptoplugin" path="vendor/mediatek/libs/libwvdrmcryptoplugin"/>
+    <project name="vendor/mediatek/libs/libwvdrmcryptoplugin_hidl" path="vendor/mediatek/libs/libwvdrmcryptoplugin_hidl"/>
+    <project name="vendor/mediatek/libs/libwvdrmdrmplugin" path="vendor/mediatek/libs/libwvdrmdrmplugin"/>
+    <project name="vendor/mediatek/libs/libwvdrmdrmplugin_hidl" path="vendor/mediatek/libs/libwvdrmdrmplugin_hidl"/>
+    <project name="vendor/mediatek/libs/libwvdrmengine" path="vendor/mediatek/libs/libwvdrmengine"/>
+    <project name="vendor/mediatek/libs/libwvhidl" path="vendor/mediatek/libs/libwvhidl"/>
+    <project name="vendor/mediatek/libs/libwvlevel3" path="vendor/mediatek/libs/libwvlevel3"/>
+    <project name="vendor/mediatek/libs/libyv12util" path="vendor/mediatek/libs/libyv12util"/>
+    <project name="vendor/mediatek/libs/md_monitor" path="vendor/mediatek/libs/md_monitor"/>
+    <project name="vendor/mediatek/libs/md_monitor_ctrl" path="vendor/mediatek/libs/md_monitor_ctrl"/>
+    <project name="vendor/mediatek/libs/mdlogger" path="vendor/mediatek/libs/mdlogger"/>
+    <project name="vendor/mediatek/libs/mfv_ut" path="vendor/mediatek/libs/mfv_ut"/>
+    <project name="vendor/mediatek/libs/mplugin" path="vendor/mediatek/libs/mplugin"/>
+    <project name="vendor/mediatek/libs/mrdump_tool" path="vendor/mediatek/libs/mrdump_tool"/>
+    <project name="vendor/mediatek/libs/mtk_agpsd" path="vendor/mediatek/libs/mtk_agpsd"/>
+    <project name="vendor/mediatek/libs/muxreport" path="vendor/mediatek/libs/muxreport"/>
+    <project name="vendor/mediatek/libs/rs2spir" path="vendor/mediatek/libs/rs2spir"/>
+    <project name="vendor/mediatek/libs/slpd" path="vendor/mediatek/libs/slpd"/>
+    <project name="vendor/mediatek/libs/spir2cl" path="vendor/mediatek/libs/spir2cl"/>
+    <project name="vendor/mediatek/libs/statusd" path="vendor/mediatek/libs/statusd"/>
+    <project name="vendor/mediatek/libs/suppression_service" path="vendor/mediatek/libs/suppression_service"/>
+    <project name="vendor/mediatek/libs/taWidevineModularDrm_core" path="vendor/mediatek/libs/taWidevineModularDrm_core"/>
+    <project name="vendor/mediatek/libs/test_ampolicymaker_service" path="vendor/mediatek/libs/test_ampolicymaker_service"/>
+    <project name="vendor/mediatek/libs/thermalindicator" path="vendor/mediatek/libs/thermalindicator"/>
+    <project name="vendor/mediatek/libs/volte_rcs_ua" path="vendor/mediatek/libs/volte_rcs_ua"/>
+    <project name="vendor/mediatek/libs/libqmcX983d" path="vendor/mediatek/libs/libqmcX983d"/>
+    <project name="vendor/mediatek/proprietary/bootable/bootloader/lk" path="vendor/mediatek/proprietary/bootable/bootloader/lk"/>
+    <project name="vendor/mediatek/proprietary/bootable/bootloader/preloader" path="vendor/mediatek/proprietary/bootable/bootloader/preloader"/>
+    <project name="vendor/mediatek/proprietary/bootable/recovery/utils" path="vendor/mediatek/proprietary/bootable/recovery/utils"/>
+    <project name="vendor/mediatek/proprietary/buildinfo" path="vendor/mediatek/proprietary/buildinfo"/>
+    <project name="vendor/mediatek/proprietary/cgen" path="vendor/mediatek/proprietary/cgen"/>
+    <project name="vendor/mediatek/proprietary/custom" path="vendor/mediatek/proprietary/custom"/>
+    <project name="vendor/mediatek/proprietary/external/AudioCompensationFilter" path="vendor/mediatek/proprietary/external/AudioCompensationFilter"/>
+    <project name="vendor/mediatek/proprietary/external/AudioComponentEngine" path="vendor/mediatek/proprietary/external/AudioComponentEngine"/>
+    <project name="vendor/mediatek/proprietary/external/AudioDCRemoval" path="vendor/mediatek/proprietary/external/AudioDCRemoval"/>
+    <project name="vendor/mediatek/proprietary/external/AudioParamParser" path="vendor/mediatek/proprietary/external/AudioParamParser"/>
+    <project name="vendor/mediatek/proprietary/external/AudioSetParam" path="vendor/mediatek/proprietary/external/AudioSetParam"/>
+    <project name="vendor/mediatek/proprietary/external/AudioSpeechEnhancement" path="vendor/mediatek/proprietary/external/AudioSpeechEnhancement"/>
+    <project name="vendor/mediatek/proprietary/external/AudioTimeStretch" path="vendor/mediatek/proprietary/external/AudioTimeStretch"/>
+    <project name="vendor/mediatek/proprietary/external/EccList" path="vendor/mediatek/proprietary/external/EccList"/>
+    <project name="vendor/mediatek/proprietary/external/LaunchPPPoe" path="vendor/mediatek/proprietary/external/LaunchPPPoe"/>
+    <project name="vendor/mediatek/proprietary/external/NetworkLogD" path="vendor/mediatek/proprietary/external/NetworkLogD"/>
+    <project name="vendor/mediatek/proprietary/external/adpcmdec" path="vendor/mediatek/proprietary/external/adpcmdec"/>
+    <project name="vendor/mediatek/proprietary/external/adpcmenc" path="vendor/mediatek/proprietary/external/adpcmenc"/>
+    <project name="vendor/mediatek/proprietary/external/aee" path="vendor/mediatek/proprietary/external/aee"/>
+    <project name="vendor/mediatek/proprietary/external/amr" path="vendor/mediatek/proprietary/external/amr"/>
+    <project name="vendor/mediatek/proprietary/external/ant-wireless" path="vendor/mediatek/proprietary/external/ant-wireless"/>
+    <project name="vendor/mediatek/proprietary/external/apedec" path="vendor/mediatek/proprietary/external/apedec"/>
+    <project name="vendor/mediatek/proprietary/external/audioATCmdHandlerServer" path="vendor/mediatek/proprietary/external/audioATCmdHandlerServer"/>
+    <project name="vendor/mediatek/proprietary/external/audio_utils" path="vendor/mediatek/proprietary/external/audio_utils"/>
+    <project name="vendor/mediatek/proprietary/external/audiocommand" path="vendor/mediatek/proprietary/external/audiocommand"/>
+    <project name="vendor/mediatek/proprietary/external/audiocustparam" path="vendor/mediatek/proprietary/external/audiocustparam"/>
+    <project name="vendor/mediatek/proprietary/external/audiodcremoveflt" path="vendor/mediatek/proprietary/external/audiodcremoveflt"/>
+    <project name="vendor/mediatek/proprietary/external/audioregsetting" path="vendor/mediatek/proprietary/external/audioregsetting"/>
+    <project name="vendor/mediatek/proprietary/external/audiosetting" path="vendor/mediatek/proprietary/external/audiosetting"/>
+    <project name="vendor/mediatek/proprietary/external/aurisys" path="vendor/mediatek/proprietary/external/aurisys"/>
+    <project name="vendor/mediatek/proprietary/external/awb" path="vendor/mediatek/proprietary/external/awb"/>
+    <project name="vendor/mediatek/proprietary/external/bessound_HD" path="vendor/mediatek/proprietary/external/bessound_HD"/>
+    <project name="vendor/mediatek/proprietary/external/biosensord" path="vendor/mediatek/proprietary/external/biosensord"/>
+    <project name="vendor/mediatek/proprietary/external/blisrc" path="vendor/mediatek/proprietary/external/blisrc"/>
+    <project name="vendor/mediatek/proprietary/external/boot_logo_updater" path="vendor/mediatek/proprietary/external/boot_logo_updater"/>
+    <project name="vendor/mediatek/proprietary/external/bridge_utils" path="vendor/mediatek/proprietary/external/bridge_utils"/>
+    <project name="vendor/mediatek/proprietary/external/charger" path="vendor/mediatek/proprietary/external/charger"/>
+    <project name="vendor/mediatek/proprietary/external/cvsd_plc_codec" path="vendor/mediatek/proprietary/external/cvsd_plc_codec"/>
+    <project name="vendor/mediatek/proprietary/external/dm_agent_binder" path="vendor/mediatek/proprietary/external/dm_agent_binder"/>
+    <project name="vendor/mediatek/proprietary/external/ext_md_daemon" path="vendor/mediatek/proprietary/external/ext_md_daemon"/>
+    <project name="vendor/mediatek/proprietary/external/fft" path="vendor/mediatek/proprietary/external/fft"/>
+    <project name="vendor/mediatek/proprietary/external/fuelgauged" path="vendor/mediatek/proprietary/external/fuelgauged"/>
+    <project name="vendor/mediatek/proprietary/external/invensense" path="vendor/mediatek/proprietary/external/invensense"/>
+    <project name="vendor/mediatek/proprietary/external/ipo_swap" path="vendor/mediatek/proprietary/external/ipo_swap"/>
+    <project name="vendor/mediatek/proprietary/external/ipod" path="vendor/mediatek/proprietary/external/ipod"/>
+    <project name="vendor/mediatek/proprietary/external/lcdc_screen_cap" path="vendor/mediatek/proprietary/external/lcdc_screen_cap"/>
+    <project name="vendor/mediatek/proprietary/external/libhotknot_device" path="vendor/mediatek/proprietary/external/libhotknot_device"/>
+    <project name="vendor/mediatek/proprietary/external/libifaddrs" path="vendor/mediatek/proprietary/external/libifaddrs"/>
+    <project name="vendor/mediatek/proprietary/external/libion_mtk" path="vendor/mediatek/proprietary/external/libion_mtk"/>
+    <project name="vendor/mediatek/proprietary/external/libipod" path="vendor/mediatek/proprietary/external/libipod"/>
+    <project name="vendor/mediatek/proprietary/external/libipsec_ims" path="vendor/mediatek/proprietary/external/libipsec_ims"/>
+    <project name="vendor/mediatek/proprietary/external/libmmprofile" path="vendor/mediatek/proprietary/external/libmmprofile"/>
+    <project name="vendor/mediatek/proprietary/external/libnvram" path="vendor/mediatek/proprietary/external/libnvram"/>
+    <project name="vendor/mediatek/proprietary/external/libnvram_ext" path="vendor/mediatek/proprietary/external/libnvram_ext"/>
+    <project name="vendor/mediatek/proprietary/external/libperfservice" path="vendor/mediatek/proprietary/external/libperfservice"/>
+    <project name="vendor/mediatek/proprietary/external/libsched" path="vendor/mediatek/proprietary/external/libsched"/>
+    <project name="vendor/mediatek/proprietary/external/libshowlogo" path="vendor/mediatek/proprietary/external/libshowlogo"/>
+    <project name="vendor/mediatek/proprietary/external/libstorage_otp" path="vendor/mediatek/proprietary/external/libstorage_otp"/>
+    <project name="vendor/mediatek/proprietary/external/libsysenv" path="vendor/mediatek/proprietary/external/libsysenv"/>
+    <project name="vendor/mediatek/proprietary/external/libudf" path="vendor/mediatek/proprietary/external/libudf"/>
+    <project name="vendor/mediatek/proprietary/external/libusb" path="vendor/mediatek/proprietary/external/libusb"/>
+    <project name="vendor/mediatek/proprietary/external/limiter" path="vendor/mediatek/proprietary/external/limiter"/>
+    <project name="vendor/mediatek/proprietary/external/lzo" path="vendor/mediatek/proprietary/external/lzo"/>
+    <project name="vendor/mediatek/proprietary/external/md_ctrl" path="vendor/mediatek/proprietary/external/md_ctrl"/>
+    <project name="vendor/mediatek/proprietary/external/midiSeektable" path="vendor/mediatek/proprietary/external/midiSeektable"/>
+    <project name="vendor/mediatek/proprietary/external/mkimage" path="vendor/mediatek/proprietary/external/mkimage"/>
+    <project name="vendor/mediatek/proprietary/external/mmc_ffu" path="vendor/mediatek/proprietary/external/mmc_ffu"/>
+    <project name="vendor/mediatek/proprietary/external/mmp" path="vendor/mediatek/proprietary/external/mmp"/>
+    <project name="vendor/mediatek/proprietary/external/mobile_log_d" path="vendor/mediatek/proprietary/external/mobile_log_d"/>
+    <project name="vendor/mediatek/proprietary/external/mp3dec" path="vendor/mediatek/proprietary/external/mp3dec"/>
+    <project name="vendor/mediatek/proprietary/external/mpe" path="vendor/mediatek/proprietary/external/mpe"/>
+    <project name="vendor/mediatek/proprietary/external/mpud6050" path="vendor/mediatek/proprietary/external/mpud6050"/>
+    <project name="vendor/mediatek/proprietary/external/msbc_codec" path="vendor/mediatek/proprietary/external/msbc_codec"/>
+    <project name="vendor/mediatek/proprietary/external/mtd-utils" path="vendor/mediatek/proprietary/external/mtd-utils"/>
+    <project name="vendor/mediatek/proprietary/external/mtknfc" path="vendor/mediatek/proprietary/external/mtknfc"/>
+    <project name="vendor/mediatek/proprietary/external/mu3d" path="vendor/mediatek/proprietary/external/mu3d"/>
+    <project name="vendor/mediatek/proprietary/external/mu3h" path="vendor/mediatek/proprietary/external/mu3h"/>
+    <project name="vendor/mediatek/proprietary/external/mvg_app" path="vendor/mediatek/proprietary/external/mvg_app"/>
+    <project name="vendor/mediatek/proprietary/external/nvram" path="vendor/mediatek/proprietary/external/nvram"/>
+    <project name="vendor/mediatek/proprietary/external/opencl_icd_loader" path="vendor/mediatek/proprietary/external/opencl_icd_loader"/>
+    <project name="vendor/mediatek/proprietary/external/otp" path="vendor/mediatek/proprietary/external/otp"/>
+    <project name="vendor/mediatek/proprietary/external/permission_check" path="vendor/mediatek/proprietary/external/permission_check"/>
+    <project name="vendor/mediatek/proprietary/external/pppd_btdun" path="vendor/mediatek/proprietary/external/pppd_btdun"/>
+    <project name="vendor/mediatek/proprietary/external/pppoe" path="vendor/mediatek/proprietary/external/pppoe"/>
+    <project name="vendor/mediatek/proprietary/external/resize_ext4" path="vendor/mediatek/proprietary/external/resize_ext4"/>
+    <project name="vendor/mediatek/proprietary/external/shifter" path="vendor/mediatek/proprietary/external/shifter"/>
+    <project name="vendor/mediatek/proprietary/external/simservs" path="vendor/mediatek/proprietary/external/simservs"/>
+    <project name="vendor/mediatek/proprietary/external/sn" path="vendor/mediatek/proprietary/external/sn"/>
+    <project name="vendor/mediatek/proprietary/external/storagemanagerd" path="vendor/mediatek/proprietary/external/storagemanagerd"/>
+    <project name="vendor/mediatek/proprietary/external/thermal" path="vendor/mediatek/proprietary/external/thermal"/>
+    <project name="vendor/mediatek/proprietary/external/thermal_managerlib" path="vendor/mediatek/proprietary/external/thermal_managerlib"/>
+    <project name="vendor/mediatek/proprietary/external/thermalalgolib" path="vendor/mediatek/proprietary/external/thermalalgolib"/>
+    <project name="vendor/mediatek/proprietary/external/tiny_util" path="vendor/mediatek/proprietary/external/tiny_util"/>
+    <project name="vendor/mediatek/proprietary/external/udf" path="vendor/mediatek/proprietary/external/udf"/>
+    <project name="vendor/mediatek/proprietary/external/ufs_util" path="vendor/mediatek/proprietary/external/ufs_util"/>
+    <project name="vendor/mediatek/proprietary/external/voiceui" path="vendor/mediatek/proprietary/external/voiceui"/>
+    <project name="vendor/mediatek/proprietary/external/voiceunlock" path="vendor/mediatek/proprietary/external/voiceunlock"/>
+    <project name="vendor/mediatek/proprietary/external/vorbisenc" path="vendor/mediatek/proprietary/external/vorbisenc"/>
+    <project name="vendor/mediatek/proprietary/external/wifi2agps" path="vendor/mediatek/proprietary/external/wifi2agps"/>
+    <project name="vendor/mediatek/proprietary/external/xcap" path="vendor/mediatek/proprietary/external/xcap"/>
+    <project name="vendor/mediatek/proprietary/factory" path="vendor/mediatek/proprietary/factory"/>
+    <project name="vendor/mediatek/proprietary/frameworks/av/drm" path="vendor/mediatek/proprietary/frameworks/av/drm"/>
+    <project name="vendor/mediatek/proprietary/frameworks/av/media/BnMtkCodec" path="vendor/mediatek/proprietary/frameworks/av/media/BnMtkCodec"/>
+    <project name="vendor/mediatek/proprietary/frameworks/av/media/MtkCodecService" path="vendor/mediatek/proprietary/frameworks/av/media/MtkCodecService"/>
+    <project name="vendor/mediatek/proprietary/frameworks/av/media/libmtkplayer" path="vendor/mediatek/proprietary/frameworks/av/media/libmtkplayer"/>
+    <project name="vendor/mediatek/proprietary/frameworks/av/media/libs" path="vendor/mediatek/proprietary/frameworks/av/media/libs"/>
+    <project name="vendor/mediatek/proprietary/frameworks/av/memorydumper" path="vendor/mediatek/proprietary/frameworks/av/memorydumper"/>
+    <project name="vendor/mediatek/proprietary/frameworks/av/services/mmsdk" path="vendor/mediatek/proprietary/frameworks/av/services/mmsdk"/>
+    <project name="vendor/mediatek/proprietary/frameworks/base" path="vendor/mediatek/proprietary/frameworks/base"/>
+    <project name="vendor/mediatek/proprietary/frameworks/common" path="vendor/mediatek/proprietary/frameworks/common"/>
+    <project name="vendor/mediatek/proprietary/frameworks/native/include" path="vendor/mediatek/proprietary/frameworks/native/include"/>
+    <project name="vendor/mediatek/proprietary/frameworks/native/libs/sensorhub" path="vendor/mediatek/proprietary/frameworks/native/libs/sensorhub"/>
+    <project name="vendor/mediatek/proprietary/frameworks/native/services/sensorhubservice" path="vendor/mediatek/proprietary/frameworks/native/services/sensorhubservice"/>
+    <project name="vendor/mediatek/proprietary/frameworks/native/services/surfaceflinger" path="vendor/mediatek/proprietary/frameworks/native/services/surfaceflinger"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/ProgramBinaryServer" path="vendor/mediatek/proprietary/frameworks/opt/ProgramBinaryServer"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/appluginmanager" path="vendor/mediatek/proprietary/frameworks/opt/appluginmanager"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/atbinlibs" path="vendor/mediatek/proprietary/frameworks/opt/atbinlibs"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/atcid" path="vendor/mediatek/proprietary/frameworks/opt/atcid"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/batterywarning" path="vendor/mediatek/proprietary/frameworks/opt/batterywarning"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/brctrler" path="vendor/mediatek/proprietary/frameworks/opt/brctrler"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/carrierexpress" path="vendor/mediatek/proprietary/frameworks/opt/carrierexpress"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/compatibility-check" path="vendor/mediatek/proprietary/frameworks/opt/compatibility-check"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/epos_lib" path="vendor/mediatek/proprietary/frameworks/opt/epos_lib"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/jpe_lib" path="vendor/mediatek/proprietary/frameworks/opt/jpe_lib"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/libimsma" path="vendor/mediatek/proprietary/frameworks/opt/libimsma"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/magelib" path="vendor/mediatek/proprietary/frameworks/opt/magelib"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/net/ims" path="vendor/mediatek/proprietary/frameworks/opt/net/ims"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/net/lwx" path="vendor/mediatek/proprietary/frameworks/opt/net/lwx"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/plugin" path="vendor/mediatek/proprietary/frameworks/opt/plugin"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/ppl_agent" path="vendor/mediatek/proprietary/frameworks/opt/ppl_agent"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/simmelock" path="vendor/mediatek/proprietary/frameworks/opt/simmelock"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/telecomm" path="vendor/mediatek/proprietary/frameworks/opt/telecomm"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/telephony" path="vendor/mediatek/proprietary/frameworks/opt/telephony"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/telephony-base" path="vendor/mediatek/proprietary/frameworks/opt/telephony-base"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/teleservice" path="vendor/mediatek/proprietary/frameworks/opt/teleservice"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/vcard" path="vendor/mediatek/proprietary/frameworks/opt/vcard"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/viaplugin" path="vendor/mediatek/proprietary/frameworks/opt/viaplugin"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/vtservice" path="vendor/mediatek/proprietary/frameworks/opt/vtservice"/>
+    <project name="vendor/mediatek/proprietary/frameworks/opt/wbxml" path="vendor/mediatek/proprietary/frameworks/opt/wbxml"/>
+    <project name="vendor/mediatek/proprietary/hardware/Trace" path="vendor/mediatek/proprietary/hardware/Trace"/>
+    <project name="vendor/mediatek/proprietary/hardware/aal" path="vendor/mediatek/proprietary/hardware/aal"/>
+    <project name="vendor/mediatek/proprietary/hardware/audio" path="vendor/mediatek/proprietary/hardware/audio"/>
+    <project name="vendor/mediatek/proprietary/hardware/audio_remote_submix" path="vendor/mediatek/proprietary/hardware/audio_remote_submix"/>
+    <project name="vendor/mediatek/proprietary/hardware/bootctrl" path="vendor/mediatek/proprietary/hardware/bootctrl"/>
+    <project name="vendor/mediatek/proprietary/hardware/bwc" path="vendor/mediatek/proprietary/hardware/bwc"/>
+    <project name="vendor/mediatek/proprietary/hardware/c2kril" path="vendor/mediatek/proprietary/hardware/c2kril"/>
+    <project name="vendor/mediatek/proprietary/hardware/ccci" path="vendor/mediatek/proprietary/hardware/ccci"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/ANT" path="vendor/mediatek/proprietary/hardware/connectivity/ANT"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/bluetooth" path="vendor/mediatek/proprietary/hardware/connectivity/bluetooth"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/combo_tool" path="vendor/mediatek/proprietary/hardware/connectivity/combo_tool"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/firmware/rom_patch" path="vendor/mediatek/proprietary/hardware/connectivity/firmware/rom_patch"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/firmware/wlan" path="vendor/mediatek/proprietary/hardware/connectivity/firmware/wlan"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/flp" path="vendor/mediatek/proprietary/hardware/connectivity/flp"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/flp_ext" path="vendor/mediatek/proprietary/hardware/connectivity/flp_ext"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/fmradio" path="vendor/mediatek/proprietary/hardware/connectivity/fmradio"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/gps" path="vendor/mediatek/proprietary/hardware/connectivity/gps"/>
+    <project name="vendor/mediatek/proprietary/hardware/connectivity/wlan" path="vendor/mediatek/proprietary/hardware/connectivity/wlan"/>
+    <project name="vendor/mediatek/proprietary/hardware/consumerir" path="vendor/mediatek/proprietary/hardware/consumerir"/>
+    <project name="vendor/mediatek/proprietary/hardware/dongle-ril" path="vendor/mediatek/proprietary/hardware/dongle-ril"/>
+    <project name="vendor/mediatek/proprietary/hardware/drvb_lib" path="vendor/mediatek/proprietary/hardware/drvb_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/fbconfig_tool" path="vendor/mediatek/proprietary/hardware/fbconfig_tool"/>
+    <project name="vendor/mediatek/proprietary/hardware/fingerprint" path="vendor/mediatek/proprietary/hardware/fingerprint"/>
+    <project name="vendor/mediatek/proprietary/hardware/fstab" path="vendor/mediatek/proprietary/hardware/fstab"/>
+    <project name="vendor/mediatek/proprietary/hardware/gatekeeper" path="vendor/mediatek/proprietary/hardware/gatekeeper"/>
+    <project name="vendor/mediatek/proprietary/hardware/gpu_img" path="vendor/mediatek/proprietary/hardware/gpu_img"/>
+    <project name="vendor/mediatek/proprietary/hardware/gpu_mali_lib" path="vendor/mediatek/proprietary/hardware/gpu_mali_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/gralloc_extra" path="vendor/mediatek/proprietary/hardware/gralloc_extra"/>
+    <project name="vendor/mediatek/proprietary/hardware/gsm0710muxd" path="vendor/mediatek/proprietary/hardware/gsm0710muxd"/>
+    <project name="vendor/mediatek/proprietary/hardware/hwcomposer" path="vendor/mediatek/proprietary/hardware/hwcomposer"/>
+    <project name="vendor/mediatek/proprietary/hardware/ims" path="vendor/mediatek/proprietary/hardware/ims"/>
+    <project name="vendor/mediatek/proprietary/hardware/imsa" path="vendor/mediatek/proprietary/hardware/imsa"/>
+    <project name="vendor/mediatek/proprietary/hardware/interfaces" path="vendor/mediatek/proprietary/hardware/interfaces"/>
+    <project name="vendor/mediatek/proprietary/hardware/keyinstall" path="vendor/mediatek/proprietary/hardware/keyinstall"/>
+    <project name="vendor/mediatek/proprietary/hardware/keymaster" path="vendor/mediatek/proprietary/hardware/keymaster"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libae_core_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libae_core_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libae_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libae_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libaf_core_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libaf_core_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libaf_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libaf_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libawb_core_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libawb_core_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libawb_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libawb_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libccu_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libccu_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libflash_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libflash_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libgma_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libgma_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/liblce_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/liblce_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libn3d3a_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libn3d3a_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_3a/libstereodepth_lib" path="vendor/mediatek/proprietary/hardware/libcamera_3a/libstereodepth_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_ext" path="vendor/mediatek/proprietary/hardware/libcamera_ext"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/lib3dverify_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/lib3dverify_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libabf_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libabf_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libasd_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libasd_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libautorama_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libautorama_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libdngop_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libdngop_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libeis_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libeis_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libfancycolor_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libfancycolor_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libfdft_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libfdft_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libfefm_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libfefm_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libflicker_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libflicker_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libfov_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libfov_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libfv3d_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libfv3d_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libhdr_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libhdr_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libimgseg_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libimgseg_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libispfeature_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libispfeature_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/liblsc_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/liblsc_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libmfnr_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libmfnr_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libnr_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libnr_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/librefocus_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/librefocus_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libstereocam_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libstereocam_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_feature/libvsf_lib" path="vendor/mediatek/proprietary/hardware/libcamera_feature/libvsf_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libcamera_lib" path="vendor/mediatek/proprietary/hardware/libcamera_lib"/>
+    <project name="vendor/mediatek/proprietary/hardware/libgem" path="vendor/mediatek/proprietary/hardware/libgem"/>
+    <project name="vendor/mediatek/proprietary/hardware/libhwcomposer" path="vendor/mediatek/proprietary/hardware/libhwcomposer"/>
+    <project name="vendor/mediatek/proprietary/hardware/libkmsetkey" path="vendor/mediatek/proprietary/hardware/libkmsetkey"/>
+    <project name="vendor/mediatek/proprietary/hardware/liblights" path="vendor/mediatek/proprietary/hardware/liblights"/>
+    <project name="vendor/mediatek/proprietary/hardware/m4u" path="vendor/mediatek/proprietary/hardware/m4u"/>
+    <project name="vendor/mediatek/proprietary/hardware/mcupmfw/build" path="vendor/mediatek/proprietary/hardware/mcupmfw/build"/>
+    <project name="vendor/mediatek/proprietary/hardware/memtrack" path="vendor/mediatek/proprietary/hardware/memtrack"/>
+    <project name="vendor/mediatek/proprietary/hardware/meta" path="vendor/mediatek/proprietary/hardware/meta"/>
+    <project name="vendor/mediatek/proprietary/hardware/miravision" path="vendor/mediatek/proprietary/hardware/miravision"/>
+    <project name="vendor/mediatek/proprietary/hardware/mjc" path="vendor/mediatek/proprietary/hardware/mjc"/>
+    <project name="vendor/mediatek/proprietary/hardware/mmsdk" path="vendor/mediatek/proprietary/hardware/mmsdk"/>
+    <project name="vendor/mediatek/proprietary/hardware/mmutils" path="vendor/mediatek/proprietary/hardware/mmutils"/>
+    <project name="vendor/mediatek/proprietary/hardware/mtkcam" path="vendor/mediatek/proprietary/hardware/mtkcam"/>
+    <project name="vendor/mediatek/proprietary/hardware/netagent" path="vendor/mediatek/proprietary/hardware/netagent"/>
+    <project name="vendor/mediatek/proprietary/hardware/omx" path="vendor/mediatek/proprietary/hardware/omx"/>
+    <project name="vendor/mediatek/proprietary/hardware/perfservice" path="vendor/mediatek/proprietary/hardware/perfservice"/>
+    <project name="vendor/mediatek/proprietary/hardware/power" path="vendor/mediatek/proprietary/hardware/power"/>
+    <project name="vendor/mediatek/proprietary/hardware/pq" path="vendor/mediatek/proprietary/hardware/pq"/>
+    <project name="vendor/mediatek/proprietary/hardware/ril" path="vendor/mediatek/proprietary/hardware/ril"/>
+    <project name="vendor/mediatek/proprietary/hardware/rrc" path="vendor/mediatek/proprietary/hardware/rrc"/>
+    <project name="vendor/mediatek/proprietary/hardware/seclib" path="vendor/mediatek/proprietary/hardware/seclib"/>
+    <project name="vendor/mediatek/proprietary/hardware/sensor" path="vendor/mediatek/proprietary/hardware/sensor"/>
+    <project name="vendor/mediatek/proprietary/hardware/sensorhub" path="vendor/mediatek/proprietary/hardware/sensorhub"/>
+    <project name="vendor/mediatek/proprietary/hardware/smartpa" path="vendor/mediatek/proprietary/hardware/smartpa"/>
+    <project name="vendor/mediatek/proprietary/hardware/soundtrigger" path="vendor/mediatek/proprietary/hardware/soundtrigger"/>
+    <project name="vendor/mediatek/proprietary/hardware/spmfw/build" path="vendor/mediatek/proprietary/hardware/spmfw/build"/>
+    <project name="vendor/mediatek/proprietary/hardware/spmfw/mt6735" path="vendor/mediatek/proprietary/hardware/spmfw/mt6735"/>
+    <project name="vendor/mediatek/proprietary/hardware/spmfw/mt6755" path="vendor/mediatek/proprietary/hardware/spmfw/mt6755"/>
+    <project name="vendor/mediatek/proprietary/hardware/spmfw/mt6757" path="vendor/mediatek/proprietary/hardware/spmfw/mt6757"/>
+    <project name="vendor/mediatek/proprietary/hardware/spmfw/mt6797" path="vendor/mediatek/proprietary/hardware/spmfw/mt6797"/>
+    <project name="vendor/mediatek/proprietary/hardware/terservice" path="vendor/mediatek/proprietary/hardware/terservice"/>
+    <project name="vendor/mediatek/proprietary/hardware/thermal" path="vendor/mediatek/proprietary/hardware/thermal"/>
+    <project name="vendor/mediatek/proprietary/hardware/trusty" path="vendor/mediatek/proprietary/hardware/trusty"/>
+    <project name="vendor/mediatek/proprietary/hardware/usbaudio" path="vendor/mediatek/proprietary/hardware/usbaudio"/>
+    <project name="vendor/mediatek/proprietary/hardware/vcodec" path="vendor/mediatek/proprietary/hardware/vcodec"/>
+    <project name="vendor/mediatek/proprietary/hardware/vpu" path="vendor/mediatek/proprietary/hardware/vpu"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP01" path="vendor/mediatek/proprietary/operator/legacy/OP01"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP02" path="vendor/mediatek/proprietary/operator/legacy/OP02"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP03" path="vendor/mediatek/proprietary/operator/legacy/OP03"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP05" path="vendor/mediatek/proprietary/operator/legacy/OP05"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP06" path="vendor/mediatek/proprietary/operator/legacy/OP06"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP07" path="vendor/mediatek/proprietary/operator/legacy/OP07"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP08" path="vendor/mediatek/proprietary/operator/legacy/OP08"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP09" path="vendor/mediatek/proprietary/operator/legacy/OP09"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP1001" path="vendor/mediatek/proprietary/operator/legacy/OP1001"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP105" path="vendor/mediatek/proprietary/operator/legacy/OP105"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP107" path="vendor/mediatek/proprietary/operator/legacy/OP107"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP11" path="vendor/mediatek/proprietary/operator/legacy/OP11"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP112" path="vendor/mediatek/proprietary/operator/legacy/OP112"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP113" path="vendor/mediatek/proprietary/operator/legacy/OP113"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP12" path="vendor/mediatek/proprietary/operator/legacy/OP12"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP120" path="vendor/mediatek/proprietary/operator/legacy/OP120"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP126" path="vendor/mediatek/proprietary/operator/legacy/OP126"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP127" path="vendor/mediatek/proprietary/operator/legacy/OP127"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP15" path="vendor/mediatek/proprietary/operator/legacy/OP15"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP16" path="vendor/mediatek/proprietary/operator/legacy/OP16"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP17" path="vendor/mediatek/proprietary/operator/legacy/OP17"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP18" path="vendor/mediatek/proprietary/operator/legacy/OP18"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP19" path="vendor/mediatek/proprietary/operator/legacy/OP19"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/OP20" path="vendor/mediatek/proprietary/operator/legacy/OP20"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP01" path="vendor/mediatek/proprietary/operator/SPEC/OP01"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP02" path="vendor/mediatek/proprietary/operator/SPEC/OP02"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP03" path="vendor/mediatek/proprietary/operator/SPEC/OP03"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP05" path="vendor/mediatek/proprietary/operator/SPEC/OP05"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP06" path="vendor/mediatek/proprietary/operator/SPEC/OP06"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP07" path="vendor/mediatek/proprietary/operator/SPEC/OP07"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP08" path="vendor/mediatek/proprietary/operator/SPEC/OP08"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP09" path="vendor/mediatek/proprietary/operator/SPEC/OP09"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP11" path="vendor/mediatek/proprietary/operator/SPEC/OP11"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP12" path="vendor/mediatek/proprietary/operator/SPEC/OP12"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP15" path="vendor/mediatek/proprietary/operator/SPEC/OP15"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP16" path="vendor/mediatek/proprietary/operator/SPEC/OP16"/>
+    <project name="vendor/mediatek/proprietary/operator/SPEC/OP18" path="vendor/mediatek/proprietary/operator/SPEC/OP18"/>
+    <project name="vendor/mediatek/proprietary/operator/legacy/common" path="vendor/mediatek/proprietary/operator/legacy/common"/>
+    <project name="vendor/mediatek/proprietary/operator/frameworks/ims" path="vendor/mediatek/proprietary/operator/frameworks/ims"/>
+    <project name="vendor/mediatek/proprietary/operator/frameworks/telephony" path="vendor/mediatek/proprietary/operator/frameworks/telephony"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/apps/Blacklist" path="vendor/mediatek/proprietary/operator/packages/apps/Blacklist"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/apps/Contacts" path="vendor/mediatek/proprietary/operator/packages/apps/Contacts"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/apps/Dialer" path="vendor/mediatek/proprietary/operator/packages/apps/Dialer"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/apps/Keyguard" path="vendor/mediatek/proprietary/operator/packages/apps/Keyguard"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/apps/Launcher3" path="vendor/mediatek/proprietary/operator/packages/apps/Launcher3"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/apps/Stk" path="vendor/mediatek/proprietary/operator/packages/apps/Stk"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/apps/SystemUI" path="vendor/mediatek/proprietary/operator/packages/apps/SystemUI"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/services/Telecomm" path="vendor/mediatek/proprietary/operator/packages/services/Telecomm"/>
+    <project name="vendor/mediatek/proprietary/operator/packages/services/Telephony" path="vendor/mediatek/proprietary/operator/packages/services/Telephony"/>
+    <project name="vendor/mediatek/proprietary/packages/3rd-party/ANT" path="vendor/mediatek/proprietary/packages/3rd-party/ANT"/>
+    <project name="vendor/mediatek/proprietary/packages/3rd-party/LBS" path="vendor/mediatek/proprietary/packages/3rd-party/LBS"/>
+    <project name="vendor/mediatek/proprietary/packages/3rd-party/PGA_50_Free_Games" path="vendor/mediatek/proprietary/packages/3rd-party/PGA_50_Free_Games"/>
+    <project name="vendor/mediatek/proprietary/packages/3rd-party/FingerPrintTest" path="vendor/mediatek/proprietary/packages/3rd-party/FingerPrintTest"/>
+    <project name="vendor/mediatek/proprietary/packages/apicheck" path="vendor/mediatek/proprietary/packages/apicheck"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/AlwaysOnDisplay" path="vendor/mediatek/proprietary/packages/apps/AlwaysOnDisplay"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/AutoDialer" path="vendor/mediatek/proprietary/packages/apps/AutoDialer"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/BSPTelephonyDevTool" path="vendor/mediatek/proprietary/packages/apps/BSPTelephonyDevTool"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/BatteryWarning" path="vendor/mediatek/proprietary/packages/apps/BatteryWarning"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Browser" path="vendor/mediatek/proprietary/packages/apps/Browser"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/BtTool" path="vendor/mediatek/proprietary/packages/apps/BtTool"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Bypass" path="vendor/mediatek/proprietary/packages/apps/Bypass"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/CMASReceiver" path="vendor/mediatek/proprietary/packages/apps/CMASReceiver"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Calendar" path="vendor/mediatek/proprietary/packages/apps/Calendar"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/CalendarImporter" path="vendor/mediatek/proprietary/packages/apps/CalendarImporter"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Camera" path="vendor/mediatek/proprietary/packages/apps/Camera"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Camera2" path="vendor/mediatek/proprietary/packages/apps/Camera2"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/CarrierConfig" path="vendor/mediatek/proprietary/packages/apps/CarrierConfig"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/CdsInfo" path="vendor/mediatek/proprietary/packages/apps/CdsInfo"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/CmasEM" path="vendor/mediatek/proprietary/packages/apps/CmasEM"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/ConfigureCheck" path="vendor/mediatek/proprietary/packages/apps/ConfigureCheck"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Contacts" path="vendor/mediatek/proprietary/packages/apps/Contacts"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/CtaTest" path="vendor/mediatek/proprietary/packages/apps/CtaTest"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/DM" path="vendor/mediatek/proprietary/packages/apps/DM"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/DataProtection" path="vendor/mediatek/proprietary/packages/apps/DataProtection"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/DeviceRegister" path="vendor/mediatek/proprietary/packages/apps/DeviceRegister"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/DeviceTestApp" path="vendor/mediatek/proprietary/packages/apps/DeviceTestApp"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/EmCamera" path="vendor/mediatek/proprietary/packages/apps/EmCamera"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/EngineerMode" path="vendor/mediatek/proprietary/packages/apps/EngineerMode"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/EsnTrack" path="vendor/mediatek/proprietary/packages/apps/EsnTrack"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Exchange" path="vendor/mediatek/proprietary/packages/apps/Exchange"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/FMRadio" path="vendor/mediatek/proprietary/packages/apps/FMRadio"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/FMTransmitter" path="vendor/mediatek/proprietary/packages/apps/FMTransmitter"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/FileManager" path="vendor/mediatek/proprietary/packages/apps/FileManager"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/FlpEM2" path="vendor/mediatek/proprietary/packages/apps/FlpEM2"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Gba" path="vendor/mediatek/proprietary/packages/apps/Gba"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/HotKnot" path="vendor/mediatek/proprietary/packages/apps/HotKnot"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/HotKnotBeam" path="vendor/mediatek/proprietary/packages/apps/HotKnotBeam"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/HotKnotCommonUI" path="vendor/mediatek/proprietary/packages/apps/HotKnotCommonUI"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/HotKnotConnectivity" path="vendor/mediatek/proprietary/packages/apps/HotKnotConnectivity"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/HotKnotVerifier" path="vendor/mediatek/proprietary/packages/apps/HotKnotVerifier"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MTKAndroidSuiteDaemon" path="vendor/mediatek/proprietary/packages/apps/MTKAndroidSuiteDaemon"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MTKLogger" path="vendor/mediatek/proprietary/packages/apps/MTKLogger"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MTKSARTestProgram" path="vendor/mediatek/proprietary/packages/apps/MTKSARTestProgram"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MTKThermalManager" path="vendor/mediatek/proprietary/packages/apps/MTKThermalManager"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MdmConfig" path="vendor/mediatek/proprietary/packages/apps/MdmConfig"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MdmlSample" path="vendor/mediatek/proprietary/packages/apps/MdmlSample"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MediatekDM" path="vendor/mediatek/proprietary/packages/apps/MediatekDM"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MiraVision" path="vendor/mediatek/proprietary/packages/apps/MiraVision"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Mms" path="vendor/mediatek/proprietary/packages/apps/Mms"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MtkFloatMenu" path="vendor/mediatek/proprietary/packages/apps/MtkFloatMenu"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/MtkWebView" path="vendor/mediatek/proprietary/packages/apps/MtkWebView"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/NvRAM" path="vendor/mediatek/proprietary/packages/apps/NvRAM"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/OfflineK" path="vendor/mediatek/proprietary/packages/apps/OfflineK"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Omacp" path="vendor/mediatek/proprietary/packages/apps/Omacp"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/PermissionControl" path="vendor/mediatek/proprietary/packages/apps/PermissionControl"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Presence" path="vendor/mediatek/proprietary/packages/apps/Presence"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/PrivacyProtectionLock" path="vendor/mediatek/proprietary/packages/apps/PrivacyProtectionLock"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/QuickSearchBox" path="vendor/mediatek/proprietary/packages/apps/QuickSearchBox"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/RCSe" path="vendor/mediatek/proprietary/packages/apps/RCSe"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/RegionalPhoneManager" path="vendor/mediatek/proprietary/packages/apps/RegionalPhoneManager"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/RunningBooster" path="vendor/mediatek/proprietary/packages/apps/RunningBooster"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/SchedulePowerOnOff" path="vendor/mediatek/proprietary/packages/apps/SchedulePowerOnOff"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/SelfRegister" path="vendor/mediatek/proprietary/packages/apps/SelfRegister"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/SensorHub" path="vendor/mediatek/proprietary/packages/apps/SensorHub"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/SimLock" path="vendor/mediatek/proprietary/packages/apps/SimLock"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/SmartMotion" path="vendor/mediatek/proprietary/packages/apps/SmartMotion"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/Stk" path="vendor/mediatek/proprietary/packages/apps/Stk"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/VendorEmail" path="vendor/mediatek/proprietary/packages/apps/VendorEmail"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/VoiceCommand" path="vendor/mediatek/proprietary/packages/apps/VoiceCommand"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/VoiceUnlock" path="vendor/mediatek/proprietary/packages/apps/VoiceUnlock"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/WiFiTest" path="vendor/mediatek/proprietary/packages/apps/WiFiTest"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/YGPS" path="vendor/mediatek/proprietary/packages/apps/YGPS"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/agpsInterface" path="vendor/mediatek/proprietary/packages/apps/agpsInterface"/>
+    <project name="vendor/mediatek/proprietary/packages/providers/ContactsProvider" path="vendor/mediatek/proprietary/packages/providers/ContactsProvider"/>
+    <project name="vendor/mediatek/proprietary/packages/providers/DrmProvider" path="vendor/mediatek/proprietary/packages/providers/DrmProvider"/>
+    <project name="vendor/mediatek/proprietary/packages/providers/Telephony" path="vendor/mediatek/proprietary/packages/providers/Telephony"/>
+    <project name="vendor/mediatek/proprietary/packages/services/AtciService" path="vendor/mediatek/proprietary/packages/services/AtciService"/>
+    <project name="vendor/mediatek/proprietary/packages/services/CallRecorderService" path="vendor/mediatek/proprietary/packages/services/CallRecorderService"/>
+    <project name="vendor/mediatek/proprietary/packages/services/CarrierExpress" path="vendor/mediatek/proprietary/packages/services/CarrierExpress"/>
+    <project name="vendor/mediatek/proprietary/packages/services/Entitlement" path="vendor/mediatek/proprietary/packages/services/Entitlement"/>
+    <project name="vendor/mediatek/proprietary/packages/services/Ims" path="vendor/mediatek/proprietary/packages/services/Ims"/>
+    <project name="vendor/mediatek/proprietary/packages/services/Mms" path="vendor/mediatek/proprietary/packages/services/Mms"/>
+    <project name="vendor/mediatek/proprietary/packages/services/SmartcardService" path="vendor/mediatek/proprietary/packages/services/SmartcardService"/>
+    <project name="vendor/mediatek/proprietary/packages/services/Telecomm" path="vendor/mediatek/proprietary/packages/services/Telecomm"/>
+    <project name="vendor/mediatek/proprietary/packages/services/WifiOffload" path="vendor/mediatek/proprietary/packages/services/WifiOffload"/>
+    <project name="vendor/mediatek/proprietary/prebuilts" path="vendor/mediatek/proprietary/prebuilts"/>
+    <project name="vendor/mediatek/proprietary/scripts" path="vendor/mediatek/proprietary/scripts"/>
+    <project name="vendor/mediatek/proprietary/system/core/xflash" path="vendor/mediatek/proprietary/system/core/xflash"/>
+    <project name="vendor/mediatek/proprietary/system/netdagent" path="vendor/mediatek/proprietary/system/netdagent"/>
+    <project name="vendor/mediatek/proprietary/system/security/keystore_soterutils" path="vendor/mediatek/proprietary/system/security/keystore_soterutils"/>
+    <project name="vendor/mediatek/proprietary/tinysys/freertos/source" path="vendor/mediatek/proprietary/tinysys/freertos/source"/>
+    <project name="vendor/mediatek/proprietary/trustzone/atf" path="vendor/mediatek/proprietary/trustzone/atf"/>
+    <project name="vendor/mediatek/proprietary/trustzone/common/hal/source" path="vendor/mediatek/proprietary/trustzone/common/hal/source"/>
+    <project name="vendor/mediatek/proprietary/trustzone/custom" path="vendor/mediatek/proprietary/trustzone/custom"/>
+    <project name="vendor/mediatek/proprietary/trustzone/microtrust/source" path="vendor/mediatek/proprietary/trustzone/microtrust/source"/>
+    <project groups="broadcom_pdk,device,fugu,pdk" name="device/asus/fugu"/>
+    <project groups="broadcom_pdk,device,fugu,pdk" name="device/asus/fugu-kernel"/>
+    <project groups="pdk,pdk-cw-fs" name="device/common"/>
+    <project groups="pdk" name="device/generic/arm64"/>
+    <project groups="pdk" name="device/generic/armv7-a-neon"/>
+    <project groups="pdk" name="device/generic/car"/>
+    <project groups="pdk" name="device/generic/common"/>
+    <project groups="pdk" name="device/generic/goldfish"/>
+    <project groups="pdk" name="device/generic/goldfish-opengl"/>
+    <project groups="pdk" name="device/generic/mini-emulator-arm64"/>
+    <project groups="pdk" name="device/generic/mini-emulator-armv7-a-neon"/>
+    <project groups="pdk" name="device/generic/mini-emulator-mips"/>
+    <project groups="pdk" name="device/generic/mini-emulator-mips64"/>
+    <project groups="pdk" name="device/generic/mini-emulator-x86"/>
+    <project groups="pdk" name="device/generic/mini-emulator-x86_64"/>
+    <project groups="pdk" name="device/generic/mips"/>
+    <project groups="pdk" name="device/generic/mips64"/>
+    <project groups="pdk" name="device/generic/qemu"/>
+    <project groups="pdk" name="device/generic/x86"/>
+    <project groups="pdk" name="device/generic/x86_64"/>
+    <project groups="device,pdk" name="device/google/accessory/arduino"/>
+    <project groups="device,pdk" name="device/google/accessory/demokit"/>
+    <project groups="broadcom_pdk,device,fugu,generic_fs,pdk" name="device/google/atv"/>
+    <project groups="device,marlin,pdk" name="device/google/contexthub"/>
+    <project groups="device,dragon,pdk" name="device/google/dragon"/>
+    <project groups="device,dragon,pdk" name="device/google/dragon-kernel"/>
+    <project groups="device,marlin" name="device/google/marlin"/>
+    <project groups="device,marlin" name="device/google/marlin-kernel"/>
+    <project groups="pdk" name="device/google/vrservices"/>
+    <project groups="angler,broadcom_pdk,device,pdk" name="device/huawei/angler"/>
+    <project groups="angler,broadcom_pdk,device,pdk" name="device/huawei/angler-kernel"/>
+    <project groups="bullhead,device,pdk" name="device/lge/bullhead"/>
+    <project groups="bullhead,device,pdk" name="device/lge/bullhead-kernel"/>
+    <project name="device/linaro/bootloader/OpenPlatformPkg"/>
+    <project name="device/linaro/bootloader/arm-trusted-firmware"/>
+    <project name="device/linaro/bootloader/edk2"/>
+    <project groups="device,hikey,pdk" name="device/linaro/hikey"/>
+    <project groups="device,hikey,pdk" name="device/linaro/hikey-kernel"/>
+    <project groups="pdk" name="device/sample"/>
+    <project name="kernel/tests"/>
+    <project groups="pdk" name="art" path="art"/>
+    <project groups="pdk" name="bionic" path="bionic"/>
+    <project groups="pdk" name="bootable/recovery" path="bootable/recovery"/>
+    <project groups="pdk" name="build/make" path="build/make">
+        <copyfile dest="Makefile" src="core/root.mk"/>
+        <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
+        <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
+        <linkfile dest="build/core" src="core"/>
+        <linkfile dest="build/envsetup.sh" src="envsetup.sh"/>
+        <linkfile dest="build/target" src="target"/>
+        <linkfile dest="build/tools" src="tools"/>
+    </project>
+    <project groups="pdk,tradefed" name="build/blueprint" path="build/blueprint"/>
+    <project groups="pdk,tradefed" name="build/kati" path="build/kati"/>
+    <project groups="pdk,tradefed" name="build/soong" path="build/soong">
+        <linkfile dest="Android.bp" src="root.bp"/>
+        <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+    </project>
+    <project groups="cts,pdk-cw-fs,pdk-fs" name="cts" path="cts"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="dalvik" path="dalvik"/>
+    <project name="developers/build" path="developers/build"/>
+    <project name="developers/demos" path="developers/demos"/>
+    <project name="developers/samples/android" path="developers/samples/android"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="development" path="development"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="docs/source.android.com" path="docs/source.android.com"/>
+    <project groups="pdk" name="external/ImageMagick" path="external/ImageMagick"/>
+    <project groups="pdk" name="external/Microsoft-GSL" path="external/Microsoft-GSL"/>
+    <project groups="pdk" name="external/aac" path="external/aac"/>
+    <project groups="pdk" name="external/abi-compliance-checker" path="external/abi-compliance-checker"/>
+    <project groups="pdk" name="external/abi-dumper" path="external/abi-dumper"/>
+    <project groups="pdk" name="external/android-clat" path="external/android-clat"/>
+    <project groups="pdk" name="external/androidplot" path="external/androidplot"/>
+    <project groups="pdk" name="external/ant-glob" path="external/ant-glob"/>
+    <project groups="pdk" name="external/antlr" path="external/antlr"/>
+    <project groups="pdk" name="external/apache-commons-math" path="external/apache-commons-math"/>
+    <project groups="pdk" name="external/apache-harmony" path="external/apache-harmony"/>
+    <project groups="pdk" name="external/apache-http" path="external/apache-http"/>
+    <project groups="pdk" name="external/apache-xml" path="external/apache-xml"/>
+    <project groups="pdk" name="external/archive-patcher" path="external/archive-patcher"/>
+    <project groups="vendor" name="external/arm-neon-tests" path="external/arm-neon-tests"/>
+    <project groups="pdk-fs" name="external/autotest" path="external/autotest"/>
+    <project groups="pdk" name="external/avb" path="external/avb"/>
+    <project groups="pdk" name="external/bison" path="external/bison"/>
+    <project groups="pdk" name="external/blktrace" path="external/blktrace"/>
+    <project groups="pdk,trusty" name="external/boringssl" path="external/boringssl"/>
+    <project groups="pdk" name="external/bouncycastle" path="external/bouncycastle"/>
+    <project groups="pdk" name="external/bsdiff" path="external/bsdiff"/>
+    <project groups="pdk" name="external/bzip2" path="external/bzip2"/>
+    <project groups="pdk" name="external/c-ares" path="external/c-ares"/>
+    <project groups="pdk" name="external/caliper" path="external/caliper"/>
+    <project groups="pdk" name="external/cblas" path="external/cblas"/>
+    <project groups="pdk" name="external/chromium-libpac" path="external/chromium-libpac"/>
+    <project groups="pdk" name="external/chromium-trace" path="external/chromium-trace"/>
+    <project groups="pdk" name="external/chromium-webview" path="external/chromium-webview"/>
+    <project groups="pdk" name="external/clang" path="external/clang"/>
+    <project groups="pdk" name="external/cmockery" path="external/cmockery"/>
+    <project groups="pdk" name="external/compiler-rt" path="external/compiler-rt"/>
+    <project groups="pdk" name="external/conscrypt" path="external/conscrypt"/>
+    <project groups="pdk" name="external/crcalc" path="external/crcalc"/>
+    <project groups="pdk" name="external/cros/system_api" path="external/cros/system_api"/>
+    <project groups="pdk" name="external/curl" path="external/curl"/>
+    <project groups="pdk" name="external/dagger2" path="external/dagger2"/>
+    <project groups="pdk-fs" name="external/deqp" path="external/deqp"/>
+    <project groups="pdk" name="external/desugar" path="external/desugar"/>
+    <project groups="pdk" name="external/dexmaker" path="external/dexmaker"/>
+    <project groups="pdk" name="external/dhcpcd-6.8.2" path="external/dhcpcd-6.8.2"/>
+    <project groups="pdk" name="external/dlmalloc" path="external/dlmalloc"/>
+    <project groups="pdk" name="external/dng_sdk" path="external/dng_sdk"/>
+    <project groups="pdk" name="external/dnsmasq" path="external/dnsmasq"/>
+    <project groups="pdk" name="external/doclava" path="external/doclava"/>
+    <project groups="pdk" name="external/donuts" path="external/donuts"/>
+    <project groups="drm_gralloc,pdk-fs" name="external/drm_gralloc" path="external/drm_gralloc"/>
+    <project groups="drm_hwcomposer,pdk-fs" name="external/drm_hwcomposer" path="external/drm_hwcomposer"/>
+    <project groups="pdk" name="external/droiddriver" path="external/droiddriver"/>
+    <project groups="pdk" name="external/dtc" path="external/dtc"/>
+    <project groups="pdk" name="external/e2fsprogs" path="external/e2fsprogs"/>
+    <project groups="pdk" name="external/easymock" path="external/easymock"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="external/eclipse-basebuilder" path="external/eclipse-basebuilder"/>
+    <project groups="pdk" name="external/eclipse-windowbuilder" path="external/eclipse-windowbuilder"/>
+    <project groups="pdk" name="external/eigen" path="external/eigen"/>
+    <project groups="pdk" name="external/elfutils" path="external/elfutils"/>
+    <project groups="pdk" name="external/emma" path="external/emma"/>
+    <project groups="pdk" name="external/esd" path="external/esd"/>
+    <project groups="pdk" name="external/expat" path="external/expat"/>
+    <project groups="pdk" name="external/eyes-free" path="external/eyes-free"/>
+    <project groups="pdk" name="external/f2fs-tools" path="external/f2fs-tools"/>
+    <project groups="pdk" name="external/fdlibm" path="external/fdlibm"/>
+    <project groups="pdk" name="external/fec" path="external/fec"/>
+    <project groups="pdk" name="external/fio" path="external/fio"/>
+    <project groups="pdk" name="external/flac" path="external/flac"/>
+    <project groups="pdk" name="external/flatbuffers" path="external/flatbuffers"/>
+    <project groups="pdk" name="external/fmtlib" path="external/fmtlib"/>
+    <project groups="pdk" name="external/fonttools" path="external/fonttools"/>
+    <project groups="pdk" name="external/freetype" path="external/freetype"/>
+    <project groups="pdk" name="external/fsck_msdos" path="external/fsck_msdos"/>
+    <project groups="pdk" name="external/gemmlowp" path="external/gemmlowp"/>
+    <project groups="pdk,qcom_msm8x26" name="external/giflib" path="external/giflib"/>
+    <project groups="pdk" name="external/glide" path="external/glide"/>
+    <project groups="pdk" name="external/google-benchmark" path="external/google-benchmark"/>
+    <project groups="dragon,pdk-fs" name="external/google-breakpad" path="external/google-breakpad"/>
+    <project groups="pdk" name="external/google-fonts/carrois-gothic-sc" path="external/google-fonts/carrois-gothic-sc"/>
+    <project groups="pdk" name="external/google-fonts/coming-soon" path="external/google-fonts/coming-soon"/>
+    <project groups="pdk" name="external/google-fonts/cutive-mono" path="external/google-fonts/cutive-mono"/>
+    <project groups="pdk" name="external/google-fonts/dancing-script" path="external/google-fonts/dancing-script"/>
+    <project groups="pdk" name="external/google-tv-pairing-protocol" path="external/google-tv-pairing-protocol"/>
+    <project groups="pdk" name="external/googletest" path="external/googletest"/>
+    <project groups="pdk" name="external/gptfdisk" path="external/gptfdisk"/>
+    <project groups="pdk" name="external/guava" path="external/guava"/>
+    <project groups="pdk" name="external/guice" path="external/guice"/>
+    <project groups="pdk" name="external/hamcrest" path="external/hamcrest"/>
+    <project groups="pdk,qcom_msm8x26" name="external/harfbuzz_ng" path="external/harfbuzz_ng"/>
+    <project groups="pdk" name="external/hyphenation-patterns" path="external/hyphenation-patterns"/>
+    <project groups="pdk" name="external/icu" path="external/icu"/>
+    <project groups="pdk" name="external/ims" path="external/ims"/>
+    <project groups="pdk" name="external/iproute2" path="external/iproute2"/>
+    <project groups="pdk" name="external/ipsec-tools" path="external/ipsec-tools"/>
+    <project groups="pdk" name="external/iptables" path="external/iptables"/>
+    <project groups="pdk" name="external/iputils" path="external/iputils"/>
+    <project groups="pdk" name="external/iw" path="external/iw"/>
+    <project groups="pdk" name="external/jacoco" path="external/jacoco"/>
+    <project groups="pdk" name="external/jarjar" path="external/jarjar"/>
+    <project groups="pdk" name="external/javasqlite" path="external/javasqlite"/>
+    <project groups="pdk" name="external/javassist" path="external/javassist"/>
+    <project groups="pdk" name="external/jcommander" path="external/jcommander"/>
+    <project groups="pdk" name="external/jdiff" path="external/jdiff"/>
+    <project groups="pdk" name="external/jemalloc" path="external/jemalloc"/>
+    <project groups="pdk,pdk-fs,tradefed" name="external/jline" path="external/jline"/>
+    <project groups="pdk" name="external/jmdns" path="external/jmdns"/>
+    <project groups="pdk" name="external/jsilver" path="external/jsilver"/>
+    <project groups="pdk" name="external/jsmn" path="external/jsmn"/>
+    <project groups="pdk" name="external/jsoncpp" path="external/jsoncpp"/>
+    <project groups="pdk" name="external/jsr305" path="external/jsr305"/>
+    <project groups="pdk" name="external/jsr330" path="external/jsr330"/>
+    <project groups="pdk" name="external/junit" path="external/junit"/>
+    <project groups="pdk" name="external/junit-params" path="external/junit-params"/>
+    <project groups="pdk" name="external/kernel-headers" path="external/kernel-headers"/>
+    <project groups="pdk" name="external/kmod" path="external/kmod"/>
+    <project groups="pdk" name="external/ksoap2" path="external/ksoap2"/>
+    <project groups="pdk" name="external/libavc" path="external/libavc"/>
+    <project groups="pdk" name="external/libbrillo" path="external/libbrillo"/>
+    <project groups="pdk" name="external/libcap" path="external/libcap"/>
+    <project groups="pdk" name="external/libcap-ng" path="external/libcap-ng"/>
+    <project groups="pdk" name="external/libchrome" path="external/libchrome"/>
+    <project groups="pdk" name="external/libconstrainedcrypto" path="external/libconstrainedcrypto"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="external/libcups" path="external/libcups"/>
+    <project groups="pdk" name="external/libcxx" path="external/libcxx"/>
+    <project groups="pdk" name="external/libcxxabi" path="external/libcxxabi"/>
+    <project groups="pdk" name="external/libdaemon" path="external/libdaemon"/>
+    <project groups="pdk" name="external/libdivsufsort" path="external/libdivsufsort"/>
+    <project groups="pdk" name="external/libdrm" path="external/libdrm"/>
+    <project groups="pdk" name="external/libedit" path="external/libedit"/>
+    <project groups="pdk" name="external/libese" path="external/libese"/>
+    <project groups="pdk" name="external/libevent" path="external/libevent"/>
+    <project groups="pdk" name="external/libexif" path="external/libexif"/>
+    <project groups="pdk" name="external/libgsm" path="external/libgsm"/>
+    <project groups="pdk" name="external/libhevc" path="external/libhevc"/>
+    <project groups="pdk" name="external/libjpeg-turbo" path="external/libjpeg-turbo"/>
+    <project groups="pdk" name="external/libldac" path="external/libldac"/>
+    <project groups="pdk" name="external/liblzf" path="external/liblzf"/>
+    <project groups="pdk" name="external/libmicrohttpd" path="external/libmicrohttpd"/>
+    <project groups="pdk" name="external/libmojo" path="external/libmojo"/>
+    <project groups="pdk" name="external/libmpeg2" path="external/libmpeg2"/>
+    <project groups="pdk" name="external/libmtp" path="external/libmtp"/>
+    <project groups="pdk" name="external/libnetfilter_conntrack" path="external/libnetfilter_conntrack"/>
+    <project groups="pdk" name="external/libnfnetlink" path="external/libnfnetlink"/>
+    <project groups="pdk" name="external/libnl" path="external/libnl"/>
+    <project groups="pdk" name="external/libogg" path="external/libogg"/>
+    <project groups="pdk" name="external/libopus" path="external/libopus"/>
+    <project groups="pdk" name="external/libpcap" path="external/libpcap"/>
+    <project groups="pdk" name="external/libphonenumber" path="external/libphonenumber"/>
+    <project groups="pdk" name="external/libpng" path="external/libpng"/>
+    <project groups="pdk" name="external/libtextclassifier" path="external/libtextclassifier"/>
+    <project groups="pdk" name="external/libunwind" path="external/libunwind"/>
+    <project groups="pdk" name="external/libunwind_llvm" path="external/libunwind_llvm"/>
+    <project groups="pdk" name="external/libusb" path="external/libusb"/>
+    <project groups="pdk" name="external/libusb-compat" path="external/libusb-compat"/>
+    <project groups="pdk" name="external/libutf" path="external/libutf"/>
+    <project groups="pdk" name="external/libvncserver" path="external/libvncserver"/>
+    <project groups="pdk" name="external/libvorbis" path="external/libvorbis"/>
+    <project groups="pdk" name="external/libvpx" path="external/libvpx"/>
+    <project groups="pdk" name="external/libvterm" path="external/libvterm"/>
+    <project groups="libxml2,pdk" name="external/libxml2" path="external/libxml2"/>
+    <project groups="libyuv,pdk" name="external/libyuv" path="external/libyuv"/>
+    <project groups="pdk,vts" name="external/linux-kselftest" path="external/linux-kselftest"/>
+    <project groups="pdk" name="external/littlemock" path="external/littlemock"/>
+    <project groups="pdk" name="external/lld" path="external/lld"/>
+    <project groups="pdk" name="external/llvm" path="external/llvm"/>
+    <project groups="pdk,vts" name="external/ltp" path="external/ltp"/>
+    <project groups="pdk" name="external/lz4" path="external/lz4"/>
+    <project groups="pdk" name="external/lzma" path="external/lzma"/>
+    <project groups="pdk" name="external/markdown" path="external/markdown"/>
+    <project groups="pdk" name="external/mdnsresponder" path="external/mdnsresponder"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="external/mesa3d" path="external/mesa3d"/>
+    <project groups="pdk" name="external/messageformat" path="external/messageformat"/>
+    <project groups="pdk" name="external/minijail" path="external/minijail"/>
+    <project groups="pdk" name="external/mksh" path="external/mksh"/>
+    <project groups="pdk" name="external/mmc-utils" path="external/mmc-utils"/>
+    <project groups="pdk" name="external/mockftpserver" path="external/mockftpserver"/>
+    <project groups="pdk" name="external/mockito" path="external/mockito"/>
+    <project groups="pdk" name="external/mockwebserver" path="external/mockwebserver"/>
+    <project groups="pdk" name="external/modp_b64" path="external/modp_b64"/>
+    <project groups="pdk" name="external/mp4parser" path="external/mp4parser"/>
+    <project groups="pdk" name="external/mtpd" path="external/mtpd"/>
+    <project groups="pdk" name="external/nanohttpd" path="external/nanohttpd"/>
+    <project groups="pdk" name="external/nanopb-c" path="external/nanopb-c"/>
+    <project groups="pdk" name="external/naver-fonts" path="external/naver-fonts"/>
+    <project groups="pdk" name="external/netcat" path="external/netcat"/>
+    <project groups="pdk" name="external/netperf" path="external/netperf"/>
+    <project groups="pdk" name="external/neven" path="external/neven"/>
+    <project groups="pdk" name="external/nfacct" path="external/nfacct"/>
+    <project groups="pdk" name="external/nist-pkits" path="external/nist-pkits"/>
+    <project groups="pdk" name="external/nist-sip" path="external/nist-sip"/>
+    <project groups="pdk" name="external/noto-fonts" path="external/noto-fonts"/>
+    <project groups="pdk" name="external/oauth" path="external/oauth"/>
+    <project groups="pdk" name="external/objenesis" path="external/objenesis"/>
+    <project groups="pdk" name="external/okhttp" path="external/okhttp"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="external/opencv" path="external/opencv"/>
+    <project groups="pdk" name="external/openssh" path="external/openssh"/>
+    <project groups="pdk" name="external/owasp/sanitizer" path="external/owasp/sanitizer"/>
+    <project groups="pdk" name="external/parameter-framework" path="external/parameter-framework"/>
+    <project groups="pdk" name="external/pcre" path="external/pcre"/>
+    <project groups="pdk" name="external/pdfium" path="external/pdfium"/>
+    <project groups="pdk" name="external/piex" path="external/piex"/>
+    <project groups="pdk" name="external/ppp" path="external/ppp"/>
+    <project groups="pdk" name="external/proguard" path="external/proguard"/>
+    <project groups="pdk" name="external/protobuf" path="external/protobuf"/>
+    <project groups="pdk" name="external/regex-re2" path="external/regex-re2"/>
+    <project groups="pdk" name="external/replicaisland" path="external/replicaisland"/>
+    <project groups="pdk" name="external/rmi4utils" path="external/rmi4utils"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="external/robolectric" path="external/robolectric"/>
+    <project groups="pdk" name="external/roboto-fonts" path="external/roboto-fonts"/>
+    <project groups="pdk" name="external/rootdev" path="external/rootdev"/>
+    <project groups="pdk" name="external/safe-iop" path="external/safe-iop"/>
+    <project groups="pdk" name="external/scrypt" path="external/scrypt"/>
+    <project groups="pdk" name="external/seccomp-tests" path="external/seccomp-tests"/>
+    <project groups="pdk" name="external/selinux" path="external/selinux"/>
+    <project groups="pdk,qcom_msm8x26" name="external/sfntly" path="external/sfntly"/>
+    <project groups="pdk" name="external/shflags" path="external/shflags"/>
+    <project groups="pdk,qcom_msm8x26" name="external/skia" path="external/skia"/>
+    <project groups="pdk" name="external/sl4a" path="external/sl4a"/>
+    <project groups="pdk" name="external/slf4j" path="external/slf4j"/>
+    <project groups="pdk" name="external/smali" path="external/smali"/>
+    <project groups="pdk" name="external/snakeyaml" path="external/snakeyaml"/>
+    <project groups="pdk" name="external/sonic" path="external/sonic"/>
+    <project groups="pdk" name="external/sonivox" path="external/sonivox"/>
+    <project groups="pdk" name="external/speex" path="external/speex"/>
+    <project name="external/spirv-llvm" path="external/spirv-llvm"/>
+    <project groups="pdk" name="external/sqlite" path="external/sqlite"/>
+    <project groups="pdk" name="external/squashfs-tools" path="external/squashfs-tools"/>
+    <project groups="pdk" name="external/strace" path="external/strace"/>
+    <project groups="pdk" name="external/stressapptest" path="external/stressapptest"/>
+    <project groups="pdk" name="external/svox" path="external/svox"/>
+    <project groups="pdk" name="external/swiftshader" path="external/swiftshader"/>
+    <project groups="pdk" name="external/syslinux" path="external/syslinux"/>
+    <project groups="pdk" name="external/tagsoup" path="external/tagsoup"/>
+    <project groups="pdk" name="external/tcpdump" path="external/tcpdump"/>
+    <project groups="pdk" name="external/testng" path="external/testng"/>
+    <project groups="pdk" name="external/timezonepicker-support" path="external/timezonepicker-support"/>
+    <project groups="pdk" name="external/tinyalsa" path="external/tinyalsa"/>
+    <project groups="pdk" name="external/tinycompress" path="external/tinycompress"/>
+    <project groups="pdk" name="external/tinyxml" path="external/tinyxml"/>
+    <project groups="pdk" name="external/tinyxml2" path="external/tinyxml2"/>
+    <project name="external/toolchain-utils" path="external/toolchain-utils"/>
+    <project groups="pdk" name="external/toybox" path="external/toybox"/>
+    <project groups="pdk" name="external/tpm2" path="external/tpm2"/>
+    <project groups="pdk" name="external/tremolo" path="external/tremolo"/>
+    <project groups="pdk" name="external/unicode" path="external/unicode"/>
+    <project name="external/universal-tween-engine" path="external/universal-tween-engine"/>
+    <project groups="pdk" name="external/v8" path="external/v8"/>
+    <project groups="pdk" name="external/valgrind" path="external/valgrind"/>
+    <project groups="pdk-fs,vboot" name="external/vboot_reference" path="external/vboot_reference"/>
+    <project groups="pdk" name="external/vixl" path="external/vixl"/>
+    <project groups="pdk" name="external/vogar" path="external/vogar"/>
+    <project groups="pdk" name="external/volley" path="external/volley"/>
+    <project groups="pdk" name="external/vulkan-validation-layers" path="external/vulkan-validation-layers"/>
+    <project groups="pdk,qcom_msm8x26" name="external/webp" path="external/webp"/>
+    <project groups="pdk" name="external/webrtc" path="external/webrtc"/>
+    <project groups="pdk" name="external/wpa_supplicant_8" path="external/wpa_supplicant_8"/>
+    <project groups="pdk" name="external/wycheproof" path="external/wycheproof"/>
+    <project groups="pdk" name="external/x264" path="external/x264"/>
+    <project groups="pdk" name="external/xmlrpcpp" path="external/xmlrpcpp"/>
+    <project groups="pdk" name="external/xmlwriter" path="external/xmlwriter"/>
+    <project groups="pdk" name="external/xmp_toolkit" path="external/xmp_toolkit"/>
+    <project groups="pdk" name="external/zlib" path="external/zlib"/>
+    <project groups="pdk" name="external/zopfli" path="external/zopfli"/>
+    <project groups="pdk" name="external/zxing" path="external/zxing"/>
+    <project groups="pdk" name="frameworks/av" path="frameworks/av"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/base" path="frameworks/base" revison="gmos3.0_8.0_develop"/>
+    <project groups="pdk" name="frameworks/compile/libbcc" path="frameworks/compile/libbcc"/>
+    <project groups="pdk" name="frameworks/compile/mclinker" path="frameworks/compile/mclinker"/>
+    <project groups="pdk" name="frameworks/compile/slang" path="frameworks/compile/slang"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/data-binding" path="frameworks/data-binding"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/ex" path="frameworks/ex"/>
+    <project groups="pdk" name="frameworks/hardware/interfaces" path="frameworks/hardware/interfaces"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/minikin" path="frameworks/minikin"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/ml" path="frameworks/ml"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/multidex" path="frameworks/multidex"/>
+    <project groups="pdk" name="frameworks/native" path="frameworks/native"/>
+    <project groups="pdk-fs" name="frameworks/opt/bitmap" path="frameworks/opt/bitmap"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/bluetooth" path="frameworks/opt/bluetooth"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/calendar" path="frameworks/opt/calendar"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/chips" path="frameworks/opt/chips"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/colorpicker" path="frameworks/opt/colorpicker"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/datetimepicker" path="frameworks/opt/datetimepicker"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/emoji" path="frameworks/opt/emoji"/>
+    <project groups="pdk-fs" name="frameworks/opt/inputconnectioncommon" path="frameworks/opt/inputconnectioncommon"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/inputmethodcommon" path="frameworks/opt/inputmethodcommon"/>
+    <project groups="pdk-fs" name="frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet"/>
+    <project groups="frameworks_ims,pdk-cw-fs,pdk-fs" name="frameworks/opt/net/ims" path="frameworks/opt/net/ims"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/net/voip" path="frameworks/opt/net/voip"/>
+    <project groups="pdk" name="frameworks/opt/net/wifi" path="frameworks/opt/net/wifi"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/photoviewer" path="frameworks/opt/photoviewer"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/setupwizard" path="frameworks/opt/setupwizard"/>
+    <project groups="pdk" name="frameworks/opt/telephony" path="frameworks/opt/telephony"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/opt/vcard" path="frameworks/opt/vcard"/>
+    <project groups="pdk" name="frameworks/rs" path="frameworks/rs"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/support" path="frameworks/support"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/webview" path="frameworks/webview"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="frameworks/wilhelm" path="frameworks/wilhelm"/>
+    <project groups="pdk" name="hardware/akm" path="hardware/akm"/>
+    <project groups="pdk" name="hardware/broadcom/libbt" path="hardware/broadcom/libbt"/>
+    <project groups="broadcom_wlan,pdk" name="hardware/broadcom/wlan" path="hardware/broadcom/wlan"/>
+    <project groups="pdk" name="hardware/google/apf" path="hardware/google/apf"/>
+    <project groups="intel,pdk" name="hardware/intel/audio_media" path="hardware/intel/audio_media"/>
+    <project groups="intel,pdk" name="hardware/intel/bootstub" path="hardware/intel/bootstub"/>
+    <project groups="intel,pdk" name="hardware/intel/common/bd_prov" path="hardware/intel/common/bd_prov"/>
+    <project groups="intel,pdk" name="hardware/intel/common/libmix" path="hardware/intel/common/libmix"/>
+    <project groups="intel,pdk" name="hardware/intel/common/libstagefrighthw" path="hardware/intel/common/libstagefrighthw"/>
+    <project groups="intel,pdk" name="hardware/intel/common/libva" path="hardware/intel/common/libva"/>
+    <project groups="intel,pdk" name="hardware/intel/common/libwsbm" path="hardware/intel/common/libwsbm"/>
+    <project groups="intel,pdk" name="hardware/intel/common/omx-components" path="hardware/intel/common/omx-components"/>
+    <project groups="intel,pdk" name="hardware/intel/common/utils" path="hardware/intel/common/utils"/>
+    <project groups="intel,pdk" name="hardware/intel/common/wrs_omxil_core" path="hardware/intel/common/wrs_omxil_core"/>
+    <project groups="intel,pdk" name="hardware/intel/img/hwcomposer" path="hardware/intel/img/hwcomposer"/>
+    <project groups="intel,pdk" name="hardware/intel/img/psb_headers" path="hardware/intel/img/psb_headers"/>
+    <project groups="intel,pdk" name="hardware/intel/img/psb_video" path="hardware/intel/img/psb_video"/>
+    <project groups="intel_sensors,pdk" name="hardware/intel/sensors" path="hardware/intel/sensors"/>
+    <project groups="pdk" name="hardware/interfaces" path="hardware/interfaces"/>
+    <project groups="invensense,pdk" name="hardware/invensense" path="hardware/invensense"/>
+    <project groups="pdk,trusty" name="hardware/libhardware" path="hardware/libhardware"/>
+    <project groups="pdk" name="hardware/libhardware_legacy" path="hardware/libhardware_legacy"/>
+    <project groups="marvell_bt,pdk" name="hardware/marvell/bt" path="hardware/marvell/bt"/>
+    <project groups="pdk,qcom,qcom_audio" name="hardware/qcom/audio" path="hardware/qcom/audio"/>
+    <project groups="pdk" name="hardware/qcom/bootctrl" path="hardware/qcom/bootctrl"/>
+    <project groups="pdk,qcom" name="hardware/qcom/bt" path="hardware/qcom/bt"/>
+    <project groups="pdk,qcom" name="hardware/qcom/data/ipacfg-mgr" path="hardware/qcom/data/ipacfg-mgr"/>
+    <project groups="pdk,qcom,qcom_display" name="hardware/qcom/display" path="hardware/qcom/display"/>
+    <project groups="pdk,qcom,qcom_gps" name="hardware/qcom/gps" path="hardware/qcom/gps"/>
+    <project groups="pdk,qcom,qcom_keymaster" name="hardware/qcom/keymaster" path="hardware/qcom/keymaster"/>
+    <project groups="pdk,qcom" name="hardware/qcom/media" path="hardware/qcom/media"/>
+    <project groups="pdk,qcom_msm8960" name="hardware/qcom/msm8960" path="hardware/qcom/msm8960"/>
+    <project groups="pdk,qcom_msm8994" name="hardware/qcom/msm8994" path="hardware/qcom/msm8994"/>
+    <project groups="qcom_msm8996" name="hardware/qcom/msm8996" path="hardware/qcom/msm8996"/>
+    <project groups="qcom_msm8x09" name="hardware/qcom/msm8x09" path="hardware/qcom/msm8x09"/>
+    <project groups="pdk,qcom_msm8x26" name="hardware/qcom/msm8x26" path="hardware/qcom/msm8x26"/>
+    <project groups="pdk,qcom_msm8x27" name="hardware/qcom/msm8x27" path="hardware/qcom/msm8x27"/>
+    <project groups="pdk,qcom_msm8x84" name="hardware/qcom/msm8x84" path="hardware/qcom/msm8x84"/>
+    <project groups="pdk,qcom" name="hardware/qcom/power" path="hardware/qcom/power"/>
+    <project groups="pdk,qcom_wlan" name="hardware/qcom/wlan" path="hardware/qcom/wlan"/>
+    <project groups="pdk" name="hardware/ril" path="hardware/ril"/>
+    <project groups="pdk" name="libcore" path="libcore"/>
+    <project groups="pdk" name="libnativehelper" path="libnativehelper"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/Bluetooth" path="packages/apps/Bluetooth"/>
+    <project groups="pdk-fs" name="packages/apps/Browser2" path="packages/apps/Browser2"/>
+    <project groups="pdk-fs" name="packages/apps/Calendar" path="packages/apps/Calendar"/>
+    <project groups="pdk-fs" name="packages/apps/Camera2" path="packages/apps/Camera2"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Dialer" path="packages/apps/Car/Dialer"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Hvac" path="packages/apps/Car/Hvac"/>
+    <project groups="pdk-fs" name="packages/apps/Car/LatinIME" path="packages/apps/Car/LatinIME"/>
+    <project groups="pdk-fs" name="packages/apps/Car/LensPicker" path="packages/apps/Car/LensPicker"/>
+    <project groups="pdk-fs" name="packages/apps/Car/LocalMediaPlayer" path="packages/apps/Car/LocalMediaPlayer"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Media" path="packages/apps/Car/Media"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Messenger" path="packages/apps/Car/Messenger"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Overview" path="packages/apps/Car/Overview"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Radio" path="packages/apps/Car/Radio"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Settings" path="packages/apps/Car/Settings"/>
+    <project groups="pdk-fs" name="packages/apps/Car/Stream" path="packages/apps/Car/Stream"/>
+    <project groups="pdk-fs" name="packages/apps/Car/SystemUpdater" path="packages/apps/Car/SystemUpdater"/>
+    <project groups="pdk-fs" name="packages/apps/Car/UserManagement" path="packages/apps/Car/UserManagement"/>
+    <project groups="pdk-fs" name="packages/apps/Car/libs" path="packages/apps/Car/libs"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/CarrierConfig" path="packages/apps/CarrierConfig"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/CertInstaller" path="packages/apps/CertInstaller"/>
+    <project groups="pdk-fs" name="packages/apps/Contacts" path="packages/apps/Contacts"/>
+    <project groups="pdk-fs" name="packages/apps/DeskClock" path="packages/apps/DeskClock"/>
+    <project groups="pdk" name="packages/apps/DevCamera" path="packages/apps/DevCamera"/>
+    <project groups="pdk-fs" name="packages/apps/Dialer" path="packages/apps/Dialer"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/DocumentsUI" path="packages/apps/DocumentsUI"/>
+    <project groups="pdk-fs" name="packages/apps/Email" path="packages/apps/Email"/>
+    <project groups="pdk-fs" name="packages/apps/EmergencyInfo" path="packages/apps/EmergencyInfo"/>
+    <project groups="pdk-fs" name="packages/apps/ExactCalculator" path="packages/apps/ExactCalculator"/>
+    <project groups="pdk-fs" name="packages/apps/Gallery" path="packages/apps/Gallery"/>
+    <project groups="pdk-fs" name="packages/apps/Gallery2" path="packages/apps/Gallery2"/>
+    <project groups="pdk-fs" name="packages/apps/HTMLViewer" path="packages/apps/HTMLViewer"/>
+    <project groups="pdk-fs" name="packages/apps/KeyChain" path="packages/apps/KeyChain"/>
+    <project groups="pdk-fs" name="packages/apps/Launcher2" path="packages/apps/Launcher2"/>
+    <project groups="pdk-fs" name="packages/apps/Launcher3" path="packages/apps/Launcher3"/>
+    <project groups="pdk-fs" name="packages/apps/LegacyCamera" path="packages/apps/LegacyCamera"/>
+    <project groups="pdk-fs" name="packages/apps/ManagedProvisioning" path="packages/apps/ManagedProvisioning"/>
+    <project groups="pdk-fs" name="packages/apps/Messaging" path="packages/apps/Messaging"/>
+    <project groups="pdk-fs" name="packages/apps/Music" path="packages/apps/Music"/>
+    <project groups="pdk-fs" name="packages/apps/MusicFX" path="packages/apps/MusicFX"/>
+    <project groups="apps_nfc,pdk-fs" name="packages/apps/Nfc" path="packages/apps/Nfc"/>
+    <project groups="pdk-fs" name="packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/PackageInstaller" path="packages/apps/PackageInstaller"/>
+    <project groups="pdk-fs" name="packages/apps/Phone" path="packages/apps/Phone"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/apps/PhoneCommon" path="packages/apps/PhoneCommon"/>
+    <project groups="pdk-fs" name="packages/apps/Protips" path="packages/apps/Protips"/>
+    <project groups="pdk-fs" name="packages/apps/Provision" path="packages/apps/Provision"/>
+    <project groups="pdk-fs" name="packages/apps/QuickSearchBox" path="packages/apps/QuickSearchBox"/>
+    <project groups="pdk-fs" name="packages/apps/RetailDemo" path="packages/apps/RetailDemo"/>
+    <project groups="pdk-fs" name="packages/apps/SafetyRegulatoryInfo" path="packages/apps/SafetyRegulatoryInfo"/>
+    <project groups="pdk-fs" name="packages/apps/Settings" path="packages/apps/Settings"/>
+    <project groups="pdk-fs" name="packages/apps/SoundRecorder" path="packages/apps/SoundRecorder"/>
+    <project groups="pdk-fs" name="packages/apps/SpareParts" path="packages/apps/SpareParts"/>
+    <project groups="pdk-fs" name="packages/apps/SpeechRecorder" path="packages/apps/SpeechRecorder"/>
+    <project groups="apps_stk,pdk-fs" name="packages/apps/Stk" path="packages/apps/Stk"/>
+    <project groups="pdk-fs" name="packages/apps/StorageManager" path="packages/apps/StorageManager"/>
+    <project name="packages/apps/TV" path="packages/apps/TV"/>
+    <project groups="pdk-fs" name="packages/apps/Tag" path="packages/apps/Tag"/>
+    <project groups="pdk-fs" name="packages/apps/Terminal" path="packages/apps/Terminal"/>
+    <project groups="pdk" name="packages/apps/Test/connectivity" path="packages/apps/Test/connectivity"/>
+    <project groups="pdk-fs" name="packages/apps/TvSettings" path="packages/apps/TvSettings"/>
+    <project groups="pdk-fs" name="packages/apps/UnifiedEmail" path="packages/apps/UnifiedEmail"/>
+    <project groups="pdk-fs" name="packages/apps/WallpaperPicker" path="packages/apps/WallpaperPicker"/>
+    <project name="packages/experimental" path="packages/experimental"/>
+    <project groups="pdk-fs" name="packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME"/>
+    <project groups="pdk-fs" name="packages/inputmethods/OpenWnn" path="packages/inputmethods/OpenWnn"/>
+    <project groups="pdk-fs" name="packages/providers/ApplicationsProvider" path="packages/providers/ApplicationsProvider"/>
+    <project groups="pdk-fs" name="packages/providers/BlockedNumberProvider" path="packages/providers/BlockedNumberProvider"/>
+    <project groups="pdk-fs" name="packages/providers/BookmarkProvider" path="packages/providers/BookmarkProvider"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/CalendarProvider" path="packages/providers/CalendarProvider"/>
+    <project groups="pdk-fs" name="packages/providers/CallLogProvider" path="packages/providers/CallLogProvider"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/ContactsProvider" path="packages/providers/ContactsProvider"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/DownloadProvider" path="packages/providers/DownloadProvider"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/MediaProvider" path="packages/providers/MediaProvider"/>
+    <project groups="pdk-fs" name="packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider"/>
+    <project groups="pdk-fs" name="packages/providers/TvProvider" path="packages/providers/TvProvider"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/providers/UserDictionaryProvider" path="packages/providers/UserDictionaryProvider"/>
+    <project groups="pdk-fs" name="packages/screensavers/Basic" path="packages/screensavers/Basic"/>
+    <project groups="pdk-fs" name="packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable"/>
+    <project groups="pdk-fs" name="packages/screensavers/WebView" path="packages/screensavers/WebView"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/services/BuiltInPrintService" path="packages/services/BuiltInPrintService"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/services/Car" path="packages/services/Car"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/services/Mms" path="packages/services/Mms"/>
+    <project groups="pdk-fs" name="packages/services/NetworkRecommendation" path="packages/services/NetworkRecommendation"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/services/Telecomm" path="packages/services/Telecomm"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="packages/services/Telephony" path="packages/services/Telephony"/>
+    <project groups="pdk-fs" name="packages/wallpapers/LivePicker" path="packages/wallpapers/LivePicker"/>
+    <project groups="pdk" name="pdk" path="pdk"/>
+    <project groups="cts,pdk-cw-fs,pdk-fs" name="platform_testing" path="platform_testing"/>
+    <project name="prebuilts/abi-dumps/ndk" path="prebuilts/abi-dumps/ndk"/>
+    <project name="prebuilts/abi-dumps/vndk" path="prebuilts/abi-dumps/vndk"/>
+    <project groups="pdk-fs" name="prebuilts/android-emulator" path="prebuilts/android-emulator"/>
+    <project groups="pdk" name="prebuilts/build-tools" path="prebuilts/build-tools"/>
+    <project groups="pdk" name="prebuilts/checkcolor" path="prebuilts/checkcolor"/>
+    <project groups="pdk" name="prebuilts/checkstyle" path="prebuilts/checkstyle"/>
+    <project groups="darwin,pdk" name="prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86"/>
+    <project groups="pdk" name="prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86"/>
+    <project groups="pdk-fs" name="prebuilts/deqp" path="prebuilts/deqp"/>
+    <project groups="pdk-fs" name="prebuilts/devtools" path="prebuilts/devtools"/>
+    <project groups="pdk" name="prebuilts/eclipse" path="prebuilts/eclipse"/>
+    <project groups="arm,darwin,pdk" name="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9"/>
+    <project groups="arm,darwin,pdk" name="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8"/>
+    <project groups="arm,darwin,pdk" name="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9"/>
+    <project groups="darwin,pdk" name="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1"/>
+    <project groups="darwin,mips,pdk" name="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9"/>
+    <project groups="darwin,pdk,x86" name="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9"/>
+    <project groups="arm,linux,pdk,trusty" name="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"/>
+    <project groups="arm,linux,pdk" name="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8"/>
+    <project groups="arm,linux,pdk,trusty" name="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"/>
+    <project groups="linux,pdk" name="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8"/>
+    <project groups="linux,pdk" name="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8"/>
+    <project groups="pdk-fs" name="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8"/>
+    <project groups="linux,mips,pdk" name="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9"/>
+    <project groups="linux,pdk,x86" name="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"/>
+    <project groups="darwin" name="prebuilts/gdb/darwin-x86" path="prebuilts/gdb/darwin-x86"/>
+    <project groups="linux" name="prebuilts/gdb/linux-x86" path="prebuilts/gdb/linux-x86"/>
+    <project groups="darwin,pdk,tradefed" name="prebuilts/go/darwin-x86" path="prebuilts/go/darwin-x86"/>
+    <project groups="linux,pdk,tradefed" name="prebuilts/go/linux-x86" path="prebuilts/go/linux-x86"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="prebuilts/gradle-plugin" path="prebuilts/gradle-plugin"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="prebuilts/libs/libedit" path="prebuilts/libs/libedit"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="prebuilts/maven_repo/android" path="prebuilts/maven_repo/android"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="prebuilts/maven_repo/bumptech" path="prebuilts/maven_repo/bumptech"/>
+    <project groups="pdk" name="prebuilts/misc" path="prebuilts/misc"/>
+    <project groups="pdk" name="prebuilts/ndk" path="prebuilts/ndk"/>
+    <project groups="darwin,pdk,pdk-cw-fs,pdk-fs" name="prebuilts/python/darwin-x86/2.7.5" path="prebuilts/python/darwin-x86/2.7.5"/>
+    <project groups="linux,pdk,pdk-cw-fs,pdk-fs" name="prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5"/>
+    <project groups="pdk" name="prebuilts/qemu-kernel" path="prebuilts/qemu-kernel"/>
+    <project groups="pdk" name="prebuilts/sdk" path="prebuilts/sdk"/>
+    <project groups="pdk,tools" name="prebuilts/tools" path="prebuilts/tools"/>
+    <project groups="pdk-cw-fs,pdk-fs" name="sdk" path="sdk"/>
+    <project groups="pdk" name="system/bt" path="system/bt"/>
+    <project groups="pdk" name="system/ca-certificates" path="system/ca-certificates"/>
+    <project groups="pdk" name="system/chre" path="system/chre"/>
+    <project groups="pdk" name="system/connectivity/wificond" path="system/connectivity/wificond"/>
+    <project groups="pdk" name="system/connectivity/wifilogd" path="system/connectivity/wifilogd"/>
+    <project groups="pdk" name="system/core" path="system/core"/>
+    <project groups="pdk" name="system/extras" path="system/extras"/>
+    <project groups="pdk,trusty" name="system/gatekeeper" path="system/gatekeeper"/>
+    <project groups="pdk" name="system/hardware/interfaces" path="system/hardware/interfaces"/>
+    <project groups="pdk" name="system/hwservicemanager" path="system/hwservicemanager"/>
+    <project groups="pdk,trusty" name="system/keymaster" path="system/keymaster"/>
+    <project groups="pdk" name="system/libfmq" path="system/libfmq"/>
+    <project groups="pdk" name="system/libhidl" path="system/libhidl"/>
+    <project groups="pdk" name="system/libhwbinder" path="system/libhwbinder"/>
+    <project groups="pdk" name="system/libufdt" path="system/libufdt"/>
+    <project groups="pdk" name="system/libvintf" path="system/libvintf"/>
+    <project groups="pdk" name="system/media" path="system/media"/>
+    <project groups="pdk" name="system/netd" path="system/netd"/>
+    <project groups="pdk" name="system/nfc" path="system/nfc"/>
+    <project name="system/nvram" path="system/nvram"/>
+    <project groups="pdk" name="system/security" path="system/security"/>
+    <project groups="pdk" name="system/sepolicy" path="system/sepolicy"/>
+    <project groups="pdk" name="system/tools/aidl" path="system/tools/aidl"/>
+    <project groups="pdk" name="system/tools/hidl" path="system/tools/hidl"/>
+    <project name="system/tpm" path="system/tpm"/>
+    <project groups="pdk" name="system/update_engine" path="system/update_engine"/>
+    <project groups="pdk" name="system/vold" path="system/vold"/>
+    <project groups="pdk,vts" name="test/vts" path="test/vts"/>
+    <project groups="pdk,vts" name="test/vts-testcase/fuzz" path="test/vts-testcase/fuzz"/>
+    <project groups="pdk,vts" name="test/vts-testcase/hal" path="test/vts-testcase/hal"/>
+    <project groups="pdk,vts" name="test/vts-testcase/hal-trace" path="test/vts-testcase/hal-trace"/>
+    <project groups="pdk,vts" name="test/vts-testcase/kernel" path="test/vts-testcase/kernel"/>
+    <project groups="pdk,vts" name="test/vts-testcase/performance" path="test/vts-testcase/performance"/>
+    <project groups="vts" name="test/vts-testcase/security" path="test/vts-testcase/security"/>
+    <project groups="pdk,vts" name="test/vts-testcase/vndk" path="test/vts-testcase/vndk"/>
+    <project groups="pdk,tradefed" name="tools/apksig" path="tools/apksig"/>
+    <project groups="tools" name="tools/external/fat32lib" path="tools/external/fat32lib"/>
+    <project groups="tools" name="tools/external/gradle" path="tools/external/gradle"/>
+    <project groups="nopresubmit,pdk,tradefed" name="tools/loganalysis" path="tools/loganalysis"/>
+    <project groups="adt-infra,cts,eclipse,motodev,pdk,tools,tradefed" name="tools/repohooks" path="tools/repohooks"/>
+    <project groups="pdk" name="tools/test/connectivity" path="tools/test/connectivity"/>
+    <project groups="pdk,tradefed" name="tools/tradefederation/core" path="tools/tradefederation/core"/>
+    <project groups="pdk,tradefed" name="tools/tradefederation/contrib" path="tools/tradefederation/contrib"/>
+    <project groups="pdk" name="toolchain/binutils"/>
+    <project groups="trusty" name="trusty/app/gatekeeper"/>
+    <project groups="trusty" name="trusty/app/keymaster"/>
+    <project groups="trusty" name="trusty/app/sample"/>
+    <project groups="trusty" name="trusty/app/storage"/>
+    <project groups="trusty" name="trusty/device/arm/generic-arm64"/>
+    <project groups="trusty" name="trusty/device/arm/vexpress-a15"/>
+    <project groups="trusty" name="trusty/external/headers"/>
+    <project groups="trusty" name="trusty/lib"/>
+    <project groups="trusty" name="trusty/external/lk" path="trusty/external/lk">
+        <copyfile dest="trusty/makefile" src="makefile"/>
+    </project>
+    <project groups="trusty" name="trusty/lk/trusty"/>
+    <project groups="trusty" name="trusty/vendor/google/aosp"/>
+    <project groups="trusty" name="trusty/vendor/mediatek/proprietary">
+        <copyfile dest="trusty/lk_inc.mk" src="lk_inc.mk"/>
+    </project>
+    <project name="AUSSHINE_K53V1_64_O0_MOLY.LR9.W1444.MD.LWTG.MP.V168" path="AUSSHINE_K53V1_64_O0_MOLY.LR9.W1444.MD.LWTG.MP.V168"/>
+    <project name="AUSSHINE_K53V1_64_O0_SIXTH.CBP.MD.MP2.V122" path="AUSSHINE_K53V1_64_O0_SIXTH.CBP.MD.MP2.V122"/>
+    <project name="vendor/mediatek/proprietary/modem" path="vendor/mediatek/proprietary/modem"/>
+    <!--gome add-->
+    <project name="device/gome" path="device/gome"/>
+    <project name="vendor/mediatek/proprietary/packages/apps/FactoryMode" path="vendor/mediatek/proprietary/packages/apps/FactoryMode"/>
+    <project name="vendor/mediatek/libs/gm12b" path="vendor/mediatek/libs/gm12b"/>
+    <project name="vendor/gome/frameworks/base" path="vendor/gome/frameworks/base"/>
+    <project name="vendor/customer/gome_src/GomeAccountService" path="vendor/customer/gome_src/GomeAccountService"/>
+    <project name="vendor/customer/gome_src/Calendar_IUV" path="vendor/customer/gome_src/Calendar_IUV"/>
+    <project name="vendor/customer/gome_src/Clock_IUV" path="vendor/customer/gome_src/Clock_IUV"/>
+    <project name="vendor/customer/gome_src/FileManager_IUV" path="vendor/customer/gome_src/FileManager_IUV"/>
+    <project name="vendor/customer/gome_src/Gallery_IUV" path="vendor/customer/gome_src/Gallery_IUV"/>
+    <project name="vendor/customer/gome_src/Video_IUV" path="vendor/customer/gome_src/Video_IUV"/>
+    <project name="vendor/customer/gome_src/Fota_IUV" path="vendor/customer/gome_src/Fota_IUV"/>
+    <project name="vendor/customer/gome_src/MultiApp_IUV" path="vendor/customer/gome_src/MultiApp_IUV"/>
+    <project name="vendor/customer/gome_src/UserCenter_IUV" path="vendor/customer/gome_src/UserCenter_IUV"/>
+    <project name="vendor/customer/gome_src/SecurityManager_IUV" path="vendor/customer/gome_src/SecurityManager_IUV"/>
+    <project name="vendor/customer/gome_src/GomeCalculator" path="vendor/customer/gome_src/GomeCalculator"/>
+    <project name="vendor/customer/gome_src/GomeScreenRecorder" path="vendor/customer/gome_src/GomeScreenRecorder"/>
+    <project name="vendor/customer/gome_src/MyPocket_IUV" path="vendor/customer/gome_src/MyPocket_IUV"/>
+    <project name="vendor/customer/gome_src/GomeBootWizard" path="vendor/customer/gome_src/GomeBootWizard"/>
+    <project name="vendor/customer/gome_src/Recorder_IUV" path="vendor/customer/gome_src/Recorder_IUV"/>
+    <project name="vendor/customer/gome_src/SalesTracterClient_IUV" path="vendor/customer/gome_src/SalesTracterClient_IUV"/>
+    <project name="vendor/customer/gome_src/AppIntercept" path="vendor/customer/gome_src/AppIntercept"/>
+    <project name="vendor/customer/gome_src/App2Lock" path="vendor/customer/gome_src/App2Lock"/>
+    <project name="vendor/customer/gome_src/GomeCloud" path="vendor/customer/gome_src/GomeCloud"/>
+    <project name="vendor/customer/gome_src/GomeThemeBravery" path="vendor/customer/gome_src/GomeThemeBravery"/>
+    <project name="vendor/customer/gome_src/GomeThemeDefault" path="vendor/customer/gome_src/GomeThemeDefault"/>
+    <project name="vendor/customer/gome_src/GomeThemeElegence" path="vendor/customer/gome_src/GomeThemeElegence"/>
+    <project name="vendor/customer/gome_src/GomeThemeFrankness" path="vendor/customer/gome_src/GomeThemeFrankness"/>
+    <project name="vendor/customer/gome_src/ThemeChooser" path="vendor/customer/gome_src/ThemeChooser"/>
+    <project name="vendor/customer/gome_src/ThemeManagerService" path="vendor/customer/gome_src/ThemeManagerService"/>
+    <project name="vendor/customer/gome_src/ThemesProvider" path="vendor/customer/gome_src/ThemesProvider"/>
+    <project name="vendor/customer/gome_src/BackupRestore" path="vendor/customer/gome_src/BackupRestore"/>
+    <project name="vendor/customer/gome_src/Note_IUV" path="vendor/customer/gome_src/Note_IUV"/>
+    <project name="vendor/customer/gome_src/Nlp_IUV" path="vendor/customer/gome_src/Nlp_IUV"/>
+    <project name="vendor/customer/gome_app" path="vendor/customer/gome_app"/>
+    <project name="vendor/customer/config" path="vendor/customer/config"/>
+    <project name="packages/apps/ContactsCommon" path="packages/apps/ContactsCommon"/>
+    <!--mtk add -->
+    <project name="vendor/mediatek/libs/oemcrypto_test"/>
+    <project name="vendor/mediatek/release_note/MT6737"/>
+    <project name="vendor/mediatek/release_note/MT6750"/>
+    <project name="vendor/mediatek/release_note/MT6753"/>
+    <project name="vendor/mediatek/release_note/MT6757C"/>
+    <project name="vendor/mediatek/release_note/MT6797"/>
+    <project name="vendor/mediatek/libs/liboemcrypto"/>
+</manifest>
