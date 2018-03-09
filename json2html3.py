@@ -58,21 +58,24 @@ def power_do_something():
     # step 1.5:  读取 template.html的内容，存储为 字符串
     import os
     html_template_str = _power_read_html_template(
-         'power_template.html')
+        'power_template.html')
 
-    # step 2: 获取 {}.keys()  ===>[全部是需要展示的了]
-    titles = data[0].keys()
-    logging.error(titles)
+    if len(data) > 0:
+        titles = data[0].keys()
+        # step 3: 做一个映射 --> (subject:jiraID, project:xxx),根据映射生成 thead 内容 [模板+映射后]
+        # step 3: 映射 [list_titles_origin] --> [list_titles_friendly] --> thead 内容插入完成
+        power_titles = _power_titles(titles)
+        html_template_str = _power_insert_tr_in_thead(html_template_str, power_titles)
 
-    # step 3: 做一个映射 --> (subject:jiraID, project:xxx),根据映射生成 thead 内容 [模板+映射后]
-    # step 3: 映射 [list_titles_origin] --> [list_titles_friendly] --> thead 内容插入完成
-    power_titles = _power_titles(titles)
-    html_template_str = _power_insert_tr_in_thead(html_template_str, power_titles)
-
-    # step 4: 根据 {}.keys() 生成 tbody 的 内容
-    html_source = _power_insert_tr_in_tbody(html_template_str, data)
-    # step 5. 写入全部内容到 power_html.html
-    _power_write_html_from_str('lastReleaseNote.html', html_source)
+        # step 4: 根据 {}.keys() 生成 tbody 的 内容
+        html_source = _power_insert_tr_in_tbody(html_template_str, data)
+        # step 5. 写入全部内容到 power_html.html
+        _power_write_html_from_str('lastReleaseNote.html', html_source)
+        return
+    else:
+        logging.error("json has no available data {}".format(data))
+        _power_write_html_from_str('lastReleaseNote.html', "")
+        return
 
     pass
 
