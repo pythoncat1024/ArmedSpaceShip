@@ -1,0 +1,10 @@
+ 1. 远程桌面连接到 服务器
+ 2. 服务器管理器-仪表板-工具-Active Directory 用户和计算机-developer-右键-新建-用户
+ 3. 姓：li
+ 4. 名：shoubo
+ 5. 用户登录名：lishoubo
+ 6. 下一步
+ 7. 密码：iuv@12345 , iuv@12345 , 密码永不过期 , 下一步 , 完成 
+ 8. 再次选择该用户，右键，属性，电子邮件：shoubo.li@gometech.com.cn , 应用 , 确定。
+ 
+ awk 'BEGIN{info="this is a test2010test!";print index(info,"test")?"ok":"no found";}' 

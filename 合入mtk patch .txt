@@ -37,13 +37,13 @@
 3. 执行如下命令完成 合入本地分支
 
 cd mtk_7.1_6797
+repo sync -c -d -j8 --no-tags          
 tar  -zxvf ../ALPS03755351\(For_aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P18\).tar.gz
-repo sync -c -d -j8 --no-tags
 repo forall -c "git add ."
 repo forall -c git commit -m "apply patch aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P17"
 repo manifest -r -o aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P18.xml
-repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6797 2>&1 | tee push.log
-(或者 repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6797 2>&1 | tee push.log # 强制推送)
+repo forall -c git push origin HEAD:refs/heads/`basename $(pwd)` 2>&1 | tee push.log
+(或者 repo forall -c git push origin HEAD:refs/heads/`basename $(pwd)` 2>&1 | tee push.log # 强制推送)
 
 -------------------------------------------
 
@@ -59,10 +59,10 @@ repo init -u ssh://liuxing@192.168.59.30:29418/aosp/gome/manifest -b GM12E_7.1_m
 repo sync -c -d -j8 --no-tags
 repo start patchLocal --all # 本地 创建一个备份分支
 repo forall -p -c git rebase origin/mtk_7.1_6797 2>&1 | tee rebase.log
-repo forall -c git push origin HEAD:refs/heads/GM12E_7.1_mtk6797_bsp 2>&1 | tee push.log #[如果push 被拒绝，加上 -f]
+repo forall -c git push origin HEAD:refs/heads/`basename $(pwd)` 2>&1 | tee push.log #[如果push 被拒绝，加上 -f]
 							
 >>> bsp 使用 rebase , develop 使用 merge  <<<
-repo forall -p -c git merge --no-edit origin/mtk_7.1_6797 2>&1 | tee rebase.log							
+repo forall -p -c git merge --no-edit origin/`basename $(pwd)` 2>&1 | tee merge.log							
 
 #####################
 使用本地镜像：
