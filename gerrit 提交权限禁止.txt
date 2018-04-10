@@ -1,0 +1,5 @@
+1. 登录 gerrit
+2. Projects -> List -> All-Projects -> Access
+3. 找到 Reference: refs/for/refs/heads/GM12E_7.1_mtk6797_dev_171016
+4. Push: Block (原来是ALLOW)
+5. 拉当网页最后，点击 save changes.

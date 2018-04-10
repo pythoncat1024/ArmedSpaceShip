@@ -51,5 +51,9 @@ userdebug：\\192.168.59.62\release\dailybuild\tk6757_66_n1\GM12B_7.1_mtk6757cd_
 
 可选操作： 1. 把 user 路径 压缩 复制到 1.15 路径下面
 
+release/dailybuild/tk6757_66_n1/GM12B_7.1_mtk6757cd_develop/2018-03-30-16-44-41_user/full_tk6757_66_n1-target_files-1522397998.zip
+release/dailybuild/tk6757_66_n1/GM12B_7.1_mtk6757cd_develop/2018-03-30-16-44-41_user/full_tk6757_66_n1-target_files-1522397998.zip
+
+release/dailybuild/tk6757_66_n1/GM12B_7.1_mtk6757cd_develop/2018-03-30-16-44-41_user/full_tk6757_66_n1-target_files-1522397998.zip
 
 

@@ -61,7 +61,7 @@ repo start patchLocal --all # 本地 创建一个备份分支
 repo forall -p -c git rebase origin/<origin-name> 2>&1 | tee rebase.log
 repo forall -c git push origin HEAD:refs/heads/<branch-name> 2>&1 | tee push.log #[如果push 被拒绝，加上 -f]
 							
->>> bsp 使用 rebase , develop 使用 merge  <<<
+>>> bsp 使用 rebase , develop 使用 merge  <<< | 6739的都是reabse
 repo forall -p -c git merge --no-edit origin/<branch-name> 2>&1 | tee merge.log							
 
 #####################
