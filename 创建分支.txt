@@ -4,6 +4,29 @@
  
  建分支是说，当前没有  mtk_8.1_6739_bsp 这个分支，然后创建一个
  
- 建仓库的操作步骤参考 原有的 建仓库.txt
+
+ 操作步骤：
+ 案例：--> "基于 mtk_7.1_6739_dev_180110 分支拉取一个分支出来，分支名为：mtk_7.1_6739_star_180413"
  
- 建分支的操作步骤是：去 manifest 仓库操作，操作步骤与建仓库类似。
+ 1. 在本地创建一个目录 createBranch
+ 2. 看一下基于的分支现在有没有 daily 版本，如果有，执行步骤a ， 如果没有执行步骤b.
+	步骤a：先去该版本的今天的daily目录下，找到 manifest.xml ，把该文件拖进 Xshell , 并利用 mv 命令：mv manifest.xml .repo/manifests/2018-04-13.xml
+		   再执行: repo init -m 2018-04-13.xml --no-repo-verify --reference=/home/sh-mirror/
+	步骤b: 
+		repo init -u ssh://liuxing@192.168.59.30:29418/aosp/gome/manifest -b mtk_7.1_6739_dev_180110 --no-repo-verify --reference=/home/sh-mirror/
+ 2.5. repo sync -c -d --no-tags -j8
+ 3. repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6739_star_180413 2>&1 | tee push.log # 最关键的一步，把这个分支push 到 gerrit 服务器
+ 4. 去 gerrit 网页 - projects - branch ,拖动到页面末尾 
+	Branch Name:        mtk_7.1_6739_star_180413
+	Initial Revision:   mtk_7.1_6739_dev_180110
+	点击 "Create Branch" 按钮。
+ 5. 完成。
+ 
+ 
+########################################################################
+
+大体步骤如下：
+
+1. 拉一套原有分支的最新稳定代码，然后把这套代码的每个仓库都push到新的分支上面 ;
+2. 再到 gerrit 网页 manifest 仓库，执行  "Create Branch" 操作。
+----完毕----
