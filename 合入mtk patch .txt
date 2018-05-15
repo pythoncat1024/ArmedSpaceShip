@@ -38,7 +38,7 @@
 
 cd mtk_7.1_6797
 repo sync -c -d -j8 --no-tags          
-tar  -zxvf ../ALPS03755351\(For_aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P18\).tar.gz
+tar  -zxvf ../ALPS03755351\(For_aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P18\).tar.gz  # 这一步会覆盖同名的文件.(目录不会)
 repo forall -c "git add ."
 repo forall -c git commit -m "apply patch aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P17"
 repo manifest -r -o aus6797_6m_n_alps-mp-n1.mp9-V1.6.3_P18.xml
@@ -62,6 +62,7 @@ repo forall -p -c git rebase origin/<origin-name> 2>&1 | tee rebase.log
 repo forall -c git push origin HEAD:refs/heads/<branch-name> 2>&1 | tee push.log #[如果push 被拒绝，加上 -f]
 							
 >>> bsp 使用 rebase , develop 使用 merge  <<< | 6739的都是reabse
+#### dev 分支，需要先禁止开发的提交权限！！！！！！
 repo forall -p -c git merge --no-edit origin/<branch-name> 2>&1 | tee merge.log							
 
 #####################

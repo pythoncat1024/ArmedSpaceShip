@@ -1,0 +1,9 @@
+
+关键步骤：1. 选择 "构建一个多配置项目"  ; 2. Configuration Matrix 下，选择 "Add axis - User-defined Axis" , Name: CIB_S_VARIANT, Values: user userdebug
+
+1. 打开 jenkins,
+2. 新建任务
+3. 输入一个任务名称：___ (随便填一个，比如：x_multi_freedom)
+4. 下面选择 "构建一个多配置项目" ， 下面点击 "确定"。
+
+5. 里面的内容参考 multiple_GM12B_7.1_mtk6757cd_develop 这个 任务的配置

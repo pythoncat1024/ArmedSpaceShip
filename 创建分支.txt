@@ -20,7 +20,8 @@
 	Branch Name:        mtk_7.1_6739_star_180413
 	Initial Revision:   mtk_7.1_6739_dev_180110
 	点击 "Create Branch" 按钮。
- 5. 完成。
+ 5. 修改 manifest 仓库中，当前 分支的  default.xml 中的 <default remote="origin" revision="GM12B_7.1_mtk6757cd_hande_180504" sync-j="4"/> 其中的 reversion 属性 需要修改成当前分支名。
+ 6. 完成。
  
  
 ########################################################################
