@@ -11,7 +11,7 @@
 	i. 编译 ota 包，make otapackage
  2. publish_xxx.sh
 	j. 在让开发下载的服务器上面(69.62)上面创建对应的目录
-	k. 把 $Date"_"$CIB_S_VARIANT 作为一个字符串写进文本文件 /mnt/$product"_"$branch"_"$CIB_S_VARIANT".txt" 中的变量，来修改
+	k. 把 $Date"_"$CIB_S_VARIANT 作为一个字符串写进文本文件 /mnt/$product"_"$branch"_"$CIB_S_VARIANT".txt" 中
 	l. 把刷机需要的文件拷贝到 daily build 发布的服务器对应的目录里面 (额外附加 manifest.xml + build.prop + build.log)
 		--> [ 这里的 manifest.xml 就成了明天的 对比 manifest.xml ]
 	m. 把 ota 升级需要的文件，拷贝到 daily build 发布的服务器对应的目录里面
