@@ -56,4 +56,8 @@ release/dailybuild/tk6757_66_n1/GM12B_7.1_mtk6757cd_develop/2018-03-30-16-44-41_
 
 release/dailybuild/tk6757_66_n1/GM12B_7.1_mtk6757cd_develop/2018-03-30-16-44-41_user/full_tk6757_66_n1-target_files-1522397998.zip
 
+1.15 服务器 登录：
+
+用户名：pythoncat.cheng
+密码：iUv1357
 

@@ -1,0 +1,113 @@
+ 1. 建仓库和建分支的区别
+ 
+ 建仓库是在已有的项目分支上面加一个仓库，比如加一个  frameworks/candy
+ 
+ 建分支是说，当前没有  mtk_8.1_6739_bsp 这个分支，然后创建一个
+ 
+
+ 操作步骤：
+ 案例：--> "基于 mtk_7.1_6739_dev_180110 分支拉取一个分支出来，分支名为：mtk_7.1_6739_star_180413"
+ 
+ 1. 在本地创建一个目录 createBranch
+ 2. 看一下基于的分支现在有没有 daily 版本，如果有，执行步骤a ， 如果没有执行步骤b.
+	步骤a：先去该版本的今天的daily目录下，找到 manifest.xml ，把该文件拖进 Xshell , 并利用 mv 命令：mv manifest.xml .repo/manifests/2018-04-13.xml
+		   再执行: repo init -m 2018-04-13.xml --no-repo-verify --reference=/home/sh-mirror/
+	步骤b: 
+		repo init -u ssh://liuxing@192.168.59.30:29418/aosp/gome/manifest -b mtk_7.1_6739_dev_180110 --no-repo-verify --reference=/home/sh-mirror/
+ 2.5. repo sync -c -d --no-tags -j8
+ 3. repo forall -c git push origin HEAD:refs/heads/mtk_7.1_6739_star_180413 2>&1 | tee push.log # 最关键的一步，把这个分支push 到 gerrit 服务器
+ 4. 去 gerrit 网页 - projects - branch ,拖动到页面末尾 
+	Branch Name:        mtk_7.1_6739_star_180413
+	Initial Revision:   mtk_7.1_6739_dev_180110
+	点击 "Create Branch" 按钮。
+ 5. 修改 manifest 仓库中，当前 分支的  default.xml 中的 <default remote="origin" revision="GM12B_7.1_mtk6757cd_hande_180504" sync-j="4"/> 其中的 reversion 属性 需要修改成当前分支名。
+ 6. 完成。
+ 
+ 
+########################################################################
+
+大体步骤如下：
+
+1. 拉一套原有分支的最新稳定代码，然后把这套代码的每个仓库都push到新的分支上面 ;
+2. 再到 gerrit 网页 manifest 仓库，执行  "Create Branch" 操作。
+----完毕
+
+
+================================================================================
+
+同步分支：
+
+场景：
+Hi 星星 
+    帮忙从mtk_8.1_6739_bsp 这个分支拉出一个新的分支出来用来过CTA 拿网标感谢，
+Hi 刘兴：
+   待周星星创建分支后，请帮忙在上海创建一个新的镜像，感谢。
+-------
+@quanwei：gm17a_8.1_mtk6739_cta 此分支已经创建，此分支以后不跟随mtk升级
+南京端下载方式：
+repo init -u ssh://zhouxingxing@192.168.63.217:29418/AOSP/Main/Manifest  -b gm17a_8.1_mtk6739_cta
+
+
+@刘兴，chengguibao:镜像已配置，配置manifest，看附件，提供下载方式给上海
+
+-----------
+
+操作步骤：[已经给出 default.xml了]
+
+1. 去 gerrit 网页 - projects - list , 输入 manifest , 点击进入 aosp/gome/manifest
+2. 到当前网页底部执行 create branch 操作， init 的分支随便写，反正最好都要被 已经给出的 default.xml 给替换掉。
+3. 到本地 xshell 中，cd 到 manifest 仓库(之前是执行 【点击 "General" - "Clone with commit-msg hook" - "ssh" - "copy"】clone 下来的)
+4. git fetch
+5. git checkout origin/gm17a_8.1_mtk6739_cta
+6. 替换里面的 default.xml
+7. 修改 xml 的 <remote xxx> 为：<remote fetch="../../NJ/AOSP" name="origin" review="http://192.168.63.217:8080"/> | ==> 主要是修改 fetch 属性值！
+8. git add *
+9. git commit -m "xxx"
+10.git push origin HEAD:refs/for/gm17a_8.1_mtk6739_cta
+11. gerrit 网页上面执行+2 操作。
+12. === 完毕 ===
+
+
+#########################################################################################################################
+
+基于原有分支 abc 创建新分支 xyz 的整个流程[南京拉分支+ 上海配置同步]：
+
+1. 去 Xshell，本地拉一套 abc 的代码 ，然后 push 到新分支 xyz
+ 
+ 命令记录如下：【
+ 2002  mkdir GMOS3.0_PRE_8.1_GM18A_STABLE_BasedOnS04K
+ 2003  cd GMOS3.0_PRE_8.1_GM18A_STABLE_BasedOnS04K
+ 2004  repo init -u ssh://$(whoami)@192.168.63.217:29418/AOSP/Main/Manifest -b GMOS3.0_PRE_8.1_GM18A_STABLE_BasedOnS04K --no-repo-verify  --reference=/home/nj-mirror
+ 2005  ls -al
+ 2006  repo sync -c -d --no-tags -j8
+ 2007  ls -al
+ 2008  repo forall -c git push origin HEAD:refs/heads/GMOS3.0_8.1_GM18C_CTC_180629 2>&1 | tee push.log
+ 】
+
+2. 去 gerrit 网页，- project - AOSP/Main/Manifest - Branchs - createBranch
+
+3. 去 Xshell，进入 manifest 仓库，更新 xml. (并且网页上面+2)
+命令记录如下：【
+ 2089  cd ../njManifest/
+ 2090  git fetch
+ 2091  git checkout origin/GMOS3.0_8.1_GM18C_CTC_180629
+ 2092  ls
+ 2093  vim default.xml # 修改 revision="GMOS3.0_8.1_GM18C_CTC_180629"
+ 2094  git status 
+ 2095  git diff
+ 2096  git add default.xml 
+ 2097  git commit -m "[scm]:create branch GMOS3.0_8.1_GM18C_CTC_180629"
+ 2098  git branch 
+ 2099  git push origin HEAD:refs/for/GMOS3.0_8.1_GM18C_CTC_180629
+ 】
+ 4. 配置同步：去 Xshell , gerrit 安装目录中，修改 replication.conf (文件名不一定对) ，然后 重启该插件
+ 
+ ---- 上面是南京 的操作，下面是上海的操作 ---
+ 
+ 5. 去 gerrit 网页 ， - project - manifest - Branchs - createBranch (和步骤2相同)
+ 
+ 6. 去 Xshell，进入 manifest 仓库，更新 xml. (并且网页上面+2)(和 步骤3 相同，vim 修改的地方不同)
+ 
+======= 实际步骤完成了 ========
+
+7. 分别在南京和上海的机器尝试下载新分支的代码，下载 ok ,把两边的下载命令通过邮件发出来。[下载不 ok ，排查原因，直到 ok , 发邮件通知下载命令]

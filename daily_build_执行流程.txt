@@ -3,7 +3,7 @@
 	a. 下载代码
 	b. 生成当前下载的代码的 manifest,xml
     c. 获取昨天的每日版本的清单文件路径
-	d. 通过比较昨天的 manifest.xml 与 今天的 manifest.xml 生成 commit.json
+	d. 通过比较昨天的 manifest.xml 与 今天的 manifest.xml 生成 commit.json [这里会用到昨天 step k 中生成的 txt]
 	e. 通过 commit.json 生成 diff 的 lastModify.html
 	f. 修改 buildinfo.sh 中的变量，来修改 daily build 的版本号
 	g. 开始编译，执行 make -j8 的操作
@@ -17,4 +17,4 @@
 	m. 把 ota 升级需要的文件，拷贝到 daily build 发布的服务器对应的目录里面
  3. autocopy2nj
 	n. resync 59.62 上面的 daily_build 的内容到 南京对应的服务器上面
-	o. 执行发送邮件的脚本，发送邮件。邮件内容就是 版本路径加上 diff 提交的信息
+	o. 执行发送邮件的脚本，发送邮件。邮件内容就是 版本路径加上 diff 提交的信息 [这里会用到今天 step k 中生成的 txt]

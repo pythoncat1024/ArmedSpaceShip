@@ -4,3 +4,14 @@ c71 上面创建分支 vender/freeme
 
 mtk_7.1_6739
 mtk_7.1_6739_ctc_180111
+
+
+17 服务器: (需要备份代码先)
+shenyanhe
+zhangguanglong
+weimingwei
+leiwentao
+
+19 服务器: 
+lijiaren
+renshuguo
